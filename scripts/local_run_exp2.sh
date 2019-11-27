@@ -13,5 +13,4 @@
 # wget download.redis.io/releases/redis-4.0.8.tar.gz
 
 . scripts/local_env_setup.sh
-pip install -r requirements.txt
-python -m es_distributed.main master --master_socket_path /tmp/es_redis_master.sock --algo es --exp_file configurations/frostbite_es.json
+python -m es_distributed.main workers --master_host localhost --relay_socket_path /tmp/es_redis_relay.sock --algo es --num_workers 40

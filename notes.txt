@@ -1,0 +1,14 @@
+
+Have to pip install requirements.txt and requirements2.txt for some reason ... (in the python venv of course)
+
+Have to install redis server (use the .tar.gz) then make the symlinks
+
+Modified the scripts a little (hardcoded them for now) to be entered manually in tmux
+
+=============================================================================================================
+
+For running on TACC:
+ - can check available modules using 'module spider'
+ - Need to 'module load intel/17.0.4' for hdf5 (h5py) to work
+ - can then use 'module load python3' ... I think
+ - or just get pip manually if you can't find pip

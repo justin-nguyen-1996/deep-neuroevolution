@@ -7,3 +7,11 @@ env/
 mujoco/mjpro131
 *.h5
 gym_tensorflow.so
+dump.rdb
+redis-4.0.8/
+docker
+docker-compose
+docker-ce-rpm/
+docker-cli-rpm/
+docker-container-rpm/
+docker-selinux-rpm/
