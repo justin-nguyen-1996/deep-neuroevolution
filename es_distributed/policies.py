@@ -304,7 +304,7 @@ class MujocoPolicy(Policy):
 
 class ESAtariPolicy(Policy):
     def _initialize(self, ob_space, ac_space):
-        self.ob_space_shape = ob_space.shape
+        self.ob_space_shape = ob_space.low.shape
         self.ac_space = ac_space
         self.num_actions = ac_space.n
 

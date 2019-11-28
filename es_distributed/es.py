@@ -419,7 +419,7 @@ def run_worker(master_redis_cfg, relay_redis_cfg, noise, *, min_task_runtime=.2)
                 policy.set_trainable_flat(task_data.params - v)
                 rews_neg, len_neg, nov_vec_neg = rollout_and_update_ob_stat(
                     policy, env, task_data.timestep_limit, rs, task_ob_stat, config.calc_obstat_prob)
-    
+
                 signreturns.append([np.sign(rews_pos).sum(), np.sign(rews_neg).sum()])
                 noise_inds.append(noise_idx)
                 returns.append([rews_pos.sum(), rews_neg.sum()])
