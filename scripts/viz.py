@@ -19,10 +19,8 @@ def main(env_id, policy_file, record, stochastic, extra_kwargs):
     is_atari_policy = "NoFrameskip" in env_id
 
     env = gym.make(env_id)
-# TODO:
-#    import pdb; pdb.set_trace(); # TEMP
-#    if is_atari_policy:
-#        env = wrap_deepmind(env)
+    if is_atari_policy:
+        env = wrap_deepmind(env)
 
     if record:
         import uuid
@@ -40,8 +38,9 @@ def main(env_id, policy_file, record, stochastic, extra_kwargs):
             pi = MujocoPolicy.Load(policy_file, extra_kwargs=extra_kwargs)
 
         while True:
-            if is_atari_policy:
-                rews, t, novelty_vector = pi.rollout(env, render=True, random_stream=np.random if stochastic else None)
+#            if is_atari_policy:
+#                rews, t, novelty_vector = pi.rollout(env, render=True, random_stream=np.random if stochastic else None)
+            rews, t = pi.rollout(env, render=True, random_stream=np.random if stochastic else None)
             print('return={:.4f} len={}'.format(rews.sum(), t))
 
             if record:
