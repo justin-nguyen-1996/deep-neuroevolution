@@ -1,0 +1,897 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALE	gpu_implementation/gym_tensorflow/Makefile	/^    ALE := $(shell pwd)\/atari-py\/atari_py\/ale_interface$/;"	m
+ALREADY_INITIALIZED	es_distributed/tf_util.py	/^ALREADY_INITIALIZED = set()$/;"	v
+AMI_MAP	scripts/launch.py	/^AMI_MAP = {$/;"	v
+ARCHIVE_KEY	es_distributed/dist.py	/^ARCHIVE_KEY = 'es:archive'$/;"	v
+Adam	es_distributed/optimizers.py	/^class Adam(Optimizer):$/;"	c
+Adam	gpu_implementation/neuroevolution/optimizers.py	/^class Adam(Optimizer):$/;"	c
+AsDeviceMemory	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	/^perftools::gputools::DeviceMemory<T> AsDeviceMemory(const T* cuda_memory) {$/;"	f	namespace:tensorflow::__anon1
+AsyncTaskHub	gpu_implementation/neuroevolution/distributed_helpers.py	/^class AsyncTaskHub(object):$/;"	c
+AsyncWorker	gpu_implementation/neuroevolution/distributed_helpers.py	/^class AsyncWorker(object):$/;"	c
+AtariEnv	gpu_implementation/gym_tensorflow/atari/__init__.py	/^    class AtariEnv(TensorFlowEnv):$/;"	c
+AtariEnv	gpu_implementation/gym_tensorflow/atari/tf_atari.py	/^class AtariEnv(TensorFlowEnv):$/;"	c
+AtariEnvironment	gpu_implementation/gym_tensorflow/atari/tf_atari.cpp	/^        AtariEnvironment(int batch_size)$/;"	f	class:AtariEnvironment
+AtariEnvironment	gpu_implementation/gym_tensorflow/atari/tf_atari.cpp	/^class AtariEnvironment : public Environment<uint8>, public StepInterface<int>$/;"	c	file:
+AtariMakeOp	gpu_implementation/gym_tensorflow/atari/tf_atari.cpp	/^    explicit AtariMakeOp(OpKernelConstruction* context) : EnvironmentMakeOp(context) {$/;"	f	class:AtariMakeOp
+AtariMakeOp	gpu_implementation/gym_tensorflow/atari/tf_atari.cpp	/^REGISTER_KERNEL_BUILDER(Name("AtariMake").Device(DEVICE_CPU), AtariMakeOp);$/;"	v
+AtariMakeOp	gpu_implementation/gym_tensorflow/atari/tf_atari.cpp	/^class AtariMakeOp : public EnvironmentMakeOp {$/;"	c	file:
+BaseEnvironment	gpu_implementation/gym_tensorflow/tf_env.h	/^class BaseEnvironment : public ResourceBase$/;"	c
+BaseModel	gpu_implementation/neuroevolution/models/base.py	/^class BaseModel(object):$/;"	c
+ButtonArea	visual_inspector/figure_base/buttons.py	/^class ButtonArea():$/;"	c
+COLORS	visual_inspector/figure_base/settings.py	/^COLORS = [$/;"	v
+COLOR_HEX_LISTS	visual_inspector/figure_base/settings.py	/^COLOR_HEX_LISTS = []$/;"	v
+CPUDevice	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	/^typedef Eigen::ThreadPoolDevice CPUDevice;$/;"	t	namespace:tensorflow	file:
+CURRENT	es_distributed/tabular_logger.py	/^    CURRENT = None # Current logger being used by the free functions above$/;"	v	class:_Logger
+CURRENT	gpu_implementation/tabular_logger.py	/^def CURRENT():$/;"	f
+CXX	gpu_implementation/gym_tensorflow/Makefile	/^CXX := g++$/;"	m
+Character	gpu_implementation/gym_tensorflow/maze/maze.h	/^        Character()$/;"	f	class:maze::Character
+Character	gpu_implementation/gym_tensorflow/maze/maze.h	/^    class Character$/;"	c	namespace:maze
+CloudPlot	visual_inspector/figure_base/cloud_figures.py	/^class CloudPlot():$/;"	c
+CloudPlotHDBC	visual_inspector/figure_custom/cloud_figures_custom.py	/^class CloudPlotHDBC(CloudPlot):$/;"	c
+CloudPlotRollout	visual_inspector/figure_custom/cloud_figures_custom.py	/^class CloudPlotRollout(CloudPlot):$/;"	c
+CloudPlotRolloutAtari	visual_inspector/figure_custom/cloud_figures_custom.py	/^class CloudPlotRolloutAtari(CloudPlot):$/;"	c
+ColorBar	visual_inspector/figure_base/cloud_figures.py	/^class ColorBar():$/;"	c
+ConcurrentWorkers	gpu_implementation/neuroevolution/concurrent_worker.py	/^class ConcurrentWorkers(object):$/;"	c
+Config	es_distributed/es.py	/^Config = namedtuple('Config', [$/;"	v
+Config	es_distributed/es_modified.py	/^Config = namedtuple('Config', [$/;"	v
+ConstTensorSliceToEigenMatrix	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	/^  static ConstMatrixMap ConstTensorSliceToEigenMatrix(const Tensor& t,$/;"	f	struct:tensorflow::__anon1::SequentialIndexedMatMulKernel
+ConstantSchedule	gpu_implementation/neuroevolution/helper.py	/^class ConstantSchedule(object):$/;"	c
+CublasScratchAllocator	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	/^  CublasScratchAllocator(OpKernelContext* context) : context_(context) {}$/;"	f	class:tensorflow::__anon1::CublasScratchAllocator
+CublasScratchAllocator	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	/^class CublasScratchAllocator : public perftools::gputools::ScratchAllocator {$/;"	c	namespace:tensorflow::__anon1	file:
+DEBUG	es_distributed/tabular_logger.py	/^DEBUG = 10$/;"	v
+DEBUG	gpu_implementation/tabular_logger.py	/^DEBUG = 10$/;"	v
+DEBUG_LOGGING_MAP	scripts/ec2ctl	/^DEBUG_LOGGING_MAP = {$/;"	v
+DEFAULT	es_distributed/tabular_logger.py	/^    DEFAULT = None # A logger with no output files. (See right below class definition) $/;"	v	class:_Logger
+DEFAULT	gpu_implementation/tabular_logger.py	/^def DEFAULT():$/;"	f
+DIR	gpu_implementation/gym_tensorflow/Makefile	/^DIR := .\/$/;"	m
+DISABLED	es_distributed/tabular_logger.py	/^DISABLED = 50$/;"	v
+DISABLED	gpu_implementation/tabular_logger.py	/^DISABLED = 50$/;"	v
+DataPoint	visual_inspector/figure_base/load_data.py	/^class DataPoint:$/;"	c
+DiscreteSlider	visual_inspector/figure_base/fitness_figures.py	/^class DiscreteSlider(Slider):$/;"	c
+DiscretizeActions	es_distributed/atari_wrappers.py	/^class DiscretizeActions(gym.Wrapper):$/;"	c
+EIGEN_USE_THREADS	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	1;"	d	file:
+ERROR	es_distributed/tabular_logger.py	/^ERROR = 40$/;"	v
+ERROR	gpu_implementation/tabular_logger.py	/^ERROR = 40$/;"	v
+ESAtariPolicy	es_distributed/policies.py	/^class ESAtariPolicy(Policy):$/;"	c
+EXCLUSIVE_LOCKS_REQUIRED	gpu_implementation/gym_tensorflow/atari/tf_atari.cpp	/^    virtual Status CreateResource(OpKernelContext* context, BaseEnvironment** ret) EXCLUSIVE_LOCKS_REQUIRED(mu_) {$/;"	f	class:AtariMakeOp	file:
+EXCLUSIVE_LOCKS_REQUIRED	gpu_implementation/gym_tensorflow/maze/tf_maze.cpp	/^    virtual Status CreateResource(OpKernelContext* context, BaseEnvironment** ret) EXCLUSIVE_LOCKS_REQUIRED(mu_) {$/;"	f	class:MazeMakeOp	file:
+EXP_KEY	es_distributed/dist.py	/^EXP_KEY = 'es:exp'$/;"	v
+Environment	gpu_implementation/gym_tensorflow/maze/maze.h	/^        Environment()$/;"	f	class:maze::Environment
+Environment	gpu_implementation/gym_tensorflow/maze/maze.h	/^        Environment(const Environment &e)$/;"	f	class:maze::Environment
+Environment	gpu_implementation/gym_tensorflow/maze/maze.h	/^        Environment(const char* filename) : Environment()$/;"	f	class:maze::Environment
+Environment	gpu_implementation/gym_tensorflow/maze/maze.h	/^    class Environment$/;"	c	namespace:maze
+Environment	gpu_implementation/gym_tensorflow/tf_env.h	/^class Environment : public BaseEnvironment$/;"	c
+EnvironmentMakeOp	gpu_implementation/gym_tensorflow/tf_env.cpp	/^EnvironmentMakeOp::EnvironmentMakeOp(OpKernelConstruction* context) : OpKernel(context) {$/;"	f	class:EnvironmentMakeOp
+EnvironmentMakeOp	gpu_implementation/gym_tensorflow/tf_env.h	/^class EnvironmentMakeOp : public OpKernel {$/;"	c
+EnvironmentObservationOp	gpu_implementation/gym_tensorflow/tf_env.cpp	/^    explicit EnvironmentObservationOp(OpKernelConstruction* context) : OpKernel(context) {$/;"	f	class:EnvironmentObservationOp
+EnvironmentObservationOp	gpu_implementation/gym_tensorflow/tf_env.cpp	/^class EnvironmentObservationOp : public OpKernel {$/;"	c	file:
+EnvironmentResetOp	gpu_implementation/gym_tensorflow/tf_env.cpp	/^    explicit EnvironmentResetOp(OpKernelConstruction* context) : OpKernel(context) {$/;"	f	class:EnvironmentResetOp
+EnvironmentResetOp	gpu_implementation/gym_tensorflow/tf_env.cpp	/^REGISTER_KERNEL_BUILDER(Name("EnvironmentReset").Device(DEVICE_CPU), EnvironmentResetOp);$/;"	v
+EnvironmentResetOp	gpu_implementation/gym_tensorflow/tf_env.cpp	/^class EnvironmentResetOp : public OpKernel {$/;"	c	file:
+EnvironmentStepOp	gpu_implementation/gym_tensorflow/tf_env.cpp	/^    explicit EnvironmentStepOp(OpKernelConstruction* context) : OpKernel(context) {$/;"	f	class:EnvironmentStepOp
+EnvironmentStepOp	gpu_implementation/gym_tensorflow/tf_env.cpp	/^class EnvironmentStepOp : public OpKernel {$/;"	c	file:
+EpisodicLifeEnv	es_distributed/atari_wrappers.py	/^class EpisodicLifeEnv(gym.Wrapper):$/;"	c
+ExponentialSchedule	gpu_implementation/neuroevolution/helper.py	/^class ExponentialSchedule(object):$/;"	c
+FLAGS	gpu_implementation/gym_tensorflow/Makefile	/^FLAGS := -std=c++11 -shared -fPIC -I$(TF_INC) -I$(TF_INC)\/external\/nsync\/public -L$(TF_LIB) -D_GLIBCXX_USE_CXX11_ABI=0 -O2$/;"	m
+FigureControl	visual_inspector/figure_base/figure_control.py	/^class FigureControl():$/;"	c
+FireResetEnv	es_distributed/atari_wrappers.py	/^class FireResetEnv(gym.Wrapper):$/;"	c
+FitnessPlot	visual_inspector/figure_base/fitness_figures.py	/^class FitnessPlot():$/;"	c
+FitnessPlotClick	visual_inspector/figure_base/mouse_event.py	/^class FitnessPlotClick():$/;"	c
+FrameStack	es_distributed/atari_wrappers.py	/^class FrameStack(gym.Wrapper):$/;"	c
+GAAtariPolicy	es_distributed/policies.py	/^class GAAtariPolicy(Policy):$/;"	c
+GATask	es_distributed/ga.py	/^GATask = namedtuple('GATask', ['params', 'population', 'ob_mean', 'ob_std', 'timestep_limit'])$/;"	v
+GATask	es_distributed/ga_modified.py	/^GATask = namedtuple('GATask', ['params', 'population', 'ob_mean', 'ob_std', 'timestep_limit'])$/;"	v
+GPUDevice	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	/^typedef Eigen::GpuDevice GPUDevice;$/;"	t	file:
+GenStat	visual_inspector/figure_base/load_data.py	/^class GenStat:$/;"	c
+GetFlat	es_distributed/tf_util.py	/^class GetFlat(object):$/;"	c
+GymEnv	gpu_implementation/gym_tensorflow/tf_env.py	/^class GymEnv(PythonEnv):$/;"	c
+INFO	es_distributed/tabular_logger.py	/^INFO = 20$/;"	v
+INFO	gpu_implementation/tabular_logger.py	/^INFO = 20$/;"	v
+IndexedBatchMatMul	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	/^  explicit IndexedBatchMatMul(OpKernelConstruction* context) : OpKernel(context) {$/;"	f	class:tensorflow::IndexedBatchMatMul
+IndexedBatchMatMul	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	/^class IndexedBatchMatMul : public OpKernel {$/;"	c	namespace:tensorflow	file:
+LDFLAGS	gpu_implementation/gym_tensorflow/Makefile	/^LDFLAGS := -ltensorflow_framework$/;"	m
+LOCKS_EXCLUDED	gpu_implementation/gym_tensorflow/tf_env.cpp	/^void EnvironmentMakeOp::Compute(OpKernelContext* context) LOCKS_EXCLUDED(mu_) {$/;"	f
+LargeDQN	gpu_implementation/neuroevolution/models/dqn_xavier.py	/^class LargeDQN(BaseModel):$/;"	c
+LargeModel	gpu_implementation/neuroevolution/models/dqn.py	/^class LargeModel(Model):$/;"	c
+Launch	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	/^  static void Launch(OpKernelContext* context, const Tensor& in_x,$/;"	f	struct:tensorflow::LaunchIndexedBatchMatMul
+LaunchIndexedBatchMatMul	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	/^struct LaunchIndexedBatchMatMul<CPUDevice, Scalar> {$/;"	s	namespace:tensorflow	file:
+LaunchIndexedBatchMatMul	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	/^struct LaunchIndexedBatchMatMul<GPUDevice, Scalar> {$/;"	s	namespace:tensorflow	file:
+Line	gpu_implementation/gym_tensorflow/maze/maze.h	/^        Line()$/;"	f	class:maze::Line
+Line	gpu_implementation/gym_tensorflow/maze/maze.h	/^        Line(Point k,Point j)$/;"	f	class:maze::Line
+Line	gpu_implementation/gym_tensorflow/maze/maze.h	/^        Line(ifstream& file)$/;"	f	class:maze::Line
+Line	gpu_implementation/gym_tensorflow/maze/maze.h	/^    class Line$/;"	c	namespace:maze
+LinearClassifier	gpu_implementation/neuroevolution/models/simple.py	/^class LinearClassifier(Model):$/;"	c
+LinearSchedule	gpu_implementation/neuroevolution/helper.py	/^class LinearSchedule(object):$/;"	c
+Load	es_distributed/policies.py	/^    def Load(cls, filename, extra_kwargs=None):$/;"	m	class:Policy
+MARKERS	visual_inspector/figure_base/settings.py	/^MARKERS = [$/;"	v
+MAZE_H	gpu_implementation/gym_tensorflow/maze/maze.h	21;"	d
+MasterClient	es_distributed/dist.py	/^class MasterClient:$/;"	c
+MaxAndSkipEnv	es_distributed/atari_wrappers.py	/^class MaxAndSkipEnv(gym.Wrapper):$/;"	c
+MazeEnv	gpu_implementation/gym_tensorflow/maze/tf_maze.py	/^class MazeEnv(TensorFlowEnv):$/;"	c
+MazeEnvironment	gpu_implementation/gym_tensorflow/maze/tf_maze.cpp	/^        MazeEnvironment(int batch_size)$/;"	f	class:MazeEnvironment
+MazeEnvironment	gpu_implementation/gym_tensorflow/maze/tf_maze.cpp	/^class MazeEnvironment : public Environment<float>, public StepInterface<float>$/;"	c	file:
+MazeFinalStateOp	gpu_implementation/gym_tensorflow/maze/tf_maze.cpp	/^    explicit MazeFinalStateOp(OpKernelConstruction* context) : OpKernel(context) {$/;"	f	class:MazeFinalStateOp
+MazeFinalStateOp	gpu_implementation/gym_tensorflow/maze/tf_maze.cpp	/^REGISTER_KERNEL_BUILDER(Name("MazeFinalState").Device(DEVICE_CPU), MazeFinalStateOp);$/;"	v
+MazeFinalStateOp	gpu_implementation/gym_tensorflow/maze/tf_maze.cpp	/^class MazeFinalStateOp : public OpKernel {$/;"	c	file:
+MazeMakeOp	gpu_implementation/gym_tensorflow/maze/tf_maze.cpp	/^    explicit MazeMakeOp(OpKernelConstruction* context) : EnvironmentMakeOp(context) {$/;"	f	class:MazeMakeOp
+MazeMakeOp	gpu_implementation/gym_tensorflow/maze/tf_maze.cpp	/^REGISTER_KERNEL_BUILDER(Name("MazeMake").Device(DEVICE_CPU), MazeMakeOp);$/;"	v
+MazeMakeOp	gpu_implementation/gym_tensorflow/maze/tf_maze.cpp	/^class MazeMakeOp : public EnvironmentMakeOp {$/;"	c	file:
+Model	gpu_implementation/neuroevolution/models/dqn.py	/^class Model(BaseModel):$/;"	c
+ModelBN	gpu_implementation/neuroevolution/models/batchnorm.py	/^class ModelBN(Model):$/;"	c
+ModelVirtualBN	gpu_implementation/neuroevolution/models/batchnorm.py	/^class ModelVirtualBN(Model):$/;"	c
+MouseMove	visual_inspector/figure_base/mouse_event.py	/^class MouseMove():$/;"	c
+MujocoPolicy	es_distributed/policies.py	/^class MujocoPolicy(Policy):$/;"	c
+Multiply	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	/^static void Multiply(bool adj_x, bool adj_y, Tx x, Ty y, Tz z) {$/;"	f	namespace:tensorflow::__anon1
+NoopResetEnv	es_distributed/atari_wrappers.py	/^class NoopResetEnv(gym.Wrapper):$/;"	c
+NumPyArangeEncoder	gpu_implementation/tabular_logger.py	/^class NumPyArangeEncoder(json.JSONEncoder):$/;"	c
+Offspring	gpu_implementation/es.py	/^class Offspring(object):$/;"	c
+Offspring	gpu_implementation/ga.py	/^class Offspring(object):$/;"	c
+OffspringCached	gpu_implementation/ga.py	/^class OffspringCached(object):$/;"	c
+Optimizer	es_distributed/optimizers.py	/^class Optimizer(object):$/;"	c
+Optimizer	gpu_implementation/neuroevolution/optimizers.py	/^class Optimizer(object):$/;"	c
+Point	gpu_implementation/gym_tensorflow/maze/maze.h	/^        Point()$/;"	f	class:maze::Point
+Point	gpu_implementation/gym_tensorflow/maze/maze.h	/^        Point(const Point& k)$/;"	f	class:maze::Point
+Point	gpu_implementation/gym_tensorflow/maze/maze.h	/^        Point(float x1,float y1)$/;"	f	class:maze::Point
+Point	gpu_implementation/gym_tensorflow/maze/maze.h	/^    class Point$/;"	c	namespace:maze
+PointClick	visual_inspector/figure_base/mouse_event.py	/^class PointClick():$/;"	c
+Policy	es_distributed/policies.py	/^class Policy:$/;"	c
+PythonEnv	gpu_implementation/gym_tensorflow/tf_env.py	/^class PythonEnv(TensorFlowEnv):$/;"	c
+RAM_SIZE	gpu_implementation/gym_tensorflow/atari/tf_atari.cpp	22;"	d	file:
+REGIONS	scripts/ec2ctl	/^REGIONS = [$/;"	v
+REGISTER_BATCH_MATMUL_CPU	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	354;"	d	file:
+REGISTER_BATCH_MATMUL_GPU	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	347;"	d	file:
+REGISTER_KERNEL	gpu_implementation/gym_tensorflow/tf_env.cpp	221;"	d	file:
+REGISTER_KERNEL	gpu_implementation/gym_tensorflow/tf_env.cpp	227;"	d	file:
+REGISTER_KERNEL	gpu_implementation/gym_tensorflow/tf_env.cpp	311;"	d	file:
+REGISTER_KERNEL	gpu_implementation/gym_tensorflow/tf_env.cpp	318;"	d	file:
+RESULTS_KEY	es_distributed/dist.py	/^RESULTS_KEY = 'es:results'$/;"	v
+RLEvalutionWorker	gpu_implementation/neuroevolution/concurrent_worker.py	/^class RLEvalutionWorker(AsyncWorker):$/;"	c
+RelayClient	es_distributed/dist.py	/^class RelayClient:$/;"	c
+Result	es_distributed/es.py	/^Result = namedtuple('Result', [$/;"	v
+Result	es_distributed/es_modified.py	/^Result = namedtuple('Result', [$/;"	v
+RolloutAtari	visual_inspector/figure_custom/rollout_custom.py	/^class RolloutAtari(RolloutBase):$/;"	c
+RolloutBase	visual_inspector/figure_base/rollout_base.py	/^class RolloutBase():$/;"	c
+RolloutMujoco	visual_inspector/figure_custom/rollout_custom.py	/^class RolloutMujoco(RolloutBase):$/;"	c
+Run	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	/^  static void Run(const Tensor& in_x, const Tensor& in_y, const Tensor& in_idx, bool adj_x,$/;"	f	struct:tensorflow::__anon1::SequentialIndexedMatMulKernel
+RunningStat	es_distributed/es.py	/^class RunningStat(object):$/;"	c
+RunningStat	es_distributed/es_modified.py	/^class RunningStat(object):$/;"	c
+SGD	es_distributed/optimizers.py	/^class SGD(Optimizer):$/;"	c
+SGD	gpu_implementation/neuroevolution/optimizers.py	/^class SGD(Optimizer):$/;"	c
+SOURCES	gpu_implementation/gym_tensorflow/Makefile	/^SOURCES := $(DIR)\/*.cpp $(DIR)\/ops\/*.cpp$/;"	m
+ScalarShape	gpu_implementation/gym_tensorflow/atari/tf_atari.cpp	/^    .SetShapeFn(shape_inference::ScalarShape);$/;"	v
+ScalarShape	gpu_implementation/gym_tensorflow/maze/tf_maze.cpp	/^    .SetShapeFn(shape_inference::ScalarShape);$/;"	v
+ScaledFloatFrame	es_distributed/atari_wrappers.py	/^class ScaledFloatFrame(gym.ObservationWrapper):$/;"	c
+SequentialIndexedMatMulKernel	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	/^struct SequentialIndexedMatMulKernel {$/;"	s	namespace:tensorflow::__anon1	file:
+SetFromFlat	es_distributed/tf_util.py	/^class SetFromFlat(object):$/;"	c
+SharedNoiseTable	es_distributed/es.py	/^class SharedNoiseTable(object):$/;"	c
+SharedNoiseTable	es_distributed/es_modified.py	/^class SharedNoiseTable(object):$/;"	c
+SharedNoiseTable	gpu_implementation/neuroevolution/helper.py	/^class SharedNoiseTable(object):$/;"	c
+SimpleClassifier	gpu_implementation/neuroevolution/models/simple.py	/^class SimpleClassifier(Model):$/;"	c
+SmallDQN	gpu_implementation/neuroevolution/models/dqn_xavier.py	/^class SmallDQN(BaseModel):$/;"	c
+StackFramesWrapper	gpu_implementation/gym_tensorflow/wrappers/stack_frames.py	/^class StackFramesWrapper(TensorFlowEnv):$/;"	c
+StepInterface	gpu_implementation/gym_tensorflow/tf_env.h	/^class StepInterface$/;"	c
+TASK_CHANNEL	es_distributed/dist.py	/^TASK_CHANNEL = 'es:task_channel'$/;"	v
+TASK_DATA_KEY	es_distributed/dist.py	/^TASK_DATA_KEY = 'es:task_data'$/;"	v
+TASK_ID_KEY	es_distributed/dist.py	/^TASK_ID_KEY = 'es:task_id'$/;"	v
+TF_ENV_H_	gpu_implementation/gym_tensorflow/tf_env.h	21;"	d
+TF_INC	gpu_implementation/gym_tensorflow/Makefile	/^TF_INC := $(shell python -c 'import tensorflow as tf; print(tf.sysconfig.get_include())')$/;"	m
+TF_LIB	gpu_implementation/gym_tensorflow/Makefile	/^TF_LIB := $(shell python -c 'import tensorflow as tf; print(tf.sysconfig.get_lib())')$/;"	m
+TabularLogger	gpu_implementation/tabular_logger.py	/^class TabularLogger(object):$/;"	c
+Task	es_distributed/es.py	/^Task = namedtuple('Task', ['params', 'ob_mean', 'ob_std', 'ref_batch', 'timestep_limit'])$/;"	v
+Task	es_distributed/es_modified.py	/^Task = namedtuple('Task', ['params', 'ob_mean', 'ob_std', 'ref_batch', 'timestep_limit'])$/;"	v
+TbWriter	es_distributed/tabular_logger.py	/^class TbWriter(object):$/;"	c
+TensorFlowEnv	gpu_implementation/gym_tensorflow/tf_env.py	/^class TensorFlowEnv(object):$/;"	c
+TensorSliceToEigenMatrix	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	/^  static MatrixMap TensorSliceToEigenMatrix(Tensor* t, int slice) {$/;"	f	struct:tensorflow::__anon1::SequentialIndexedMatMulKernel
+TextArea	visual_inspector/figure_base/cloud_figures.py	/^class TextArea():$/;"	c
+TrainingState	gpu_implementation/es.py	/^class TrainingState(object):$/;"	c
+TrainingState	gpu_implementation/ga.py	/^class TrainingState(object):$/;"	c
+UNAME_S	gpu_implementation/gym_tensorflow/Makefile	/^UNAME_S := $(shell uname -s)$/;"	m
+USE_ALE	gpu_implementation/gym_tensorflow/Makefile	/^USE_ALE := 0$/;"	m
+USE_GPU	gpu_implementation/gym_tensorflow/Makefile	/^USE_GPU := 1$/;"	m
+USE_SDL	gpu_implementation/gym_tensorflow/Makefile	/^USE_SDL := 0$/;"	m
+Update	gpu_implementation/gym_tensorflow/maze/maze.h	/^        void Update()$/;"	f	class:maze::Environment
+VARIABLES	es_distributed/tf_util.py	/^VARIABLES = {}$/;"	v
+VerifyResource	gpu_implementation/gym_tensorflow/tf_env.cpp	/^Status EnvironmentMakeOp::VerifyResource(BaseEnvironment* resource) { return Status::OK(); }$/;"	f	class:EnvironmentMakeOp
+WARN	es_distributed/tabular_logger.py	/^WARN = 30$/;"	v
+WARN	gpu_implementation/tabular_logger.py	/^WARN = 30$/;"	v
+WarpFrame	es_distributed/atari_wrappers.py	/^class WarpFrame(gym.ObservationWrapper):$/;"	c
+WorkerClient	es_distributed/dist.py	/^class WorkerClient:$/;"	c
+WorkerHub	gpu_implementation/neuroevolution/distributed_helpers.py	/^class WorkerHub(object):$/;"	c
+WorkerSession	gpu_implementation/neuroevolution/tf_util.py	/^class WorkerSession(object):$/;"	c
+_CheckButtons	visual_inspector/figure_base/buttons.py	/^class _CheckButtons(CheckButtons):$/;"	c
+_Function	es_distributed/tf_util.py	/^class _Function(object):$/;"	c
+_Logger	es_distributed/tabular_logger.py	/^class _Logger(object):$/;"	c
+_PLACEHOLDER_CACHE	es_distributed/tf_util.py	/^_PLACEHOLDER_CACHE = {} # name -> (placeholder, dtype, shape)$/;"	v
+_RadioButtons	visual_inspector/figure_base/buttons.py	/^class _RadioButtons(RadioButtons):$/;"	c
+__CURRENT	gpu_implementation/tabular_logger.py	/^__CURRENT = None$/;"	v
+__DEFAULT	gpu_implementation/tabular_logger.py	/^__DEFAULT = None$/;"	v
+__call__	es_distributed/tf_util.py	/^    def __call__(self):$/;"	m	class:GetFlat	file:
+__call__	es_distributed/tf_util.py	/^    def __call__(self, *inputvals):$/;"	m	class:_Function	file:
+__call__	es_distributed/tf_util.py	/^    def __call__(self, theta):$/;"	m	class:SetFromFlat	file:
+__enter__	gpu_implementation/neuroevolution/tf_util.py	/^    def __enter__(self, *args, **kwargs):$/;"	m	class:WorkerSession	file:
+__exit__	gpu_implementation/neuroevolution/tf_util.py	/^    def __exit__(self, exception_type, exception_value, traceback):$/;"	m	class:WorkerSession	file:
+__init__	es_distributed/atari_wrappers.py	/^    def __init__(self, env):$/;"	m	class:DiscretizeActions
+__init__	es_distributed/atari_wrappers.py	/^    def __init__(self, env):$/;"	m	class:EpisodicLifeEnv
+__init__	es_distributed/atari_wrappers.py	/^    def __init__(self, env):$/;"	m	class:FireResetEnv
+__init__	es_distributed/atari_wrappers.py	/^    def __init__(self, env, k):$/;"	m	class:FrameStack
+__init__	es_distributed/atari_wrappers.py	/^    def __init__(self, env, noop_max=30):$/;"	m	class:NoopResetEnv
+__init__	es_distributed/atari_wrappers.py	/^    def __init__(self, env, show_warped=False):$/;"	m	class:WarpFrame
+__init__	es_distributed/atari_wrappers.py	/^    def __init__(self, env, skip=4):$/;"	m	class:MaxAndSkipEnv
+__init__	es_distributed/dist.py	/^    def __init__(self, master_redis_cfg):$/;"	m	class:MasterClient
+__init__	es_distributed/dist.py	/^    def __init__(self, master_redis_cfg, relay_redis_cfg):$/;"	m	class:RelayClient
+__init__	es_distributed/dist.py	/^    def __init__(self, relay_redis_cfg, master_redis_cfg):$/;"	m	class:WorkerClient
+__init__	es_distributed/es.py	/^    def __init__(self):$/;"	m	class:SharedNoiseTable
+__init__	es_distributed/es.py	/^    def __init__(self, shape, eps):$/;"	m	class:RunningStat
+__init__	es_distributed/es_modified.py	/^    def __init__(self):$/;"	m	class:SharedNoiseTable
+__init__	es_distributed/es_modified.py	/^    def __init__(self, shape, eps):$/;"	m	class:RunningStat
+__init__	es_distributed/optimizers.py	/^    def __init__(self, theta):$/;"	m	class:Optimizer
+__init__	es_distributed/optimizers.py	/^    def __init__(self, theta, stepsize, beta1=0.9, beta2=0.999, epsilon=1e-08):$/;"	m	class:Adam
+__init__	es_distributed/optimizers.py	/^    def __init__(self, theta, stepsize, momentum=0.9):$/;"	m	class:SGD
+__init__	es_distributed/policies.py	/^    def __init__(self, *args, **kwargs):$/;"	m	class:Policy
+__init__	es_distributed/tabular_logger.py	/^    def __init__(self, dir, prefix):$/;"	m	class:TbWriter
+__init__	es_distributed/tabular_logger.py	/^    def __init__(self, dir=None):$/;"	m	class:_Logger
+__init__	es_distributed/tf_util.py	/^    def __init__(self, inputs, outputs, updates, givens, check_nan=False):$/;"	m	class:_Function
+__init__	es_distributed/tf_util.py	/^    def __init__(self, var_list):$/;"	m	class:GetFlat
+__init__	es_distributed/tf_util.py	/^    def __init__(self, var_list, dtype=tf.float32):$/;"	m	class:SetFromFlat
+__init__	gpu_implementation/es.py	/^    def __init__(self, exp):$/;"	m	class:TrainingState
+__init__	gpu_implementation/es.py	/^    def __init__(self, seeds, rewards, ep_len, validation_rewards=[], validation_ep_len=[]):$/;"	m	class:Offspring
+__init__	gpu_implementation/ga.py	/^    def __init__(self, exp):$/;"	m	class:TrainingState
+__init__	gpu_implementation/ga.py	/^    def __init__(self, seeds):$/;"	m	class:OffspringCached
+__init__	gpu_implementation/ga.py	/^    def __init__(self, seeds, rewards, ep_len, validation_rewards=[], validation_ep_len=[]):$/;"	m	class:Offspring
+__init__	gpu_implementation/gym_tensorflow/atari/__init__.py	/^        def __init__(self, * args, ** kwargs):$/;"	m	class:AtariEnv
+__init__	gpu_implementation/gym_tensorflow/atari/tf_atari.py	/^    def __init__(self, game, batch_size, warp_size=(84, 84), color_pallete=None, frameskip=4, name=None):$/;"	m	class:AtariEnv
+__init__	gpu_implementation/gym_tensorflow/maze/tf_maze.py	/^    def __init__(self, batch_size, name=None):$/;"	m	class:MazeEnv
+__init__	gpu_implementation/gym_tensorflow/tf_env.py	/^    def __init__(self, name, batch_size):$/;"	m	class:GymEnv
+__init__	gpu_implementation/gym_tensorflow/wrappers/stack_frames.py	/^    def __init__(self, env, num_stacked_frames=4):$/;"	m	class:StackFramesWrapper
+__init__	gpu_implementation/neuroevolution/concurrent_worker.py	/^    def __init__(self, make_env_f, *args, gpus=get_available_gpus() * 4, input_queue=None, done_queue=None, **kwargs):$/;"	m	class:ConcurrentWorkers
+__init__	gpu_implementation/neuroevolution/concurrent_worker.py	/^    def __init__(self, make_env_f, model, batch_size, device='\/cpu:0', ref_batch=None):$/;"	m	class:RLEvalutionWorker
+__init__	gpu_implementation/neuroevolution/distributed_helpers.py	/^    def __init__(self, input_queue=None, results_queue=None):$/;"	m	class:AsyncTaskHub
+__init__	gpu_implementation/neuroevolution/distributed_helpers.py	/^    def __init__(self, workers, input_queue, done_queue):$/;"	m	class:WorkerHub
+__init__	gpu_implementation/neuroevolution/helper.py	/^    def __init__(self):$/;"	m	class:SharedNoiseTable
+__init__	gpu_implementation/neuroevolution/helper.py	/^    def __init__(self, initial_p, final_p, schedule, field):$/;"	m	class:ExponentialSchedule
+__init__	gpu_implementation/neuroevolution/helper.py	/^    def __init__(self, schedule, final_p, initial_p, field):$/;"	m	class:LinearSchedule
+__init__	gpu_implementation/neuroevolution/helper.py	/^    def __init__(self, value):$/;"	m	class:ConstantSchedule
+__init__	gpu_implementation/neuroevolution/models/base.py	/^    def __init__(self):$/;"	m	class:BaseModel
+__init__	gpu_implementation/neuroevolution/models/batchnorm.py	/^    def __init__(self):$/;"	m	class:ModelBN
+__init__	gpu_implementation/neuroevolution/models/batchnorm.py	/^    def __init__(self):$/;"	m	class:ModelVirtualBN
+__init__	gpu_implementation/neuroevolution/optimizers.py	/^    def __init__(self, theta):$/;"	m	class:Optimizer
+__init__	gpu_implementation/neuroevolution/optimizers.py	/^    def __init__(self, theta, stepsize, beta1=0.9, beta2=0.999, epsilon=1e-08):$/;"	m	class:Adam
+__init__	gpu_implementation/neuroevolution/optimizers.py	/^    def __init__(self, theta, stepsize, momentum=0.9):$/;"	m	class:SGD
+__init__	gpu_implementation/neuroevolution/tf_util.py	/^    def __init__(self, worker):$/;"	m	class:WorkerSession
+__init__	gpu_implementation/tabular_logger.py	/^    def __init__(self, dir=None, format='{asctime} {message}\\n', datefmt='%m\/%d\/%Y %I:%M:%S %p'):$/;"	m	class:TabularLogger
+__init__	visual_inspector/figure_base/buttons.py	/^    def __init__(self, *args, **kwargs):$/;"	m	class:_RadioButtons
+__init__	visual_inspector/figure_base/buttons.py	/^    def __init__(self, fig, visible_range):$/;"	m	class:ButtonArea
+__init__	visual_inspector/figure_base/cloud_figures.py	/^    def __init__(self, fig):$/;"	m	class:ColorBar
+__init__	visual_inspector/figure_base/cloud_figures.py	/^    def __init__(self, fig):$/;"	m	class:TextArea
+__init__	visual_inspector/figure_base/cloud_figures.py	/^    def __init__(self, title, start_iter, end_iter, snapshots_path, visible_range, bc_dim=2):$/;"	m	class:CloudPlot
+__init__	visual_inspector/figure_base/fitness_figures.py	/^    def __init__(self, *args, **kwargs):$/;"	m	class:DiscreteSlider
+__init__	visual_inspector/figure_base/fitness_figures.py	/^    def __init__(self, title, start_iter, end_iter, snapshots_path):$/;"	m	class:FitnessPlot
+__init__	visual_inspector/figure_base/load_data.py	/^    def __init__(self, artist, table, filename, op_data=None):$/;"	m	class:GenStat
+__init__	visual_inspector/figure_base/load_data.py	/^    def __init__(self, x, y, fitness, gen, parentOrNot, message, op_data=None):$/;"	m	class:DataPoint
+__init__	visual_inspector/figure_custom/cloud_figures_custom.py	/^    def __init__(self, *args, **kwargs):$/;"	m	class:CloudPlotHDBC
+__init__	visual_inspector/figure_custom/cloud_figures_custom.py	/^    def __init__(self, *args, **kwargs):$/;"	m	class:CloudPlotRollout
+__init__	visual_inspector/figure_custom/rollout_trajectory.py	/^    def __init__(self, gen, thisData, cloud_plot):$/;"	m	class:rolloutMaker
+__initialize_handlers	gpu_implementation/neuroevolution/distributed_helpers.py	/^    def __initialize_handlers(self):$/;"	m	class:WorkerHub	file:
+__log	gpu_implementation/tabular_logger.py	/^def __log(level, *args):$/;"	f	file:
+_collect_instances	scripts/ec2ctl	/^def _collect_instances(region):$/;"	f
+_collect_scaling_groups	scripts/ec2ctl	/^def _collect_scaling_groups(region):$/;"	f
+_compute_step	es_distributed/optimizers.py	/^    def _compute_step(self, globalg):$/;"	m	class:Adam
+_compute_step	es_distributed/optimizers.py	/^    def _compute_step(self, globalg):$/;"	m	class:Optimizer
+_compute_step	es_distributed/optimizers.py	/^    def _compute_step(self, globalg):$/;"	m	class:SGD
+_compute_step	gpu_implementation/neuroevolution/optimizers.py	/^    def _compute_step(self, globalg):$/;"	m	class:Adam
+_compute_step	gpu_implementation/neuroevolution/optimizers.py	/^    def _compute_step(self, globalg):$/;"	m	class:Optimizer
+_compute_step	gpu_implementation/neuroevolution/optimizers.py	/^    def _compute_step(self, globalg):$/;"	m	class:SGD
+_declare_task_local	es_distributed/dist.py	/^    def _declare_task_local(self, task_id, task_data):$/;"	m	class:RelayClient
+_demo	es_distributed/tabular_logger.py	/^def _demo():$/;"	f
+_do_log	es_distributed/tabular_logger.py	/^    def _do_log(self, *args):$/;"	m	class:_Logger
+_do_log	gpu_implementation/tabular_logger.py	/^    def _do_log(self, *args):$/;"	m	class:TabularLogger
+_get_pos	es_distributed/policies.py	/^    def _get_pos(self, model):$/;"	m	class:MujocoPolicy
+_handle_input	gpu_implementation/neuroevolution/distributed_helpers.py	/^    def _handle_input(self):$/;"	m	class:WorkerHub
+_handle_output	gpu_implementation/neuroevolution/distributed_helpers.py	/^    def _handle_output(self):$/;"	m	class:AsyncTaskHub
+_handle_output	gpu_implementation/neuroevolution/distributed_helpers.py	/^    def _handle_output(self):$/;"	m	class:WorkerHub
+_initialize	es_distributed/policies.py	/^    def _initialize(self, *args, **kwargs):$/;"	m	class:Policy
+_initialize	es_distributed/policies.py	/^    def _initialize(self, ob_space, ac_space):$/;"	m	class:ESAtariPolicy
+_initialize	es_distributed/policies.py	/^    def _initialize(self, ob_space, ac_space, ac_bins, ac_noise_std, nonlin_type, hidden_dims, connection_type):$/;"	m	class:MujocoPolicy
+_initialize	es_distributed/policies.py	/^    def _initialize(self, ob_space, ac_space, nonlin_type, ac_init_std=0.1):$/;"	m	class:GAAtariPolicy
+_initializer	es_distributed/tf_util.py	/^    def _initializer(shape, dtype=None, partition_info=None): #pylint: disable=W0613$/;"	f	function:normc_initializer
+_loop	gpu_implementation/neuroevolution/concurrent_worker.py	/^    def _loop(self):$/;"	m	class:RLEvalutionWorker
+_make_net	es_distributed/policies.py	/^    def _make_net(self, o):$/;"	m	class:GAAtariPolicy
+_make_net	es_distributed/policies.py	/^    def _make_net(self, o):$/;"	m	class:MujocoPolicy
+_make_net	es_distributed/policies.py	/^    def _make_net(self, o, is_ref):$/;"	m	class:ESAtariPolicy
+_make_net	gpu_implementation/neuroevolution/models/base.py	/^    def _make_net(self, x, num_actions):$/;"	m	class:BaseModel
+_make_net	gpu_implementation/neuroevolution/models/batchnorm.py	/^    def _make_net(self, x, num_actions):$/;"	m	class:ModelBN
+_make_net	gpu_implementation/neuroevolution/models/batchnorm.py	/^    def _make_net(self, x, num_actions, ):$/;"	m	class:ModelVirtualBN
+_make_net	gpu_implementation/neuroevolution/models/dqn.py	/^    def _make_net(self, x, num_actions):$/;"	m	class:LargeModel
+_make_net	gpu_implementation/neuroevolution/models/dqn.py	/^    def _make_net(self, x, num_actions):$/;"	m	class:Model
+_make_net	gpu_implementation/neuroevolution/models/dqn_xavier.py	/^    def _make_net(self, x, num_actions):$/;"	m	class:LargeDQN
+_make_net	gpu_implementation/neuroevolution/models/dqn_xavier.py	/^    def _make_net(self, x, num_actions):$/;"	m	class:SmallDQN
+_make_net	gpu_implementation/neuroevolution/models/simple.py	/^    def _make_net(self, x, num_actions):$/;"	m	class:LinearClassifier
+_make_net	gpu_implementation/neuroevolution/models/simple.py	/^    def _make_net(self, x, num_actions):$/;"	m	class:SimpleClassifier
+_normalize	es_distributed/tf_util.py	/^def _normalize(x, std):$/;"	f
+_obs	gpu_implementation/gym_tensorflow/tf_env.py	/^    def _obs(self, indices):$/;"	m	class:GymEnv
+_obs	gpu_implementation/gym_tensorflow/tf_env.py	/^    def _obs(self, indices):$/;"	m	class:PythonEnv
+_observation	es_distributed/atari_wrappers.py	/^    def _observation(self):$/;"	m	class:FrameStack
+_observation	es_distributed/atari_wrappers.py	/^    def _observation(self, obs):$/;"	m	class:ScaledFloatFrame
+_observation	es_distributed/atari_wrappers.py	/^    def _observation(self, obs):$/;"	m	class:WarpFrame
+_render	es_distributed/atari_wrappers.py	/^    def _render(self, mode='human', close=False):$/;"	m	class:MaxAndSkipEnv
+_render	es_distributed/atari_wrappers.py	/^    def _render(self, mode='human', close=False):$/;"	m	class:WarpFrame
+_reset	es_distributed/atari_wrappers.py	/^    def _reset(self):$/;"	m	class:EpisodicLifeEnv
+_reset	es_distributed/atari_wrappers.py	/^    def _reset(self):$/;"	m	class:FireResetEnv
+_reset	es_distributed/atari_wrappers.py	/^    def _reset(self):$/;"	m	class:FrameStack
+_reset	es_distributed/atari_wrappers.py	/^    def _reset(self):$/;"	m	class:MaxAndSkipEnv
+_reset	es_distributed/atari_wrappers.py	/^    def _reset(self):$/;"	m	class:NoopResetEnv
+_reset	gpu_implementation/gym_tensorflow/tf_env.py	/^    def _reset(self, indices):$/;"	m	class:GymEnv
+_reset	gpu_implementation/gym_tensorflow/tf_env.py	/^    def _reset(self, indices):$/;"	m	class:PythonEnv
+_step	es_distributed/atari_wrappers.py	/^    def _step(self, action):$/;"	m	class:DiscretizeActions
+_step	es_distributed/atari_wrappers.py	/^    def _step(self, action):$/;"	m	class:EpisodicLifeEnv
+_step	es_distributed/atari_wrappers.py	/^    def _step(self, action):$/;"	m	class:FrameStack
+_step	es_distributed/atari_wrappers.py	/^    def _step(self, action):$/;"	m	class:MaxAndSkipEnv
+_step	gpu_implementation/gym_tensorflow/tf_env.py	/^    def _step(self, action, indices):$/;"	m	class:GymEnv
+_step	gpu_implementation/gym_tensorflow/tf_env.py	/^    def _step(self, action, indices):$/;"	m	class:PythonEnv
+_truncate	es_distributed/tabular_logger.py	/^    def _truncate(self, s):$/;"	m	class:_Logger
+_truncate	gpu_implementation/tabular_logger.py	/^    def _truncate(self, s):$/;"	m	class:TabularLogger
+_write_text	es_distributed/tabular_logger.py	/^    def _write_text(self, *strings):$/;"	m	class:_Logger
+_write_text	gpu_implementation/tabular_logger.py	/^    def _write_text(self, *strings):$/;"	m	class:TabularLogger
+a	gpu_implementation/gym_tensorflow/maze/maze.h	/^        Point a;$/;"	m	class:maze::Line
+act	es_distributed/policies.py	/^    def act(self, ob, random_stream=None):$/;"	m	class:MujocoPolicy
+act	es_distributed/policies.py	/^    def act(self, ob, random_stream=None):$/;"	m	class:Policy
+act	es_distributed/policies.py	/^    def act(self, train_vars, random_stream=None):$/;"	m	class:ESAtariPolicy
+act	es_distributed/policies.py	/^    def act(self, train_vars, random_stream=None):$/;"	m	class:GAAtariPolicy
+action_space	gpu_implementation/gym_tensorflow/atari/tf_atari.py	/^    def action_space(self):$/;"	m	class:AtariEnv
+action_space	gpu_implementation/gym_tensorflow/maze/tf_maze.py	/^    def action_space(self):$/;"	m	class:MazeEnv
+action_space	gpu_implementation/gym_tensorflow/tf_env.py	/^    def action_space(self):$/;"	m	class:GymEnv
+action_space	gpu_implementation/gym_tensorflow/wrappers/stack_frames.py	/^    def action_space(self):$/;"	m	class:StackFramesWrapper
+add_point	gpu_implementation/gym_tensorflow/maze/maze.h	/^        void add_point(float* v)$/;"	f	class:maze::position_accumulator
+add_to_novelty_archive	es_distributed/dist.py	/^    def add_to_novelty_archive(self, novelty_vector):$/;"	m	class:MasterClient
+adj_x_	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	/^  bool adj_x_;$/;"	m	class:tensorflow::IndexedBatchMatMul	file:
+adj_y_	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	/^  bool adj_y_;$/;"	m	class:tensorflow::IndexedBatchMatMul	file:
+allocated_tensors_	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	/^  std::vector<Tensor> allocated_tensors_;$/;"	m	class:tensorflow::__anon1::CublasScratchAllocator	file:
+ang_vel	gpu_implementation/gym_tensorflow/maze/maze.h	/^        float ang_vel;$/;"	m	class:maze::Character
+angle	gpu_implementation/gym_tensorflow/maze/maze.h	/^        float angle()$/;"	f	class:maze::Point
+applyVisibleRange	visual_inspector/figure_base/figure_control.py	/^    def applyVisibleRange(cls, mode, newGen):$/;"	m	class:FigureControl
+argmax	es_distributed/tf_util.py	/^def argmax(x, axis=None):$/;"	f
+assemble	visual_inspector/dimen_red/assemble.py	/^def assemble(start_iter, end_iter, path, *, bc_dim, ds_ratio):$/;"	f
+aws_access_key_id	scripts/ec2ctl	/^aws_access_key_id = os.environ.get("AWS_ACCESS_KEY", None)$/;"	v
+aws_secret_access_key	scripts/ec2ctl	/^aws_secret_access_key = os.environ.get("AWS_ACCESS_SECRET", None)$/;"	v
+b	gpu_implementation/gym_tensorflow/maze/maze.h	/^        Point b;$/;"	m	class:maze::Line
+batch_size	gpu_implementation/gym_tensorflow/tf_env.h	/^    int batch_size;$/;"	m	class:EnvironmentMakeOp
+batch_size	gpu_implementation/gym_tensorflow/wrappers/stack_frames.py	/^    def batch_size(self):$/;"	m	class:StackFramesWrapper
+batched_weighted_sum	es_distributed/es.py	/^def batched_weighted_sum(weights, vecs, batch_size):$/;"	f
+batched_weighted_sum	es_distributed/es_modified.py	/^def batched_weighted_sum(weights, vecs, batch_size):$/;"	f
+batched_weighted_sum	gpu_implementation/es.py	/^def batched_weighted_sum(weights, vecs, batch_size):$/;"	f
+batchnorm	gpu_implementation/neuroevolution/models/batchnorm.py	/^    def batchnorm(self, x):$/;"	m	class:ModelBN
+batchnorm	gpu_implementation/neuroevolution/models/batchnorm.py	/^    def batchnorm(self, x):$/;"	m	class:ModelVirtualBN
+bins	es_distributed/policies.py	/^def bins(x, dim, num_bins, name):$/;"	f
+buffer	gpu_implementation/gym_tensorflow/maze/maze.h	/^        float* buffer;$/;"	m	class:maze::position_accumulator
+button_1	visual_inspector/figure_base/cloud_figures.py	/^    def button_1(self, artist, ind):$/;"	m	class:CloudPlot
+button_1	visual_inspector/figure_base/mouse_event.py	/^    def button_1(cls, cloud_plot, artist, ind):$/;"	m	class:PointClick
+button_3	visual_inspector/figure_base/cloud_figures.py	/^    def button_3(self, artist, ind):$/;"	m	class:CloudPlot
+button_3	visual_inspector/figure_base/mouse_event.py	/^    def button_3(cls, cloud_plot, artist, ind):$/;"	m	class:PointClick
+button_3	visual_inspector/figure_custom/cloud_figures_custom.py	/^    def button_3(self, artist, ind):$/;"	m	class:CloudPlotRollout
+button_3	visual_inspector/figure_custom/cloud_figures_custom.py	/^    def button_3(self, artist, ind):$/;"	m	class:CloudPlotRolloutAtari
+canvas2cloud_plot	visual_inspector/figure_base/settings.py	/^canvas2cloud_plot = {} # Figure canvas to figure object$/;"	v
+cap	gpu_implementation/gym_tensorflow/maze/maze.h	/^        float cap;$/;"	m	class:maze::position_accumulator
+categorical_sample_logits	es_distributed/tf_util.py	/^def categorical_sample_logits(X):$/;"	f
+clear_labels	visual_inspector/figure_base/cloud_figures.py	/^    def clear_labels(self):$/;"	m	class:CloudPlot
+clear_labels	visual_inspector/figure_base/figure_control.py	/^    def clear_labels(cls):$/;"	m	class:FigureControl
+clear_labels	visual_inspector/figure_custom/cloud_figures_custom.py	/^    def clear_labels(self):$/;"	m	class:CloudPlotHDBC
+cli	es_distributed/main.py	/^def cli():$/;"	f
+cli	scripts/ec2ctl	/^def cli(ctx, verbose):$/;"	f
+clip	es_distributed/tf_util.py	/^clip = tf.clip_by_value$/;"	v
+close	es_distributed/tabular_logger.py	/^    def close(self):$/;"	m	class:TbWriter
+close	es_distributed/tabular_logger.py	/^    def close(self):$/;"	m	class:_Logger
+close	gpu_implementation/gym_tensorflow/atari/tf_atari.py	/^    def close(self):$/;"	m	class:AtariEnv
+close	gpu_implementation/gym_tensorflow/maze/tf_maze.py	/^    def close(self):$/;"	m	class:MazeEnv
+close	gpu_implementation/gym_tensorflow/tf_env.py	/^    def close(self):$/;"	m	class:PythonEnv
+close	gpu_implementation/gym_tensorflow/wrappers/stack_frames.py	/^    def close(self):$/;"	m	class:StackFramesWrapper
+close	gpu_implementation/neuroevolution/concurrent_worker.py	/^    def close(self):$/;"	m	class:ConcurrentWorkers
+close	gpu_implementation/neuroevolution/concurrent_worker.py	/^    def close(self):$/;"	m	class:RLEvalutionWorker
+close	gpu_implementation/neuroevolution/distributed_helpers.py	/^    def close(self):$/;"	m	class:WorkerHub
+close	gpu_implementation/tabular_logger.py	/^    def close(self):$/;"	m	class:TabularLogger
+closest_to_poi	gpu_implementation/gym_tensorflow/maze/maze.h	/^        double closest_to_poi;$/;"	m	class:maze::Environment
+closest_to_target	gpu_implementation/gym_tensorflow/maze/maze.h	/^        double closest_to_target;$/;"	m	class:maze::Environment
+cloud_plots	visual_inspector/figure_base/settings.py	/^cloud_plots = set()$/;"	v
+collide	gpu_implementation/gym_tensorflow/maze/maze.h	/^        bool collide;$/;"	m	class:maze::Character
+collide_lines	gpu_implementation/gym_tensorflow/maze/maze.h	/^        bool collide_lines(Point loc,float rad)$/;"	f	class:maze::Environment
+collisions	gpu_implementation/gym_tensorflow/maze/maze.h	/^        int collisions;$/;"	m	class:maze::Character
+color_gradient	visual_inspector/figure_base/settings.py	/^    color_gradient = color[0].range_to(color[1], numBins)$/;"	v
+color_index	visual_inspector/figure_base/load_data.py	/^def color_index(fitness, minfit, maxfit):$/;"	f
+compute_centered_ranks	es_distributed/es.py	/^def compute_centered_ranks(x):$/;"	f
+compute_centered_ranks	es_distributed/es_modified.py	/^def compute_centered_ranks(x):$/;"	f
+compute_centered_ranks	gpu_implementation/es.py	/^def compute_centered_ranks(x):$/;"	f
+compute_mutation	gpu_implementation/neuroevolution/models/base.py	/^    def compute_mutation(self, noise, parent_theta, idx, mutation_power):$/;"	m	class:BaseModel
+compute_novelty_vs_archive	es_distributed/nses.py	/^def compute_novelty_vs_archive(archive, novelty_vector, k):$/;"	f
+compute_ranks	es_distributed/es.py	/^def compute_ranks(x):$/;"	f
+compute_ranks	es_distributed/es_modified.py	/^def compute_ranks(x):$/;"	f
+compute_ranks	gpu_implementation/es.py	/^def compute_ranks(x):$/;"	f
+compute_weights_from_seeds	gpu_implementation/neuroevolution/models/base.py	/^    def compute_weights_from_seeds(self, noise, seeds, cache=None):$/;"	m	class:BaseModel
+concatenate	es_distributed/tf_util.py	/^def concatenate(arrs, axis=0):$/;"	f
+concurrent_tasks	gpu_implementation/neuroevolution/concurrent_worker.py	/^    def concurrent_tasks(self):$/;"	m	class:RLEvalutionWorker
+concurrent_tasks	gpu_implementation/neuroevolution/distributed_helpers.py	/^    def concurrent_tasks(self):$/;"	m	class:AsyncWorker
+context_	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	/^  OpKernelContext* context_;$/;"	m	class:tensorflow::__anon1::CublasScratchAllocator	file:
+conv	es_distributed/tf_util.py	/^def conv(x, kernel_size, num_outputs, name, stride=1, padding="SAME", bias=True, std=1.0):$/;"	f
+conv	gpu_implementation/neuroevolution/models/base.py	/^    def conv(self, x, kernel_size, num_outputs, name, stride=1, padding="SAME", bias=True, std=1.0):$/;"	m	class:BaseModel
+copy_population	gpu_implementation/ga.py	/^    def copy_population(self, filename):$/;"	m	class:TrainingState
+count	gpu_implementation/gym_tensorflow/maze/maze.h	/^        long count;$/;"	m	class:maze::position_accumulator
+count	scripts/ec2ctl	/^              count=True)$/;"	v
+create_bias_variable	gpu_implementation/neuroevolution/models/base.py	/^    def create_bias_variable(self, name, shape):$/;"	m	class:BaseModel
+create_variable	gpu_implementation/neuroevolution/models/base.py	/^    def create_variable(self, name, shape, scale_by):$/;"	m	class:BaseModel
+create_weight_variable	gpu_implementation/neuroevolution/models/base.py	/^    def create_weight_variable(self, name, shape, std):$/;"	m	class:BaseModel
+create_weight_variable	gpu_implementation/neuroevolution/models/dqn.py	/^    def create_weight_variable(self, name, shape, std):$/;"	m	class:Model
+debug	es_distributed/tabular_logger.py	/^def debug(*args):$/;"	f
+debug	gpu_implementation/tabular_logger.py	/^def debug(*args):$/;"	f
+declare_experiment	es_distributed/dist.py	/^    def declare_experiment(self, exp):$/;"	m	class:MasterClient
+declare_task	es_distributed/dist.py	/^    def declare_task(self, task_data):$/;"	m	class:MasterClient
+default	gpu_implementation/tabular_logger.py	/^    def default(self, obj):$/;"	m	class:NumPyArangeEncoder
+dense	es_distributed/tf_util.py	/^def dense(x, size, name, weight_init=None, bias=True, std=1.0):$/;"	f
+dense	gpu_implementation/neuroevolution/models/base.py	/^    def dense(self, x, size, name, bias=True, std=1.0):$/;"	m	class:BaseModel
+deserialize	es_distributed/dist.py	/^def deserialize(x):$/;"	f
+dim	gpu_implementation/gym_tensorflow/maze/maze.h	/^        vector<int> dim;$/;"	m	class:maze::position_accumulator
+disable	gpu_implementation/gym_tensorflow/maze/maze.h	/^    static bool disable=true;$/;"	m	namespace:maze
+disassemble	visual_inspector/dimen_red/disassemble.py	/^def disassemble(X, parent_options, child_options, method, *,$/;"	f
+discrete_action	gpu_implementation/gym_tensorflow/atari/tf_atari.py	/^    def discrete_action(self):$/;"	m	class:AtariEnv
+discrete_action	gpu_implementation/gym_tensorflow/maze/tf_maze.py	/^    def discrete_action(self):$/;"	m	class:MazeEnv
+discrete_action	gpu_implementation/gym_tensorflow/tf_env.py	/^    def discrete_action(self):$/;"	m	class:GymEnv
+discrete_action	gpu_implementation/gym_tensorflow/wrappers/stack_frames.py	/^    def discrete_action(self):$/;"	m	class:StackFramesWrapper
+display	gpu_implementation/gym_tensorflow/maze/maze.h	/^        void display()$/;"	f	class:maze::Environment
+display_obs	gpu_implementation/neuroevolution/display.py	/^        def display_obs(im):$/;"	f	function:main
+distance	gpu_implementation/gym_tensorflow/maze/maze.h	/^        float distance(Point b)$/;"	f	class:maze::Point
+distance	gpu_implementation/gym_tensorflow/maze/maze.h	/^        float distance(Point n)$/;"	f	class:maze::Line
+distance_to_poi	gpu_implementation/gym_tensorflow/maze/maze.h	/^        float distance_to_poi()$/;"	f	class:maze::Environment
+distance_to_start	gpu_implementation/gym_tensorflow/maze/maze.h	/^            float distance_to_start() {$/;"	f	class:maze::Environment
+distance_to_target	gpu_implementation/gym_tensorflow/maze/maze.h	/^        float distance_to_target()$/;"	f	class:maze::Environment
+draw_all_cloud_plots	visual_inspector/figure_base/figure_control.py	/^    def draw_all_cloud_plots(cls):$/;"	m	class:FigureControl
+dump_tabular	es_distributed/tabular_logger.py	/^    def dump_tabular(self):$/;"	m	class:_Logger
+dump_tabular	es_distributed/tabular_logger.py	/^def dump_tabular():$/;"	f
+dump_tabular	gpu_implementation/tabular_logger.py	/^    def dump_tabular(self):$/;"	m	class:TabularLogger
+dump_tabular	gpu_implementation/tabular_logger.py	/^def dump_tabular():$/;"	f
+eligibleClick	visual_inspector/figure_base/buttons.py	/^    def eligibleClick(self, buttonClicked):$/;"	m	class:ButtonArea
+end	gpu_implementation/gym_tensorflow/maze/maze.h	/^        Point end; \/\/the goal$/;"	m	class:maze::Environment
+enforce	visual_inspector/figure_base/buttons.py	/^    def enforce(self, bval, index):$/;"	m	class:_CheckButtons
+enforce	visual_inspector/figure_base/buttons.py	/^    def enforce(self, val):$/;"	m	class:_RadioButtons
+entropy	gpu_implementation/gym_tensorflow/maze/maze.h	/^        double entropy()$/;"	f	class:maze::position_accumulator
+env_default_timestep_cutoff	gpu_implementation/gym_tensorflow/atari/tf_atari.py	/^    def env_default_timestep_cutoff(self):$/;"	m	class:AtariEnv
+env_default_timestep_cutoff	gpu_implementation/gym_tensorflow/maze/tf_maze.py	/^    def env_default_timestep_cutoff(self):$/;"	m	class:MazeEnv
+env_default_timestep_cutoff	gpu_implementation/gym_tensorflow/tf_env.py	/^    def env_default_timestep_cutoff(self):$/;"	m	class:GymEnv
+env_default_timestep_cutoff	gpu_implementation/gym_tensorflow/wrappers/stack_frames.py	/^    def env_default_timestep_cutoff(self):$/;"	m	class:StackFramesWrapper
+error	es_distributed/tabular_logger.py	/^def error(*args):$/;"	f
+error	gpu_implementation/tabular_logger.py	/^def error(*args):$/;"	f
+euclidean_distance	es_distributed/nses.py	/^def euclidean_distance(x, y):$/;"	f
+eval	es_distributed/tf_util.py	/^def eval(expr, feed_dict=None):$/;"	f
+eval	gpu_implementation/neuroevolution/concurrent_worker.py	/^    def eval(self, theta, extras, max_frames=None):$/;"	m	class:ConcurrentWorkers
+eval_async	gpu_implementation/neuroevolution/concurrent_worker.py	/^    def eval_async(self, theta, extras, max_frames=None, callback=None, error_callback=None):$/;"	m	class:ConcurrentWorkers
+exception	gpu_implementation/tabular_logger.py	/^    def exception(self, *args):$/;"	m	class:TabularLogger
+exception	gpu_implementation/tabular_logger.py	/^def exception(exception, *args):$/;"	f
+extract_traj	visual_inspector/figure_custom/rollout_trajectory.py	/^def extract_traj(traj):$/;"	f
+fastMove	visual_inspector/figure_base/figure_control.py	/^    def fastMove(cls, label):$/;"	m	class:FigureControl
+fetch_child_data_point	visual_inspector/figure_base/cloud_figures.py	/^    def fetch_child_data_point(self, genNum, rowIdx):$/;"	m	class:CloudPlot
+fetch_data_point	visual_inspector/figure_base/cloud_figures.py	/^    def fetch_data_point(self, thisArtist, thisInd):$/;"	m	class:CloudPlot
+final_state	gpu_implementation/gym_tensorflow/maze/tf_maze.py	/^    def final_state(self, indices, name=None):$/;"	m	class:MazeEnv
+final_state	gpu_implementation/gym_tensorflow/tf_env.py	/^    def final_state(self, indices, name=None):$/;"	m	class:PythonEnv
+final_state	gpu_implementation/gym_tensorflow/wrappers/stack_frames.py	/^    def final_state(self, indices, name=None):$/;"	m	class:StackFramesWrapper
+fitness	gpu_implementation/es.py	/^    def fitness(self):$/;"	m	class:Offspring
+fitness	gpu_implementation/ga.py	/^    def fitness(self):$/;"	m	class:Offspring
+fitness_plot	visual_inspector/figure_base/settings.py	/^fitness_plot = None$/;"	v
+flatgrad	es_distributed/tf_util.py	/^def flatgrad(loss, var_list):$/;"	f
+flattenallbut0	es_distributed/tf_util.py	/^def flattenallbut0(x):$/;"	f
+flattenallbut0	gpu_implementation/neuroevolution/models/base.py	/^    def flattenallbut0(self, x):$/;"	m	class:BaseModel
+flush_results	es_distributed/dist.py	/^    def flush_results(self):$/;"	m	class:MasterClient
+flush_results	es_distributed/dist.py	/^    def flush_results(self):$/;"	m	class:RelayClient
+flush_tabular	gpu_implementation/tabular_logger.py	/^    def flush_tabular(self):$/;"	m	class:TabularLogger
+flush_tabular	gpu_implementation/tabular_logger.py	/^def flush_tabular():$/;"	f
+fromfile	gpu_implementation/gym_tensorflow/maze/maze.h	/^        void fromfile(ifstream& file)$/;"	f	class:maze::Point
+function	es_distributed/tf_util.py	/^def function(inputs, outputs, updates=None, givens=None):$/;"	f
+game	gpu_implementation/neuroevolution/display.py	/^game = 'frostbite'$/;"	v
+game_actions	gpu_implementation/gym_tensorflow/atari/tf_atari.py	/^game_actions = {$/;"	v
+games	gpu_implementation/gym_tensorflow/atari/tf_atari.py	/^games = ['air_raid', 'alien', 'amidar', 'assault', 'asterix', 'asteroids', 'atlantis',$/;"	v
+gen2sorted_indices	visual_inspector/figure_base/settings.py	/^gen2sorted_indices = {} # Global sorted index for sorting BCs$/;"	v
+generateMessage	visual_inspector/figure_base/load_data.py	/^def generateMessage(thisGenNumber, parentOrNot, x, y, fitness):$/;"	f
+generate_neural_inputs	gpu_implementation/gym_tensorflow/maze/maze.h	/^        void generate_neural_inputs(float* inputs)$/;"	f	class:maze::Environment
+generate_neural_inputs_wrapper	gpu_implementation/gym_tensorflow/maze/maze.h	/^        void generate_neural_inputs_wrapper(float* inputs, int size) {$/;"	f	class:maze::Environment
+get	es_distributed/es.py	/^    def get(self, i, dim):$/;"	m	class:SharedNoiseTable
+get	es_distributed/es_modified.py	/^    def get(self, i, dim):$/;"	m	class:SharedNoiseTable
+get	gpu_implementation/neuroevolution/helper.py	/^    def get(self, i, dim):$/;"	m	class:SharedNoiseTable
+get_all_instances	scripts/ec2ctl	/^def get_all_instances():$/;"	f
+get_all_scaling_groups	scripts/ec2ctl	/^def get_all_scaling_groups():$/;"	f
+get_all_x	scripts/ec2ctl	/^def get_all_x(name):$/;"	f
+get_archive	es_distributed/dist.py	/^    def get_archive(self):$/;"	m	class:MasterClient
+get_archive	es_distributed/dist.py	/^    def get_archive(self):$/;"	m	class:WorkerClient
+get_available_gpus	gpu_implementation/neuroevolution/tf_util.py	/^def get_available_gpus():$/;"	f
+get_clients	scripts/ec2ctl	/^def get_clients():$/;"	f
+get_current_task	es_distributed/dist.py	/^    def get_current_task(self):$/;"	m	class:WorkerClient
+get_dir	es_distributed/tabular_logger.py	/^    def get_dir(self):$/;"	m	class:_Logger
+get_dir	es_distributed/tabular_logger.py	/^def get_dir():$/;"	f
+get_dir	gpu_implementation/tabular_logger.py	/^    def get_dir(self):$/;"	m	class:TabularLogger
+get_dir	gpu_implementation/tabular_logger.py	/^def get_dir():$/;"	f
+get_exp_name_tag	scripts/ec2ctl	/^def get_exp_name_tag(instance):$/;"	f
+get_exp_prefix_tag	scripts/ec2ctl	/^def get_exp_prefix_tag(instance):$/;"	f
+get_experiment	es_distributed/dist.py	/^    def get_experiment(self):$/;"	m	class:WorkerClient
+get_expt_dir	es_distributed/tabular_logger.py	/^def get_expt_dir():$/;"	f
+get_expt_dir	gpu_implementation/tabular_logger.py	/^def get_expt_dir():$/;"	f
+get_final_state	gpu_implementation/gym_tensorflow/atari/tf_atari.cpp	/^        void get_final_state(float *data, int idx)$/;"	f	class:AtariEnvironment
+get_final_state	gpu_implementation/gym_tensorflow/maze/tf_maze.cpp	/^        void get_final_state(float *data, int idx)$/;"	f	class:MazeEnvironment
+get_game_obs	gpu_implementation/gym_tensorflow/atari/tf_atari.py	/^def get_game_obs(game):$/;"	f
+get_groups_by_pattern	scripts/ec2ctl	/^def get_groups_by_pattern(job):$/;"	f
+get_gym_env	gpu_implementation/gym_tensorflow/atari/tf_atari.py	/^def get_gym_env(game):$/;"	f
+get_instances_by_pattern	scripts/ec2ctl	/^def get_instances_by_pattern(job):$/;"	f
+get_line	gpu_implementation/gym_tensorflow/maze/maze.h	/^        Line get_line(int idx) {$/;"	f	class:maze::Environment
+get_line_count	gpu_implementation/gym_tensorflow/maze/maze.h	/^        int get_line_count() {$/;"	f	class:maze::Environment
+get_mean_bc	es_distributed/nses.py	/^def get_mean_bc(env, policy, tslimit, num_rollouts=1):$/;"	f
+get_name_tag	scripts/ec2ctl	/^def get_name_tag(instance):$/;"	f
+get_parent_op_data	visual_inspector/figure_base/cloud_figures.py	/^    def get_parent_op_data(self, gen):$/;"	m	class:CloudPlot
+get_placeholder	es_distributed/tf_util.py	/^def get_placeholder(name, dtype, shape):$/;"	f
+get_placeholder_cached	es_distributed/tf_util.py	/^def get_placeholder_cached(name):$/;"	f
+get_policy_file	visual_inspector/figure_base/cloud_figures.py	/^    def get_policy_file(self, gen):$/;"	m	class:CloudPlot
+get_range	gpu_implementation/gym_tensorflow/maze/maze.h	/^        void get_range(float &minx,float &miny, float &maxx, float& maxy)$/;"	f	class:maze::Environment
+get_ref_batch	es_distributed/es.py	/^def get_ref_batch(env, batch_size=32):$/;"	f
+get_ref_batch	es_distributed/es_modified.py	/^def get_ref_batch(env, batch_size=32):$/;"	f
+get_ref_batch	gpu_implementation/gym_tensorflow/__init__.py	/^def get_ref_batch(make_env_f, sess, batch_size):$/;"	f
+get_sensor_size	gpu_implementation/gym_tensorflow/maze/maze.h	/^        int get_sensor_size() {$/;"	f	class:maze::Environment
+get_session	es_distributed/tf_util.py	/^def get_session():$/;"	f
+get_tag	scripts/ec2ctl	/^def get_tag(key, stuff):$/;"	f
+get_trainable_flat	es_distributed/policies.py	/^    def get_trainable_flat(self):$/;"	m	class:Policy
+get_x_y_death_from_humanoid_bc	visual_inspector/figure_custom/rollout_custom.py	/^    def get_x_y_death_from_humanoid_bc(cls, bc):$/;"	m	class:RolloutMujoco
+goalattract	gpu_implementation/gym_tensorflow/maze/maze.h	/^        bool goalattract;$/;"	m	class:maze::Environment
+grayscale_palette	gpu_implementation/gym_tensorflow/atari/tf_atari.py	/^grayscale_palette = np.expand_dims(np.dot(rgb_palette, np.array([0.299, 0.587, 0.114], np.float32)), axis=-1)$/;"	v
+gym_tensorflow_module	gpu_implementation/gym_tensorflow/tf_env.py	/^gym_tensorflow_module = tf.load_op_library(os.path.join(os.path.dirname(__file__), 'gym_tensorflow.so'))$/;"	v
+handle_close	visual_inspector/figure_base/figure_control.py	/^    def handle_close(cls, event):$/;"	m	class:FigureControl
+heading	gpu_implementation/gym_tensorflow/maze/maze.h	/^        float heading;$/;"	m	class:maze::Character
+help	scripts/ec2ctl	/^              help="Sets the debug noise level, specify multiple times "$/;"	v
+help	visual_inspector/main_atari.py	/^              help='Path to high-dimensional (> 2-D) BC and its dimension')$/;"	v
+help	visual_inspector/main_mujoco.py	/^              help='Path to high-dimensional (> 2-D) BC and its dimension')$/;"	v
+help	visual_inspector/process_bc.py	/^              help='Downsampling ratio (<1) when method=downsampling.')$/;"	v
+help	visual_inspector/process_bc.py	/^              help='Files to copy over. Support Unix-style wildcards, separated in spaces')$/;"	v
+help	visual_inspector/process_bc.py	/^              help='Methods of dimensionality reduction or downsampling.')$/;"	v
+hero	gpu_implementation/gym_tensorflow/maze/maze.h	/^        Character hero; \/\/navigator$/;"	m	class:maze::Environment
+hex_list	visual_inspector/figure_base/settings.py	/^    hex_list = [c.get_hex_l() for c in color_gradient]$/;"	v
+hide	visual_inspector/figure_base/cloud_figures.py	/^    def hide(self):$/;"	m	class:ColorBar
+hide	visual_inspector/figure_base/cloud_figures.py	/^    def hide(self):$/;"	m	class:TextArea
+hideOffSprings	visual_inspector/figure_base/cloud_figures.py	/^    def hideOffSprings(self, thisGenNumber):$/;"	m	class:CloudPlot
+hideOffSprings	visual_inspector/figure_base/figure_control.py	/^    def hideOffSprings(cls, thisGenNumber):$/;"	m	class:FigureControl
+highlight	scripts/ec2ctl	/^def highlight(x):$/;"	f
+highlight	scripts/launch.py	/^def highlight(x):$/;"	f
+home	visual_inspector/figure_base/buttons.py	/^    def home(self, event=None):$/;"	m	class:ButtonArea
+hover	visual_inspector/figure_base/mouse_event.py	/^    def hover(cls, event):$/;"	m	class:MouseMove
+import_algo	es_distributed/main.py	/^def import_algo(name):$/;"	f
+in_session	es_distributed/tf_util.py	/^def in_session(f):$/;"	f
+increment	es_distributed/es.py	/^    def increment(self, s, ssq, c):$/;"	m	class:RunningStat
+increment	es_distributed/es_modified.py	/^    def increment(self, s, ssq, c):$/;"	m	class:RunningStat
+indexed_matmul	gpu_implementation/gym_tensorflow/ops/__init__.py	/^    def indexed_matmul(a, b, idx):$/;"	f
+indexed_matmul	gpu_implementation/gym_tensorflow/ops/__init__.py	/^    indexed_matmul = gym_tensorflow_module.indexed_batch_mat_mul$/;"	v
+info	es_distributed/tabular_logger.py	/^def info(*args):$/;"	f
+info	gpu_implementation/tabular_logger.py	/^def info(*args):$/;"	f
+init	visual_inspector/figure_base/figure_control.py	/^    def init(cls, start_iter, end_iter, visible_range):$/;"	m	class:FigureControl
+initialize	es_distributed/tf_util.py	/^def initialize():$/;"	f
+initialize	gpu_implementation/es.py	/^    def initialize(self, rs, noise, model):$/;"	m	class:TrainingState
+initialize	gpu_implementation/neuroevolution/concurrent_worker.py	/^    def initialize(self, sess):$/;"	m	class:ConcurrentWorkers
+initialize	gpu_implementation/neuroevolution/concurrent_worker.py	/^    def initialize(self, sess):$/;"	m	class:RLEvalutionWorker
+initialize	gpu_implementation/neuroevolution/distributed_helpers.py	/^    def initialize(self):$/;"	m	class:WorkerHub
+initialize	gpu_implementation/neuroevolution/models/base.py	/^    def initialize(self):$/;"	m	class:BaseModel
+initialize_from	es_distributed/policies.py	/^    def initialize_from(self, filename):$/;"	m	class:ESAtariPolicy
+initialize_from	es_distributed/policies.py	/^    def initialize_from(self, filename, ob_stat=None):$/;"	m	class:MujocoPolicy
+interpret_outputs	gpu_implementation/gym_tensorflow/maze/maze.h	/^        void interpret_outputs(float o1,float o2)$/;"	f	class:maze::Environment
+intersection	gpu_implementation/gym_tensorflow/maze/maze.h	/^        Point intersection(Line L,bool &found)$/;"	f	class:maze::Line
+intprod	es_distributed/tf_util.py	/^def intprod(x):$/;"	f
+isVisible	visual_inspector/figure_base/figure_control.py	/^    def isVisible(cls, thisGenNumber):$/;"	m	class:FigureControl
+is_parent_artist	visual_inspector/figure_base/cloud_figures.py	/^    def is_parent_artist(self, thisArtist, thisInd):$/;"	m	class:CloudPlot
+itergroups	es_distributed/es.py	/^def itergroups(items, group_size):$/;"	f
+itergroups	es_distributed/es_modified.py	/^def itergroups(items, group_size):$/;"	f
+itergroups	gpu_implementation/es.py	/^def itergroups(items, group_size):$/;"	f
+jobs	scripts/ec2ctl	/^def jobs():$/;"	f
+kill	scripts/ec2ctl	/^def kill(pattern):$/;"	f
+l2loss	es_distributed/tf_util.py	/^def l2loss(params):$/;"	f
+last_click_time	visual_inspector/figure_base/mouse_event.py	/^    last_click_time = None$/;"	v	class:PointClick
+length	gpu_implementation/gym_tensorflow/maze/maze.h	/^        float length()$/;"	f	class:maze::Line
+lines	gpu_implementation/gym_tensorflow/maze/maze.h	/^        vector<Line*> lines; \/\/maze line segments$/;"	m	class:maze::Environment
+load	gpu_implementation/gym_tensorflow/maze/tf_maze.cpp	/^        void load(std::string filename, int i)$/;"	f	class:MazeEnvironment
+load	gpu_implementation/neuroevolution/models/base.py	/^    def load(self, sess, i, theta, seeds):$/;"	m	class:BaseModel
+load	gpu_implementation/neuroevolution/models/batchnorm.py	/^    def load(self, sess, i, *args, **kwargs):$/;"	m	class:ModelVirtualBN
+loadOffspringData	visual_inspector/figure_base/load_data.py	/^def loadOffspringData(path, gen, pfit, bc_dim=2):$/;"	f
+loadParentData	visual_inspector/figure_base/load_data.py	/^def loadParentData(path, gen, bc_dim=2):$/;"	f
+load_data_and_plot	visual_inspector/figure_base/cloud_figures.py	/^    def load_data_and_plot(self, start_iter, end_iter, snapshots_path):$/;"	m	class:CloudPlot
+load_from	gpu_implementation/gym_tensorflow/maze/maze.h	/^        void load_from(const char* filename)$/;"	f	class:maze::Environment
+load_rom	gpu_implementation/gym_tensorflow/atari/tf_atari.cpp	/^        void load_rom(string game, int i)$/;"	f	class:AtariEnvironment
+load_state	es_distributed/tf_util.py	/^def load_state(fname):$/;"	f
+location	gpu_implementation/gym_tensorflow/maze/maze.h	/^        Point location;$/;"	m	class:maze::Character
+log	es_distributed/tabular_logger.py	/^    def log(self, *args, level=INFO):$/;"	m	class:_Logger
+log	es_distributed/tabular_logger.py	/^def log(*args, level=INFO):$/;"	f
+log	gpu_implementation/tabular_logger.py	/^    def log(self, level, *args):$/;"	m	class:TabularLogger
+log	gpu_implementation/tabular_logger.py	/^log = info$/;"	v
+log_dir	gpu_implementation/tabular_logger.py	/^    def log_dir(self):$/;"	m	class:TabularLogger
+log_dir	gpu_implementation/tabular_logger.py	/^def log_dir():$/;"	f
+logger	es_distributed/dist.py	/^logger = logging.getLogger(__name__)$/;"	v
+logger	es_distributed/es.py	/^logger = logging.getLogger(__name__)$/;"	v
+logger	es_distributed/es_modified.py	/^logger = logging.getLogger(__name__)$/;"	v
+logger	es_distributed/policies.py	/^logger = logging.getLogger(__name__)$/;"	v
+lrelu	es_distributed/tf_util.py	/^def lrelu(x, leak=0.2):$/;"	f
+m_filename	gpu_implementation/gym_tensorflow/maze/tf_maze.cpp	/^    std::string m_filename;$/;"	m	class:MazeMakeOp	file:
+m_game	gpu_implementation/gym_tensorflow/atari/tf_atari.cpp	/^    std::string m_game;$/;"	m	class:AtariMakeOp	file:
+m_initialized	gpu_implementation/gym_tensorflow/atari/tf_atari.cpp	/^        bool m_initialized;$/;"	m	class:AtariEnvironment	file:
+m_maxFrames	gpu_implementation/gym_tensorflow/atari/tf_atari.cpp	/^        std::vector<int> m_maxFrames;$/;"	m	class:AtariEnvironment	file:
+m_numNoops	gpu_implementation/gym_tensorflow/atari/tf_atari.cpp	/^        std::vector<int> m_numNoops;$/;"	m	class:AtariEnvironment	file:
+m_numSteps	gpu_implementation/gym_tensorflow/maze/tf_maze.cpp	/^        std::vector<int> m_numSteps;$/;"	m	class:MazeEnvironment	file:
+m_pInterfaces	gpu_implementation/gym_tensorflow/atari/tf_atari.cpp	/^        ALEInterface* m_pInterfaces;$/;"	m	class:AtariEnvironment	file:
+m_pInterfaces	gpu_implementation/gym_tensorflow/maze/tf_maze.cpp	/^        maze::Environment* m_pInterfaces;$/;"	m	class:MazeEnvironment	file:
+m_repeat	gpu_implementation/gym_tensorflow/atari/tf_atari.cpp	/^        int m_repeat = 4;$/;"	m	class:AtariEnvironment	file:
+main	gpu_implementation/es.py	/^def main(**exp):$/;"	f
+main	gpu_implementation/ga.py	/^def main(**exp):$/;"	f
+main	gpu_implementation/neuroevolution/display.py	/^def main():$/;"	f
+main	scripts/launch.py	/^def main(exp_files,$/;"	f
+main	scripts/viz.py	/^def main(env_id, policy_file, record, stochastic, extra_kwargs):$/;"	f
+main	visual_inspector/main_atari.py	/^def main(start_iter, end_iter, snapshots_path, visible_range, hi_dim_bc):$/;"	f
+main	visual_inspector/main_mujoco.py	/^def main(start_iter, end_iter, snapshots_path, visible_range, hi_dim_bc):$/;"	f
+main	visual_inspector/process_bc.py	/^def main(start_iter, end_iter, snapshots_path, bc_dim, method, downsampling_ratio, copy_files):$/;"	f
+make	gpu_implementation/gym_tensorflow/__init__.py	/^def make(game, batch_size, *args, **kwargs):$/;"	f
+makeGenVisible	visual_inspector/figure_base/figure_control.py	/^    def makeGenVisible(cls, gen, visNow, mode, *, skip_fitness_plot=False):$/;"	m	class:FigureControl
+make_disable_hyperthreading_script	scripts/launch.py	/^def make_disable_hyperthreading_script():$/;"	f
+make_download_and_run_script	scripts/launch.py	/^def make_download_and_run_script(code_url, cmd):$/;"	f
+make_env	gpu_implementation/es.py	/^    def make_env(b):$/;"	f	function:main
+make_env	gpu_implementation/ga.py	/^    def make_env(b):$/;"	f	function:main
+make_env	visual_inspector/figure_base/rollout_base.py	/^    def make_env(cls, *args, **kwargs):$/;"	m	class:RolloutBase
+make_env	visual_inspector/figure_custom/rollout_custom.py	/^    def make_env(cls):$/;"	m	class:RolloutMujoco
+make_env	visual_inspector/figure_custom/rollout_custom.py	/^    def make_env(self):$/;"	m	class:RolloutAtari
+make_master_script	scripts/launch.py	/^def make_master_script(code_url, exp_str):$/;"	f
+make_net	gpu_implementation/neuroevolution/concurrent_worker.py	/^    def make_net(self, model_constructor, device, ref_batch=None):$/;"	m	class:RLEvalutionWorker
+make_net	gpu_implementation/neuroevolution/models/base.py	/^    def make_net(self, x, num_actions, indices=None, batch_size=1, ref_batch=None):$/;"	m	class:BaseModel
+make_offspring	gpu_implementation/es.py	/^        def make_offspring(state):$/;"	f	function:main.make_env
+make_offspring	gpu_implementation/ga.py	/^        def make_offspring():$/;"	f	function:main.make_env
+make_schedule	gpu_implementation/neuroevolution/helper.py	/^def make_schedule(args):$/;"	f
+make_session	es_distributed/es.py	/^def make_session(single_threaded):$/;"	f
+make_session	es_distributed/es_modified.py	/^def make_session(single_threaded):$/;"	f
+make_weights	gpu_implementation/neuroevolution/models/base.py	/^    def make_weights(self):$/;"	m	class:BaseModel
+make_weights	gpu_implementation/neuroevolution/models/batchnorm.py	/^    def make_weights(self):$/;"	m	class:ModelVirtualBN
+make_worker_script	scripts/launch.py	/^def make_worker_script(code_url, master_private_ip):$/;"	f
+markVisible	visual_inspector/figure_base/fitness_figures.py	/^    def markVisible(self, gen, visible):$/;"	m	class:FitnessPlot
+master	es_distributed/main.py	/^def master(algo, exp_str, exp_file, master_socket_path, log_dir):$/;"	f
+master_extract_cloud	es_distributed/es_modified.py	/^def master_extract_cloud(curr_task_results, iteration):$/;"	f
+master_extract_cloud_ga	es_distributed/ga_modified.py	/^def master_extract_cloud_ga(curr_task_results, iteration):$/;"	f
+master_extract_parent	es_distributed/es_modified.py	/^def master_extract_parent(eval_bc_vecs, eval_rets, iteration, policy, ref_batch):$/;"	f
+master_extract_parent_ga	es_distributed/ga_modified.py	/^def master_extract_parent_ga(point, noise_stdev, iteration, policy):$/;"	f
+max	es_distributed/tf_util.py	/^def max(x, axis=None, keepdims=False):$/;"	f
+maxVisibleGenNumber	visual_inspector/figure_base/figure_control.py	/^    def maxVisibleGenNumber(cls):$/;"	m	class:FigureControl
+maxx	gpu_implementation/gym_tensorflow/maze/maze.h	/^        float maxx,maxy;$/;"	m	class:maze::position_accumulator
+maxy	gpu_implementation/gym_tensorflow/maze/maze.h	/^        float maxx,maxy;$/;"	m	class:maze::position_accumulator
+maze	gpu_implementation/gym_tensorflow/maze/maze.h	/^namespace maze$/;"	n
+mean	es_distributed/es.py	/^    def mean(self):$/;"	m	class:RunningStat
+mean	es_distributed/es_modified.py	/^    def mean(self):$/;"	m	class:RunningStat
+mean	es_distributed/tf_util.py	/^def mean(x, axis=None, keepdims=False):$/;"	f
+midpoint	gpu_implementation/gym_tensorflow/maze/maze.h	/^        Point midpoint()$/;"	f	class:maze::Line
+min	es_distributed/tf_util.py	/^def min(x, axis=None, keepdims=False):$/;"	f
+minVisibleGenNumber	visual_inspector/figure_base/figure_control.py	/^    def minVisibleGenNumber(cls):$/;"	m	class:FigureControl
+minx	gpu_implementation/gym_tensorflow/maze/maze.h	/^        float minx,miny;$/;"	m	class:maze::position_accumulator
+miny	gpu_implementation/gym_tensorflow/maze/maze.h	/^        float minx,miny;$/;"	m	class:maze::position_accumulator
+mkdir_p	es_distributed/main.py	/^def mkdir_p(path):$/;"	f
+monitor_eval	gpu_implementation/neuroevolution/concurrent_worker.py	/^    def monitor_eval(self, it, max_frames):$/;"	m	class:ConcurrentWorkers
+monitor_eval_repeated	gpu_implementation/neuroevolution/concurrent_worker.py	/^    def monitor_eval_repeated(self, it, max_frames, num_episodes):$/;"	m	class:ConcurrentWorkers
+movie	visual_inspector/figure_base/buttons.py	/^    def movie(self, event):$/;"	m	class:ButtonArea
+movie	visual_inspector/figure_base/figure_control.py	/^    def movie(cls, event):$/;"	m	class:FigureControl
+mu_	gpu_implementation/gym_tensorflow/tf_env.h	/^    BaseEnvironment* resource_ GUARDED_BY(mu_) = nullptr;$/;"	m	class:EnvironmentMakeOp
+mu_	gpu_implementation/gym_tensorflow/tf_env.h	/^    tensorflow::mutex mu_;$/;"	m	class:EnvironmentMakeOp
+mu_	gpu_implementation/gym_tensorflow/tf_env.h	/^    virtual Status CreateResource(OpKernelContext *context, BaseEnvironment **ret) EXCLUSIVE_LOCKS_REQUIRED(mu_) = 0;$/;"	m	class:EnvironmentMakeOp
+mutate	gpu_implementation/neuroevolution/models/base.py	/^    def mutate(self, parent, rs, noise, mutation_power):$/;"	m	class:BaseModel
+needs_ob_stat	es_distributed/policies.py	/^    def needs_ob_stat(self):$/;"	m	class:ESAtariPolicy
+needs_ob_stat	es_distributed/policies.py	/^    def needs_ob_stat(self):$/;"	m	class:GAAtariPolicy
+needs_ob_stat	es_distributed/policies.py	/^    def needs_ob_stat(self):$/;"	m	class:MujocoPolicy
+needs_ob_stat	es_distributed/policies.py	/^    def needs_ob_stat(self):$/;"	m	class:Policy
+needs_ref_batch	es_distributed/policies.py	/^    def needs_ref_batch(self):$/;"	m	class:ESAtariPolicy
+needs_ref_batch	es_distributed/policies.py	/^    def needs_ref_batch(self):$/;"	m	class:GAAtariPolicy
+needs_ref_batch	es_distributed/policies.py	/^    def needs_ref_batch(self):$/;"	m	class:MujocoPolicy
+newfunc	es_distributed/tf_util.py	/^    def newfunc(*args, **kwargs):$/;"	f	function:in_session
+next	visual_inspector/figure_base/buttons.py	/^    def next(self, event=None):$/;"	m	class:ButtonArea
+noise	visual_inspector/figure_base/settings.py	/^noise = None # Global Noise Table$/;"	v
+normc_initializer	es_distributed/tf_util.py	/^def normc_initializer(std=1.0):$/;"	f
+ntsc_palette_uint8	gpu_implementation/gym_tensorflow/atari/tf_atari.py	/^ntsc_palette_uint8 = np.empty((1, 1), np.uint8)$/;"	v
+ntsc_to_rgb_palette	gpu_implementation/gym_tensorflow/atari/tf_atari.py	/^ntsc_to_rgb_palette = [$/;"	v
+numBins	visual_inspector/figure_base/settings.py	/^numBins = 5 # Number of Color Bins for ColorBar$/;"	v
+numColors	visual_inspector/figure_base/settings.py	/^numColors = len(COLOR_HEX_LISTS)$/;"	v
+numMarkers	visual_inspector/figure_base/settings.py	/^numMarkers = len(MARKERS)$/;"	v
+numVisibleGenNumber	visual_inspector/figure_base/figure_control.py	/^    def numVisibleGenNumber(cls):$/;"	m	class:FigureControl
+numel	es_distributed/tf_util.py	/^def numel(x):$/;"	f
+observation	gpu_implementation/gym_tensorflow/atari/tf_atari.py	/^    def observation(self, indices=None, name=None):$/;"	m	class:AtariEnv
+observation	gpu_implementation/gym_tensorflow/maze/tf_maze.py	/^    def observation(self, indices=None, name=None):$/;"	m	class:MazeEnv
+observation	gpu_implementation/gym_tensorflow/tf_env.py	/^    def observation(self, indices=None, name=None):$/;"	m	class:PythonEnv
+observation	gpu_implementation/gym_tensorflow/wrappers/stack_frames.py	/^    def observation(self, indices=None, name=None):$/;"	m	class:StackFramesWrapper
+observation_space	gpu_implementation/gym_tensorflow/atari/tf_atari.py	/^    def observation_space(self):$/;"	m	class:AtariEnv
+observation_space	gpu_implementation/gym_tensorflow/tf_env.py	/^    def observation_space(self):$/;"	m	class:GymEnv
+observation_space	gpu_implementation/gym_tensorflow/wrappers/stack_frames.py	/^    def observation_space(self):$/;"	m	class:StackFramesWrapper
+on_pick	visual_inspector/figure_custom/rollout_trajectory.py	/^    def on_pick(self, event):$/;"	m	class:rolloutMaker
+on_press	visual_inspector/figure_custom/rollout_trajectory.py	/^    def on_press(self, event):$/;"	m	class:rolloutMaker
+onpick	visual_inspector/figure_base/mouse_event.py	/^    def onpick(cls, event):$/;"	m	class:FitnessPlotClick
+onpick	visual_inspector/figure_base/mouse_event.py	/^    def onpick(cls, event):$/;"	m	class:PointClick
+override	gpu_implementation/gym_tensorflow/tf_env.h	/^    virtual ~EnvironmentMakeOp() override;$/;"	m	class:EnvironmentMakeOp
+pickCloud	visual_inspector/figure_base/figure_control.py	/^    def pickCloud(cls, label):$/;"	m	class:FigureControl
+pickVR	visual_inspector/figure_base/figure_control.py	/^    def pickVR(cls, label):$/;"	m	class:FigureControl
+play_movie	visual_inspector/figure_base/cloud_figures.py	/^    def play_movie(self, start, stop):$/;"	m	class:CloudPlot
+plotOffSprings	visual_inspector/figure_base/cloud_figures.py	/^    def plotOffSprings(self, thisGenNumber):$/;"	m	class:CloudPlot
+plotOffSprings	visual_inspector/figure_base/figure_control.py	/^    def plotOffSprings(cls, thisGenNumber):$/;"	m	class:FigureControl
+poi	gpu_implementation/gym_tensorflow/maze/maze.h	/^        Point poi; \/\/point of interest$/;"	m	class:maze::Environment
+poi_radar	gpu_implementation/gym_tensorflow/maze/maze.h	/^        vector<float> poi_radar; \/\/stores poi radar$/;"	m	class:maze::Character
+pop_result	es_distributed/dist.py	/^    def pop_result(self):$/;"	m	class:MasterClient
+position_accumulator	gpu_implementation/gym_tensorflow/maze/maze.h	/^        position_accumulator(vector<int> dims,$/;"	f	class:maze::position_accumulator
+position_accumulator	gpu_implementation/gym_tensorflow/maze/maze.h	/^    class position_accumulator$/;"	c	namespace:maze
+post_process	visual_inspector/figure_base/rollout_base.py	/^    def post_process(cls, *args, **kwargs):$/;"	m	class:RolloutBase
+post_process	visual_inspector/figure_custom/rollout_custom.py	/^    def post_process(cls, env, result):$/;"	m	class:RolloutAtari
+post_process	visual_inspector/figure_custom/rollout_custom.py	/^    def post_process(cls, env, result):$/;"	m	class:RolloutMujoco
+prev	visual_inspector/figure_base/buttons.py	/^    def prev(self, event=None):$/;"	m	class:ButtonArea
+print_error	visual_inspector/figure_base/figure_control.py	/^    def print_error(cls, err):$/;"	m	class:FigureControl
+print_info	visual_inspector/figure_base/rollout_base.py	/^    def print_info(cls, *args, **kwargs):$/;"	m	class:RolloutBase
+print_info	visual_inspector/figure_custom/rollout_custom.py	/^    def print_info(cls, seed, rews, t, novelty_vec):$/;"	m	class:RolloutAtari
+print_info	visual_inspector/figure_custom/rollout_custom.py	/^    def print_info(cls, seed, rews, t, novelty_vec):$/;"	m	class:RolloutMujoco
+push_result	es_distributed/dist.py	/^    def push_result(self, task_id, result):$/;"	m	class:WorkerClient
+put	gpu_implementation/neuroevolution/distributed_helpers.py	/^    def put(self, result):$/;"	m	class:AsyncTaskHub
+py_func_init	es_distributed/tf_util.py	/^        def py_func_init():$/;"	f	function:normc_initializer._initializer
+py_func_init	es_distributed/tf_util.py	/^    def py_func_init(out):$/;"	f	function:_normalize
+radar	gpu_implementation/gym_tensorflow/maze/maze.h	/^        vector<float> radar; \/\/stores radar outputs$/;"	m	class:maze::Character
+radarAngles1	gpu_implementation/gym_tensorflow/maze/maze.h	/^        vector<float> radarAngles1; \/\/beginning angles for radar sensors$/;"	m	class:maze::Character
+radarAngles2	gpu_implementation/gym_tensorflow/maze/maze.h	/^        vector<float> radarAngles2; \/\/ending angles for radar sensors$/;"	m	class:maze::Character
+radius	gpu_implementation/gym_tensorflow/maze/maze.h	/^        float radius;$/;"	m	class:maze::Character
+randomize	gpu_implementation/neuroevolution/models/base.py	/^    def randomize(self, rs, noise):$/;"	m	class:BaseModel
+rangeFinderAngles	gpu_implementation/gym_tensorflow/maze/maze.h	/^        vector<float> rangeFinderAngles; \/\/angles of range finder sensors$/;"	m	class:maze::Character
+rangeFinders	gpu_implementation/gym_tensorflow/maze/maze.h	/^        vector<float> rangeFinders; \/\/stores rangefinder outputs$/;"	m	class:maze::Character
+rangefinder_range	gpu_implementation/gym_tensorflow/maze/maze.h	/^        float rangefinder_range;$/;"	m	class:maze::Character
+rate_limiting	visual_inspector/figure_base/mouse_event.py	/^    def rate_limiting(cls):$/;"	m	class:PointClick
+reachgoal	gpu_implementation/gym_tensorflow/maze/maze.h	/^        int reachgoal;$/;"	m	class:maze::Environment
+reachpoi	gpu_implementation/gym_tensorflow/maze/maze.h	/^        int reachpoi;$/;"	m	class:maze::Environment
+record_tabular	es_distributed/tabular_logger.py	/^    def record_tabular(self, key, val):$/;"	m	class:_Logger
+record_tabular	es_distributed/tabular_logger.py	/^def record_tabular(key, val):$/;"	f
+record_tabular	gpu_implementation/tabular_logger.py	/^    def record_tabular(self, key, val):$/;"	m	class:TabularLogger
+record_tabular	gpu_implementation/tabular_logger.py	/^def record_tabular(key, val):$/;"	f
+reduce_dim	visual_inspector/dimen_red/reduce.py	/^def reduce_dim(X, *, labels, method='pca'):$/;"	f
+reinitialize	es_distributed/policies.py	/^    def reinitialize(self):$/;"	m	class:Policy
+render	gpu_implementation/gym_tensorflow/atari/tf_atari.py	/^    def render(self, indices=None):$/;"	m	class:AtariEnv
+requires_ref_batch	gpu_implementation/neuroevolution/models/base.py	/^    def requires_ref_batch(self):$/;"	m	class:BaseModel
+requires_ref_batch	gpu_implementation/neuroevolution/models/batchnorm.py	/^    def requires_ref_batch(self):$/;"	m	class:ModelVirtualBN
+reset	es_distributed/tf_util.py	/^def reset():$/;"	f
+reset	gpu_implementation/gym_tensorflow/atari/tf_atari.py	/^    def reset(self, indices=None, max_frames=None, name=None):$/;"	m	class:AtariEnv
+reset	gpu_implementation/gym_tensorflow/maze/maze.h	/^        void reset()$/;"	f	class:maze::Character
+reset	gpu_implementation/gym_tensorflow/maze/maze.h	/^        void reset()$/;"	f	class:maze::Environment
+reset	gpu_implementation/gym_tensorflow/maze/tf_maze.py	/^    def reset(self, indices=None, max_frames=None, name=None):$/;"	m	class:MazeEnv
+reset	gpu_implementation/gym_tensorflow/tf_env.py	/^    def reset(self, indices=None, max_frames=None, name=None):$/;"	m	class:PythonEnv
+reset	gpu_implementation/gym_tensorflow/wrappers/stack_frames.py	/^    def reset(self, indices=None, max_frames=None, name=None):$/;"	m	class:StackFramesWrapper
+reset	visual_inspector/figure_base/buttons.py	/^    def reset(self, event=None):$/;"	m	class:ButtonArea
+reset	visual_inspector/figure_base/fitness_figures.py	/^    def reset(self):$/;"	m	class:FitnessPlot
+reset	visual_inspector/figure_custom/rollout_trajectory.py	/^    def reset(self):$/;"	m	class:rolloutMaker
+reset_xy_lim	visual_inspector/figure_base/cloud_figures.py	/^    def reset_xy_lim(self):$/;"	m	class:CloudPlot
+resize	scripts/ec2ctl	/^def resize(pattern, size):$/;"	f
+retry_connect	es_distributed/dist.py	/^def retry_connect(redis_cfg, tries=300, base_delay=4.):$/;"	f
+retry_get	es_distributed/dist.py	/^def retry_get(pipe, key, tries=300, base_delay=4.):$/;"	f
+rgb_palette	gpu_implementation/gym_tensorflow/atari/tf_atari.py	/^rgb_palette = rgb_palette_uint8.astype(np.float32)  * (1.0 \/ 255.0)$/;"	v
+rgb_palette_uint8	gpu_implementation/gym_tensorflow/atari/tf_atari.py	/^rgb_palette_uint8 = np.empty((256, 3), np.uint8)$/;"	v
+rollout	es_distributed/policies.py	/^    def rollout(self, env, *, render=False, timestep_limit=None, save_obs=False, random_stream=None):$/;"	m	class:Policy
+rollout	es_distributed/policies.py	/^    def rollout(self, env, *, render=False, timestep_limit=None, save_obs=False, random_stream=None, policy_seed=None, bc_choice=None):$/;"	m	class:MujocoPolicy
+rollout	es_distributed/policies.py	/^    def rollout(self, env, *, render=False, timestep_limit=None, save_obs=False, random_stream=None, worker_stats=None, policy_seed=None):$/;"	m	class:ESAtariPolicy
+rollout	es_distributed/policies.py	/^    def rollout(self, env, *, render=False, timestep_limit=None, save_obs=False, random_stream=None, worker_stats=None, policy_seed=None):$/;"	m	class:GAAtariPolicy
+rolloutMaker	visual_inspector/figure_custom/rollout_trajectory.py	/^class rolloutMaker():$/;"	c
+rollout_and_update_ob_stat	es_distributed/es.py	/^def rollout_and_update_ob_stat(policy, env, timestep_limit, rs, task_ob_stat, calc_obstat_prob):$/;"	f
+rollout_and_update_ob_stat	es_distributed/es_modified.py	/^def rollout_and_update_ob_stat(policy, env, timestep_limit, rs, task_ob_stat, calc_obstat_prob, *, policy_seed=None):$/;"	f
+rollout_and_update_ob_stat	es_distributed/ga.py	/^def rollout_and_update_ob_stat(policy, env, timestep_limit, rs, task_ob_stat, calc_obstat_prob):$/;"	f
+rotate	gpu_implementation/gym_tensorflow/maze/maze.h	/^        void rotate(float angle,Point p)$/;"	f	class:maze::Point
+run	es_distributed/dist.py	/^    def run(self):$/;"	m	class:RelayClient
+run_async	gpu_implementation/neuroevolution/concurrent_worker.py	/^    def run_async(self, task_id, task, callback):$/;"	m	class:RLEvalutionWorker
+run_async	gpu_implementation/neuroevolution/distributed_helpers.py	/^    def run_async(self, task, callback=None, error_callback=None):$/;"	m	class:AsyncTaskHub
+run_async	gpu_implementation/neuroevolution/distributed_helpers.py	/^    def run_async(self, task_id, task, callback):$/;"	m	class:AsyncWorker
+run_master	es_distributed/es.py	/^def run_master(master_redis_cfg, log_dir, exp):$/;"	f
+run_master	es_distributed/es_modified.py	/^def run_master(master_redis_cfg, log_dir, exp):$/;"	f
+run_master	es_distributed/ga.py	/^def run_master(master_redis_cfg, log_dir, exp):$/;"	f
+run_master	es_distributed/ga_modified.py	/^def run_master(master_redis_cfg, log_dir, exp):$/;"	f
+run_master	es_distributed/nses.py	/^def run_master(master_redis_cfg, log_dir, exp):$/;"	f
+run_master	es_distributed/rs.py	/^def run_master(master_redis_cfg, log_dir, exp):$/;"	f
+run_worker	es_distributed/es.py	/^def run_worker(master_redis_cfg, relay_redis_cfg, noise, *, min_task_runtime=.2):$/;"	f
+run_worker	es_distributed/es_modified.py	/^def run_worker(master_redis_cfg, relay_redis_cfg, noise, *, min_task_runtime=.2):$/;"	f
+run_worker	es_distributed/ga.py	/^def run_worker(master_redis_cfg, relay_redis_cfg, noise, *, min_task_runtime=.2):$/;"	f
+run_worker	es_distributed/ga_modified.py	/^def run_worker(master_redis_cfg, relay_redis_cfg, noise, *, min_task_runtime=.2):$/;"	f
+run_worker	es_distributed/nses.py	/^def run_worker(master_redis_cfg, relay_redis_cfg, noise, *, min_task_runtime=.2):$/;"	f
+run_worker	es_distributed/rs.py	/^def run_worker(master_redis_cfg, relay_redis_cfg, noise, *, min_task_runtime=.2):$/;"	f
+sample	gpu_implementation/es.py	/^    def sample(self, schedule):$/;"	m	class:TrainingState
+sample	gpu_implementation/ga.py	/^    def sample(self, schedule):$/;"	m	class:TrainingState
+sample_index	es_distributed/es.py	/^    def sample_index(self, stream, dim):$/;"	m	class:SharedNoiseTable
+sample_index	es_distributed/es_modified.py	/^    def sample_index(self, stream, dim):$/;"	m	class:SharedNoiseTable
+sample_index	gpu_implementation/neuroevolution/helper.py	/^    def sample_index(self, stream, dim):$/;"	m	class:SharedNoiseTable
+save	es_distributed/policies.py	/^    def save(self, filename):$/;"	m	class:Policy
+saveMovie	visual_inspector/figure_base/figure_control.py	/^    def saveMovie(cls, label):$/;"	m	class:FigureControl
+save_state	es_distributed/tf_util.py	/^def save_state(fname):$/;"	f
+scale1	gpu_implementation/gym_tensorflow/maze/maze.h	/^    void inline scale1(float &v, float min, float max)$/;"	f	namespace:maze
+scope_vars	es_distributed/tf_util.py	/^def scope_vars(scope, trainable_only):$/;"	f
+screen_size	gpu_implementation/gym_tensorflow/atari/tf_atari.py	/^screen_size = {'name_this_game': (210, 160), 'hero': (210, 160), 'space_invaders': (210, 160), 'qbert': (210, 160), 'solaris': (210, 160), 'asteroids': (210, 160), 'pooyan': (250, 160), 'gopher': (250, 160), 'video_pinball': (250, 160), 'alien': (210, 160), 'krull': (210, 160), 'beam_rider': (210, 160), 'battle_zone': (210, 160), 'double_dunk': (250, 160), 'skiing': (250, 160), 'frostbite': (210, 160), 'pong': (210, 160), 'freeway': (210, 160), 'jamesbond': (210, 160), 'tutankham': (250, 160), 'asterix': (210, 160), 'boxing': (210, 160), 'seaquest': (210, 160), 'riverraid': (210, 160), 'elevator_action': (210, 160), 'breakout': (210, 160), 'bank_heist': (250, 160), 'journey_escape': (230, 160), 'pitfall': (210, 160), 'ice_hockey': (210, 160), 'atlantis': (210, 160), 'amidar': (250, 160), 'zaxxon': (210, 160), 'tennis': (250, 160), 'kangaroo': (210, 160), 'robotank': (210, 160), 'kung_fu_master': (210, 160), 'chopper_command': (210, 160), 'assault': (250, 160), 'demon_attack': (210, 160), 'berzerk': (210, 160), 'crazy_climber': (210, 160), 'up_n_down': (210, 160), 'wizard_of_wor': (250, 160), 'yars_revenge': (210, 160), 'carnival': (250, 160), 'montezuma_revenge': (210, 160), 'road_runner': (210, 160), 'ms_pacman': (210, 160), 'gravitar': (210, 160), 'star_gunner': (210, 160), 'fishing_derby': (210, 160), 'private_eye': (210, 160), 'centipede': (250, 160), 'venture': (210, 160), 'bowling': (210, 160), 'phoenix': (210, 160), 'time_pilot': (210, 160), 'air_raid': (250, 160), 'enduro': (210, 160)}$/;"	v
+seeds	gpu_implementation/neuroevolution/display.py	/^seeds = [157822315, [94987453, 0.002], [61990409, 0.002], [132377995, 0.002], [126312029, 0.002], [93915238, 0.002], [204022435, 0.002], [171168059, 0.002], [95856784, 0.002], [205934773, 0.002], [213365167, 0.002], [56944619, 0.002], [130129199, 0.002], [97653261, 0.002], [218695493, 0.002], [28585353, 0.002], [88260057, 0.002], [64456571, 0.002], [98751337, 0.002], [87617692, 0.002], [125110843, 0.002], [152209542, 0.002], [23777454, 0.002], [118715026, 0.002], [99788230, 0.002], [75625082, 0.002], [159513938, 0.002], [49484131, 0.002], [212507985, 0.002], [67766136, 0.002], [105190117, 0.002], [33338001, 0.002], [91160896, 0.002], [95386222, 0.002], [45411355, 0.002], [35330570, 0.002], [52225337, 0.002], [165107533, 0.002], [168561753, 0.002], [227083606, 0.002], [214214551, 0.002], [149424426, 0.002], [227684991, 0.002], [35940913, 0.002], [37453011, 0.002], [47170722, 0.002], [92046206, 0.002], [133306577, 0.002], [241955088, 0.002], [41258860, 0.002], [124242631, 0.002], [238064391, 0.002], [46235460, 0.002], [202890570, 0.002], [162416334, 0.002], [78853643, 0.002], [46547745, 0.002], [42268049, 0.002], [202162794, 0.002], [7635563, 0.002], [157757570, 0.002], [237930574, 0.002], [136918954, 0.002], [74723244, 0.002], [2358695, 0.002], [186515303, 0.002], [123109724, 0.002], [109957783, 0.002], [139233438, 0.002], [149436411, 0.002], [8346966, 0.002], [50835889, 0.002], [88695187, 0.002], [211719991, 0.002], [7283371, 0.002], [187750894, 0.002], [154620515, 0.002], [1567632, 0.002], [152631412, 0.002], [38971002, 0.002], [210627707, 0.002], [13311476, 0.002], [157351125, 0.002], [141462178, 0.002], [77606659, 0.002], [22653392, 0.002], [126720849, 0.002], [103503555, 0.002], [138904418, 0.002], [35877598, 0.002], [144448095, 0.002], [143072590, 0.002], [22256859, 0.002], [136674067, 0.002], [54962461, 0.002], [204771663, 0.002], [126594400, 0.002], [143362648, 0.002], [160053218, 0.002], [36505, 0.002], [234586339, 0.002], [8689386, 0.002], [65244214, 0.002], [39252740, 0.002], [64390487, 0.002], [191138142, 0.002], [114738239, 0.002], [184992944, 0.002], [178848289, 0.002], [685758, 0.002], [3946484, 0.002], [9120869, 0.002], [77891561, 0.002], [21685013, 0.002], [38580333, 0.002], [116730475, 0.002], [235053809, 0.002], [227204700, 0.002], [3795447, 0.002], [81764102, 0.002], [166797679, 0.002], [243641394, 0.002], [100513946, 0.002], [99241225, 0.002], [52990995, 0.002], [184304246, 0.002], [46027535, 0.002], [231862778, 0.002], [213237946, 0.002], [227474205, 0.002], [158534897, 0.002], [121346355, 0.002], [63714427, 0.002], [243338063, 0.002], [77546631, 0.002], [178281288, 0.002], [220770449, 0.002], [145968980, 0.002], [29894061, 0.002], [127519509, 0.002], [77760912, 0.002], [61219600, 0.002], [161595533, 0.002], [221480691, 0.002], [206642829, 0.002], [215721178, 0.002], [229794882, 0.002], [31325752, 0.002], [224755578, 0.002], [21220559, 0.002], [171553173, 0.002], [145243964, 0.002], [210190857, 0.002], [150615695, 0.002], [86169422, 0.002], [68813648, 0.002], [107799990, 0.002], [55892198, 0.002], [2389691, 0.002], [181991246, 0.002], [226957512, 0.002], [17909594, 0.002], [54447626, 0.002], [43646598, 0.002], [235297721, 0.002], [193625953, 0.002], [102087733, 0.002], [90041055, 0.002], [76368893, 0.002], [142359520, 0.002], [46114189, 0.002], [80413082, 0.002], [215509948, 0.002], [224115155, 0.002], [85931155, 0.002], [178125002, 0.002], [212925031, 0.002], [18694268, 0.002], [46238885, 0.002], [84948476, 0.002], [8914603, 0.002], [167599874, 0.002], [187802420, 0.002], [170522346, 0.002], [219794607, 0.002], [138665107, 0.002], [157723712, 0.002], [198373356, 0.002], [17916877, 0.002], [149620586, 0.002], [171324275, 0.002], [33574148, 0.002], [438145, 0.002], [30578731, 0.002], [111771703, 0.002], [215725985, 0.002], [226048734, 0.002], [159650006, 0.002], [94154665, 0.002], [33938839, 0.002], [147816297, 0.002], [55752950, 0.002], [217323253, 0.002], [5963619, 0.002], [236473711, 0.002], [133530026, 0.002], [31605617, 0.002], [176598781, 0.002], [117344669, 0.002], [236439401, 0.002], [232750544, 0.002], [126125063, 0.002], [20500196, 0.002], [156839548, 0.002], [17602010, 0.002], [92471651, 0.002], [92360499, 0.002], [7769454, 0.002], [136213779, 0.002], [118114719, 0.002], [105398561, 0.002], [131436589, 0.002], [202193758, 0.002], [60385109, 0.002], [179870277, 0.002], [239557330, 0.002], [187854329, 0.002], [45710618, 0.002], [186771058, 0.002], [189689540, 0.002], [212594973, 0.002], [13689343, 0.002], [20117487, 0.002], [141338221, 0.002], [174004389, 0.002], [49948893, 0.002], [121246710, 0.002], [80925692, 0.002], [39571786, 0.002], [181570823, 0.002], [181260602, 0.002], [179666712, 0.002], [157724327, 0.002], [142152925, 0.002], [72763175, 0.002], [124426367, 0.002], [95423105, 0.002], [142795024, 0.002], [149481164, 0.002], [156867918, 0.002], [193305436, 0.002], [225062969, 0.002], [51384529, 0.002], [153485310, 0.002], [186021802, 0.002], [126854908, 0.002], [57495392, 0.002], [93191535, 0.002], [123655689, 0.002], [204221002, 0.002], [147627388, 0.002], [100922671, 0.002], [43042488, 0.002], [109793369, 0.002], [86175815, 0.002], [103521806, 0.002]]$/;"	v
+select	visual_inspector/figure_custom/rollout_trajectory.py	/^    def select(self, rIdx):$/;"	m	class:rolloutMaker
+serialize	es_distributed/dist.py	/^def serialize(x):$/;"	f
+setVal	visual_inspector/figure_base/fitness_figures.py	/^    def setVal(self, val):$/;"	m	class:FitnessPlot
+set_default	gpu_implementation/tabular_logger.py	/^def set_default(logger, replace=True):$/;"	f
+set_from_init	es_distributed/es.py	/^    def set_from_init(self, init_mean, init_std, init_count):$/;"	m	class:RunningStat
+set_from_init	es_distributed/es_modified.py	/^    def set_from_init(self, init_mean, init_std, init_count):$/;"	m	class:RunningStat
+set_home	visual_inspector/figure_base/figure_control.py	/^    def set_home(cls):$/;"	m	class:FigureControl
+set_level	es_distributed/tabular_logger.py	/^    def set_level(self, level):$/;"	m	class:_Logger
+set_level	es_distributed/tabular_logger.py	/^def set_level(level):$/;"	f
+set_level	gpu_implementation/tabular_logger.py	/^    def set_level(self, level):$/;"	m	class:TabularLogger
+set_level	gpu_implementation/tabular_logger.py	/^def set_level(level):$/;"	f
+set_log_dir	gpu_implementation/tabular_logger.py	/^def set_log_dir(dir):$/;"	f
+set_ob_stat	es_distributed/policies.py	/^    def set_ob_stat(self, ob_mean, ob_std):$/;"	m	class:MujocoPolicy
+set_ob_stat	es_distributed/policies.py	/^    def set_ob_stat(self, ob_mean, ob_std):$/;"	m	class:Policy
+set_ref_batch	es_distributed/policies.py	/^    def set_ref_batch(self, ref_batch):$/;"	m	class:ESAtariPolicy
+set_theta	gpu_implementation/es.py	/^    def set_theta(self, theta):$/;"	m	class:TrainingState
+set_trainable_flat	es_distributed/policies.py	/^    def set_trainable_flat(self, x):$/;"	m	class:Policy
+set_val	visual_inspector/figure_base/fitness_figures.py	/^    def set_val(self, val):$/;"	m	class:DiscreteSlider
+set_value	es_distributed/tf_util.py	/^def set_value(v, val):$/;"	f
+setup	es_distributed/es.py	/^def setup(exp, single_threaded):$/;"	f
+setup	es_distributed/es_modified.py	/^def setup(exp, single_threaded):$/;"	f
+setup	es_distributed/ga.py	/^def setup(exp, single_threaded):$/;"	f
+setup	es_distributed/ga_modified.py	/^def setup(exp, single_threaded):$/;"	f
+setup_and_rollout_policy	visual_inspector/figure_base/rollout_base.py	/^    def setup_and_rollout_policy(cls, policy_file, thisData, *,$/;"	m	class:RolloutBase
+setup_env	es_distributed/nses.py	/^def setup_env(exp):$/;"	f
+setup_policy	es_distributed/nses.py	/^def setup_policy(env, exp, single_threaded):$/;"	f
+setup_policy	visual_inspector/figure_base/rollout_base.py	/^    def setup_policy(cls, *args, **kwargs):$/;"	m	class:RolloutBase
+setup_policy	visual_inspector/figure_custom/rollout_custom.py	/^    def setup_policy(cls, policy_file, thisData, noise_stdev, path):$/;"	m	class:RolloutAtari
+setup_policy	visual_inspector/figure_custom/rollout_custom.py	/^    def setup_policy(cls, policy_file, thisData, noise_stdev, path):$/;"	m	class:RolloutMujoco
+show	visual_inspector/figure_base/cloud_figures.py	/^    def show(self, genNumber):$/;"	m	class:ColorBar
+show	visual_inspector/figure_base/cloud_figures.py	/^    def show(self, message):$/;"	m	class:TextArea
+show_new_labels_dp	visual_inspector/figure_base/cloud_figures.py	/^    def show_new_labels_dp(self, thisData):$/;"	m	class:CloudPlot
+show_new_labels_dp	visual_inspector/figure_custom/cloud_figures_custom.py	/^    def show_new_labels_dp(self, thisData):$/;"	m	class:CloudPlotHDBC
+show_new_labels_gen	visual_inspector/figure_base/cloud_figures.py	/^    def show_new_labels_gen(self, gen):$/;"	m	class:CloudPlot
+single_threaded_session	es_distributed/tf_util.py	/^def single_threaded_session():$/;"	f
+size	gpu_implementation/gym_tensorflow/maze/maze.h	/^        long size;$/;"	m	class:maze::position_accumulator
+speed	gpu_implementation/gym_tensorflow/maze/maze.h	/^        float speed;$/;"	m	class:maze::Character
+ssh	scripts/ec2ctl	/^def ssh(pattern):$/;"	f
+stack_observation	gpu_implementation/gym_tensorflow/wrappers/stack_frames.py	/^    def stack_observation(self, indices, reset=False):$/;"	m	class:StackFramesWrapper
+start	es_distributed/tabular_logger.py	/^def start(dir):$/;"	f
+start	gpu_implementation/gym_tensorflow/maze/maze.h	/^            Point start;$/;"	m	class:maze::Character
+std	es_distributed/es.py	/^    def std(self):$/;"	m	class:RunningStat
+std	es_distributed/es_modified.py	/^    def std(self):$/;"	m	class:RunningStat
+std	es_distributed/tf_util.py	/^def std(x, axis=None, keepdims=False):$/;"	f
+step	gpu_implementation/gym_tensorflow/atari/tf_atari.py	/^    def step(self, action, indices=None, name=None):$/;"	m	class:AtariEnv
+step	gpu_implementation/gym_tensorflow/maze/tf_maze.py	/^    def step(self, action, indices=None, name=None):$/;"	m	class:MazeEnv
+step	gpu_implementation/gym_tensorflow/tf_env.py	/^    def step(self, action, indices=None, name=None):$/;"	m	class:PythonEnv
+step	gpu_implementation/gym_tensorflow/wrappers/stack_frames.py	/^    def step(self, action, indices=None, name=None):$/;"	m	class:StackFramesWrapper
+steps	gpu_implementation/gym_tensorflow/maze/maze.h	/^        int steps;$/;"	m	class:maze::Environment
+stochastic	visual_inspector/figure_base/figure_control.py	/^    def stochastic(cls, label):$/;"	m	class:FigureControl
+stop	es_distributed/tabular_logger.py	/^def stop():$/;"	f
+sum	es_distributed/tf_util.py	/^def sum(x, axis=None, keepdims=False):$/;"	f
+switch	es_distributed/tf_util.py	/^def switch(condition, then_expression, else_expression):$/;"	f
+sync	scripts/ec2ctl	/^def sync(pattern, dest, dry_run):$/;"	f
+tail	scripts/ec2ctl	/^def tail(pattern):$/;"	f
+tensorflow	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	/^namespace tensorflow {$/;"	n	file:
+total_dist	gpu_implementation/gym_tensorflow/maze/maze.h	/^        float total_dist;$/;"	m	class:maze::Character
+total_spin	gpu_implementation/gym_tensorflow/maze/maze.h	/^        float total_spin;$/;"	m	class:maze::Character
+training_steps	gpu_implementation/es.py	/^    def training_steps(self):$/;"	m	class:Offspring
+training_steps	gpu_implementation/ga.py	/^    def training_steps(self):$/;"	m	class:Offspring
+transform	gpu_implementation/gym_tensorflow/maze/maze.h	/^        void transform()$/;"	f	class:maze::position_accumulator
+type	scripts/ec2ctl	/^              type=click.IntRange(0, 3, clamp=True),$/;"	v
+unwrapped	gpu_implementation/gym_tensorflow/tf_env.py	/^    def unwrapped(self):$/;"	m	class:PythonEnv
+unwrapped	gpu_implementation/gym_tensorflow/wrappers/stack_frames.py	/^    def unwrapped(self):$/;"	m	class:StackFramesWrapper
+update	es_distributed/optimizers.py	/^    def update(self, globalg):$/;"	m	class:Optimizer
+update	gpu_implementation/neuroevolution/optimizers.py	/^    def update(self, globalg):$/;"	m	class:Optimizer
+update	visual_inspector/figure_base/fitness_figures.py	/^    def update(self, value):$/;"	m	class:FitnessPlot
+update	visual_inspector/figure_base/mouse_event.py	/^    def update(cls, event, curve, preferred_idx):$/;"	m	class:MouseMove
+update_annot	visual_inspector/figure_base/cloud_figures.py	/^    def update_annot(self, gen):$/;"	m	class:CloudPlot
+update_annot	visual_inspector/figure_base/mouse_event.py	/^    def update_annot(cls, ind):$/;"	m	class:MouseMove
+update_plot	visual_inspector/figure_base/mouse_event.py	/^    def update_plot(cls, vis):$/;"	m	class:MouseMove
+update_radar	gpu_implementation/gym_tensorflow/maze/maze.h	/^        void update_radar(Character& h)$/;"	f	class:maze::Environment
+update_radar_gen	gpu_implementation/gym_tensorflow/maze/maze.h	/^        void update_radar_gen(Character& h,Point target, vector<float>& radar_arr)$/;"	f	class:maze::Environment
+update_rangefinders	gpu_implementation/gym_tensorflow/maze/maze.h	/^        void update_rangefinders(Character& h)$/;"	f	class:maze::Environment
+update_xy_lim	visual_inspector/figure_base/cloud_figures.py	/^    def update_xy_lim(self):$/;"	m	class:CloudPlot
+upload_archive	scripts/launch.py	/^def upload_archive(exp_name, archive_excludes, s3_bucket):$/;"	f
+value	gpu_implementation/neuroevolution/helper.py	/^    def value(self, **kwargs):$/;"	m	class:ConstantSchedule
+value	gpu_implementation/neuroevolution/helper.py	/^    def value(self, **kwargs):$/;"	m	class:ExponentialSchedule
+value	gpu_implementation/neuroevolution/helper.py	/^    def value(self, **kwargs):$/;"	m	class:LinearSchedule
+var	es_distributed/tf_util.py	/^def var(x, axis=None, keepdims=False):$/;"	f
+var_shape	es_distributed/tf_util.py	/^def var_shape(x):$/;"	f
+warn	es_distributed/tabular_logger.py	/^def warn(*args):$/;"	f
+warn	gpu_implementation/tabular_logger.py	/^def warn(*args):$/;"	f
+worker_callback	gpu_implementation/neuroevolution/distributed_helpers.py	/^    def worker_callback(self, worker, subworker, result):$/;"	m	class:WorkerHub
+workers	es_distributed/main.py	/^def workers(algo, master_host, master_port, relay_socket_path, num_workers):$/;"	f
+wrap_deepmind	es_distributed/atari_wrappers.py	/^def wrap_deepmind(env, episode_life=False, skip=4, stack_frames=4, noop_max=30, noops=None, show_warped=False):$/;"	f
+write_values	es_distributed/tabular_logger.py	/^    def write_values(self, key2val):$/;"	m	class:TbWriter
+x	gpu_implementation/gym_tensorflow/maze/maze.h	/^        float x;$/;"	m	class:maze::Point
+y	gpu_implementation/gym_tensorflow/maze/maze.h	/^        float y;$/;"	m	class:maze::Point
+zrgb	gpu_implementation/gym_tensorflow/atari/tf_atari.py	/^    zrgb = ntsc_to_rgb_palette[i]$/;"	v
+~AtariEnvironment	gpu_implementation/gym_tensorflow/atari/tf_atari.cpp	/^        virtual ~AtariEnvironment() {$/;"	f	class:AtariEnvironment
+~Environment	gpu_implementation/gym_tensorflow/maze/maze.h	/^        ~Environment()$/;"	f	class:maze::Environment
+~EnvironmentMakeOp	gpu_implementation/gym_tensorflow/tf_env.cpp	/^EnvironmentMakeOp::~EnvironmentMakeOp() {$/;"	f	class:EnvironmentMakeOp
+~IndexedBatchMatMul	gpu_implementation/gym_tensorflow/ops/indexedmatmul.cpp	/^  virtual ~IndexedBatchMatMul() {}$/;"	f	class:tensorflow::IndexedBatchMatMul
+~MazeEnvironment	gpu_implementation/gym_tensorflow/maze/tf_maze.cpp	/^        virtual ~MazeEnvironment() {$/;"	f	class:MazeEnvironment
+~position_accumulator	gpu_implementation/gym_tensorflow/maze/maze.h	/^        ~position_accumulator()$/;"	f	class:maze::position_accumulator
