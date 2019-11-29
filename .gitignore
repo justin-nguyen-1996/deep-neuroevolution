@@ -1,6 +1,7 @@
 *.DS_Store
 __pycache__/
 env/
+env_laptop/
 *.pyc
 *.pkl
 *.p
@@ -14,3 +15,4 @@ docker-ce-rpm/
 docker-cli-rpm/
 docker-container-rpm/
 docker-selinux-rpm/
+.tags
