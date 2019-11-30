@@ -214,18 +214,18 @@ def run_master(master_redis_cfg, log_dir, exp):
 
         assert noise_inds_n.shape[0] == returns_n2.shape[0] == lengths_n2.shape[0]
         # Process returns
-        if config.return_proc_mode == 'centered_rank':
+        if config.return_proc_mode == 'centered_rank': # (J) seems to be used for pure reward (quality)
             proc_returns_n2 = compute_centered_ranks(returns_n2)
         elif config.return_proc_mode == 'sign':
             proc_returns_n2 = signreturns_n2
-        elif config.return_proc_mode == 'centered_sign_rank':
+        elif config.return_proc_mode == 'centered_sign_rank': # (J) seems to be used for pure novelty
             proc_returns_n2 = compute_centered_ranks(signreturns_n2)
         else:
             raise NotImplementedError(config.return_proc_mode)
 
         if algo_type  == "nsr":
             rew_ranks = compute_centered_ranks(returns_n2)
-            proc_returns_n2 = (rew_ranks + proc_returns_n2) / 2.0
+            proc_returns_n2 = (rew_ranks + proc_returns_n2) / 2.0 # (J) reward and novelty each weighted by 0.5
 
         # Compute and take step
         g, count = batched_weighted_sum(
