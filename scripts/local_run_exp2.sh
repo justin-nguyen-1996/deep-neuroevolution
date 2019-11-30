@@ -12,5 +12,14 @@
 
 # wget download.redis.io/releases/redis-4.0.8.tar.gz
 
+### ES
+#. scripts/local_env_setup.sh
+#python -m es_distributed.main workers --master_host localhost --relay_socket_path /tmp/es_redis_relay.sock --algo es --num_workers 40
+
+### GA (doesn't work)
+#. scripts/local_env_setup.sh
+#python -m es_distributed.main workers --master_host localhost --relay_socket_path /tmp/es_redis_relay.sock --algo ga --num_workers 40
+
+ALGO=$1
 . scripts/local_env_setup.sh
-python -m es_distributed.main workers --master_host localhost --relay_socket_path /tmp/es_redis_relay.sock --algo es --num_workers 40
+python -m es_distributed.main workers --master_host localhost --relay_socket_path /tmp/es_redis_relay.sock --algo "$ALGO" --num_workers 40

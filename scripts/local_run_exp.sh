@@ -12,6 +12,15 @@
 
 # wget download.redis.io/releases/redis-4.0.8.tar.gz
 
+### ES
+#. scripts/local_env_setup.sh
+#python -m es_distributed.main master --master_socket_path /tmp/es_redis_master.sock --algo es --exp_file configurations/frostbite_es.json
+
+### GA (doesn't work)
+#. scripts/local_env_setup.sh
+#python -m es_distributed.main master --master_socket_path /tmp/es_redis_master.sock --algo ga --exp_file configurations/frostbite_ga.json
+
+ALGO=$1
+EXP_FILE=$2
 . scripts/local_env_setup.sh
-pip install -r requirements.txt
-python -m es_distributed.main master --master_socket_path /tmp/es_redis_master.sock --algo es --exp_file configurations/frostbite_es.json
+python -m es_distributed.main master --master_socket_path /tmp/es_redis_master.sock --algo "$ALGO" --exp_file "$EXP_FILE"
