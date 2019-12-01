@@ -29,6 +29,8 @@ def cli():
 def import_algo(name):
     if name == 'es':
         from . import es as algo
+    elif name == 'es-mod':
+        from . import es_modified as algo
     elif name == 'ns-es' or name == "nsr-es":
         from . import nses as algo
     elif name == 'ga':
