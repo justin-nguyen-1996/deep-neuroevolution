@@ -5,6 +5,7 @@ env_laptop/
 *.pyc
 *.pkl
 *.p
+*clips/
 mujoco/mjpro131
 gym_tensorflow.so
 dump.rdb
