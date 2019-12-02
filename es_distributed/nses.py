@@ -19,9 +19,12 @@ def euclidean_distance(x, y):
         b = np.linalg.norm(x[-1] - y[n:])
     return np.sqrt(a**2 + b**2)
 
+# (J) computes novelty score i.e. computes distance of current BC to every BC in the archive to get each point's KNN and
+# takes the mean of the distances (the novelty_vector is really the BC)
 def compute_novelty_vs_archive(archive, novelty_vector, k):
     distances = []
     nov = novelty_vector.astype(np.float)
+    # TODO: (J) change this to compute different distance metric for novelty calculation
     for point in archive:
         distances.append(euclidean_distance(point.astype(np.float), nov))
 
@@ -235,7 +238,7 @@ def run_master(master_redis_cfg, log_dir, exp):
         )
         g /= returns_n2.size
         assert g.shape == (policy.num_params,) and g.dtype == np.float32 and count == len(noise_inds_n)
-        update_ratio, theta = optimizer.update(-g + config.l2coeff * theta)
+        update_ratio, theta = optimizer.update(-g + config.l2coeff * theta) # (J) maximize reward metric (i.e. novelty or fitness or some combination)
 
         policy.set_trainable_flat(theta)
 
@@ -380,10 +383,10 @@ def run_worker(master_redis_cfg, relay_redis_cfg, noise, *, min_task_runtime=.2)
 
                 nov_pos = compute_novelty_vs_archive(archive, nov_vec_pos, exp['novelty_search']['k'])
                 nov_neg = compute_novelty_vs_archive(archive, nov_vec_neg, exp['novelty_search']['k'])
-                
-                signreturns.append([nov_pos, nov_neg])
+
+                signreturns.append([nov_pos, nov_neg]) # (J) novelty scores
                 noise_inds.append(noise_idx)
-                returns.append([rews_pos.sum(), rews_neg.sum()])
+                returns.append([rews_pos.sum(), rews_neg.sum()]) # (J) reward scores i.e. fitness scores
                 lengths.append([len_pos, len_neg])
 
             worker.push_result(task_id, Result(

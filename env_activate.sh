@@ -1,4 +1,2 @@
-
-# env_activate.sh
-
-. env_laptop/bin/activate
+#!/bin/sh
+source env_laptop/bin/activate
