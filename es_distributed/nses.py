@@ -9,6 +9,22 @@ import numpy as np
 from .dist import MasterClient, WorkerClient
 from .es import *
 
+def computeZ(a, similarity):
+    result = 0
+    for i in range(1, len(a)):
+        if abs(a[i] - a[i-1]) > similarity:
+            result+=1
+    return result
+
+def interleave(a, b):
+    return np.dstack((a, b)).flatten()
+
+def NCD(a, b):
+    similarity = 1
+    z_a = computeZ(a, similarity)
+    z_b = computeZ(b, similarity)
+    return (computeZ(interleave(a, b), similarity) - min(z_a, z_b))/max(z_a, z_b)
+
 def euclidean_distance(x, y):
     n, m = len(x), len(y)
     if n > m:
