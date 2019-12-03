@@ -42,7 +42,7 @@ def compute_novelty_vs_archive(archive, novelty_vector, k):
     nov = novelty_vector.astype(np.float)
     # TODO: (J) change this to compute different distance metric for novelty calculation
     for point in archive:
-        distances.append(euclidean_distance(point.astype(np.float), nov))
+        distances.append(NCD(point.astype(np.float), nov))
 
     # Pick k nearest neighbors
     distances = np.array(distances)
