@@ -1,0 +1,24 @@
+
+# Obs:     (210, 160, 3)
+# Actions: 18
+#
+# Blue water                       : [0     28    136]
+# White ice                        : [214   214   214]
+# Blue status HUD                  : [45    50    184]
+# Light blue numbers in status HUD : [132   144   252]
+# Gray igloo                       : [142   142   142]
+# Black igloo door                 : [0     0     0]
+# Stepped on blue ice              : [84    138   210]
+#
+# First row of actual game screen    : 7 (beginning of status HUD)
+# First column of actual game screen : 8 (beginning of water)
+# Last row of actual game screen     : 184 (end of water)
+# Last column of actual game screen  : 159 (end of water)
+#
+# First row of igloo: 35
+# Last row of igloo: 54
+# Left most column of igloo: 112
+# Right most column of igloo: 143
+#
+# First row of water : 78 (beginning of water)
+# First row of ice   : 96
