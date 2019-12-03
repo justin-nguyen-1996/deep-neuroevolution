@@ -17,13 +17,17 @@ def computeZ(a, similarity):
     return result
 
 def interleave(a, b):
-    return np.dstack((a, b)).flatten()
+    c = np.zeros((2*min(len(a), len(b))),)
+    for i in range(0, int(len(c)/2)):
+        c[2*i] = a[i]
+        c[2*i+1] = b[i]
+    return c
 
 def NCD(a, b):
     similarity = 1
     z_a = computeZ(a, similarity)
     z_b = computeZ(b, similarity)
-    return (computeZ(interleave(a, b), similarity) - min(z_a, z_b))/max(z_a, z_b)
+    return (computeZ(interleave(a, b), similarity) - min(z_a, z_b))/max(max(z_a, z_b), 1)
 
 def euclidean_distance(x, y):
     n, m = len(x), len(y)
