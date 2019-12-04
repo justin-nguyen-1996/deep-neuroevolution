@@ -417,6 +417,9 @@ class ESAtariPolicy(Policy):
             # Number of igloos pieces
             # Entire water pixels (that entire 2D block of pixel values)
             # Entire water pixels + entire igloo pixels
+            # --> TODO: try trajectory path (should be unique enough to encourage exploration)
+            # --> TODO: see if good results from step on ice BC is just because of 'R' component of NSR-ES
+            #           i.e. run experiment again but for just NS
 
             # BC: Number of stepped on ice in water
             num_stepped_on_ice = 0
