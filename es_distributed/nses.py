@@ -17,7 +17,7 @@ def computeZ(a, similarity):
     return result
 
 def interleave(a, b):
-    c = np.zeros((2*min(len(a), len(b))),)
+    c = np.zeros((min(len(a), len(b))))
     for i in range(0, int(len(c)/2)):
         c[2*i] = a[i]
         c[2*i+1] = b[i]
@@ -25,6 +25,8 @@ def interleave(a, b):
 
 def NCD(a, b):
     similarity = 1
+    a = a.reshape((a.shape[0]*a.shape[1]))
+    b = b.reshape((b.shape[0]*b.shape[1]))
     z_a = computeZ(a, similarity)
     z_b = computeZ(b, similarity)
     return (computeZ(interleave(a, b), similarity) - min(z_a, z_b))/max(max(z_a, z_b), 1)
