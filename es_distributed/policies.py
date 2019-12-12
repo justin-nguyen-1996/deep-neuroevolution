@@ -398,7 +398,15 @@ class ESAtariPolicy(Policy):
         ob = env.reset()
         self.act(self.ref_list, random_stream=random_stream) #passing ref batch through network
 
-        for _ in range(timestep_limit):
+        # Frostbite game color and position info
+        begin_water_row    = 78
+        end_water_row      = 184+1
+        begin_water_col    = 8
+        end_water_col      = 159+1
+
+        done = False
+#        for _ in range(timestep_limit):
+        while not done:
             start_time = time.time()
             ac = self.act([ob[None], False], random_stream=random_stream)[0]
 
@@ -419,19 +427,23 @@ class ESAtariPolicy(Policy):
             # Entire water pixels + entire igloo pixels
             # --> TODO: try trajectory path (should be unique enough to encourage exploration)
 
-            # Frostbite game color and position info
-            begin_water_row    = 78
-            end_water_row      = 184+1
-            begin_water_col    = 8
-            end_water_col      = 159+1
-
             # BC: Number of stepped on ice in water
 #            num_stepped_on_ice = len(np.where(ob[begin_water_row:end_water_row] == [84, 138, 210])[0])/3
 #            bc = num_stepped_on_ice
 
-            # BC: trajectory heatmap
-            num_stepped_on_ice = len(np.where(ob[begin_water_row:end_water_row] == [84, 138, 210])[0])/3
-            bc = num_stepped_on_ice
+            # BC: trajectory heatmap (NOTE: doesn't work because it doesn't compile)
+#            player_pos_ = np.where(ob == [162, 162, 42])
+#            if len(player_pos_[0]) != 0:
+#                player_pos = (player_pos_[0][-1], player_pos_[1][-1])
+#                bc[player_pos] += 0.01
+
+            # BC: path taken
+            player_pos_ = np.where(ob == [162, 162, 42])
+            if len(player_pos_[0]) != 0:
+                player_pos = (player_pos_[0][-1], player_pos_[1][-1])
+                bc = player_pos
+            else:
+                bc = [0,0]
 
             if save_obs:
                obs.append(ob)
@@ -447,6 +459,7 @@ class ESAtariPolicy(Policy):
             if done:
                 break
 
+#        print('novelty_vector: ', novelty_vector, len(novelty_vector))
         rews = np.array(rews, dtype=np.float32)
         if save_obs:
             return rews, t, np.array(obs), np.array(novelty_vector)

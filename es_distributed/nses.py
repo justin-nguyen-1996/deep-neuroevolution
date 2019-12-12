@@ -39,16 +39,17 @@ def get_mean_bc(env, policy, tslimit, num_rollouts=1):
     for n in range(num_rollouts):
         rew, t, nv = policy.rollout(env, timestep_limit=tslimit)
         novelty_vector.append(nv)
-    return np.mean(novelty_vector, axis=0)
+    mean_bc = np.mean(novelty_vector, axis=0)
+    return mean_bc
 
 def setup_env(exp):
     import gym
     gym.undo_logger_setup()
     config = Config(**exp['config'])
     env = gym.make(exp['env_id'])
-    if exp['policy']['type'] == "ESAtariPolicy":
-        from .atari_wrappers import wrap_deepmind
-        env = wrap_deepmind(env)
+#    if exp['policy']['type'] == "ESAtariPolicy":
+#        from .atari_wrappers import wrap_deepmind
+#        env = wrap_deepmind(env)
     return config, env
 
 def setup_policy(env, exp, single_threaded):
