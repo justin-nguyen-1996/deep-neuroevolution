@@ -418,19 +418,18 @@ class ESAtariPolicy(Policy):
             # Entire water pixels (that entire 2D block of pixel values)
             # Entire water pixels + entire igloo pixels
             # --> TODO: try trajectory path (should be unique enough to encourage exploration)
-            # --> TODO: see if good results from step on ice BC is just because of 'R' component of NSR-ES
-            #           i.e. run experiment again but for just NS
 
-            # BC: Number of stepped on ice in water
-            num_stepped_on_ice = 0
+            # Frostbite game color and position info
             begin_water_row    = 78
             end_water_row      = 184+1
             begin_water_col    = 8
             end_water_col      = 159+1
-#            for r in range(begin_water_row, end_water_row):
-#                for c in range(begin_water_col, end_water_col):
-#                    if ob[r][c] == [84, 138, 210]:
-#                        num_stepped_on_ice += 1
+
+            # BC: Number of stepped on ice in water
+#            num_stepped_on_ice = len(np.where(ob[begin_water_row:end_water_row] == [84, 138, 210])[0])/3
+#            bc = num_stepped_on_ice
+
+            # BC: trajectory heatmap
             num_stepped_on_ice = len(np.where(ob[begin_water_row:end_water_row] == [84, 138, 210])[0])/3
             bc = num_stepped_on_ice
 
