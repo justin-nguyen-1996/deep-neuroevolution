@@ -419,7 +419,7 @@ class ESAtariPolicy(Policy):
                 worker_stats.time_comp_step += time.time() - start_time
 
             rews.append(rew)
-            
+
             novelty_vector.append(countBluePixels(env.unwrapped._get_image()))
 
             t += 1
@@ -522,6 +522,6 @@ def countBluePixels(img):
     target = np.array([84, 138, 210])
     for i in range(210):
         for j in range(160):
-            if np.array_equal(image[i, j], target):
+            if np.array_equal(img[i, j], target):
                 result+=1
     return result
