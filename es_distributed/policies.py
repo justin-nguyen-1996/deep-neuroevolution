@@ -407,8 +407,11 @@ class ESAtariPolicy(Policy):
 
             start_time = time.time()
             ob, rew, done, info = env.step(ac)
+            curr_img = env.unwrapped._get_image()
             # TODO: (J) change this BC (should be custom per game instead of just the RAM state)
             ram = env.unwrapped._get_ram() # extracts RAM state information
+
+            env.unwrapped._get_image()
 
             if save_obs:
                obs.append(ob)
@@ -416,7 +419,8 @@ class ESAtariPolicy(Policy):
                 worker_stats.time_comp_step += time.time() - start_time
 
             rews.append(rew)
-            novelty_vector.append(ram)
+            
+            novelty_vector.append(countBluePixels(env.unwrapped._get_image()))
 
             t += 1
             if render:
@@ -513,3 +517,11 @@ class GAAtariPolicy(Policy):
             return rews, t, np.array(obs), np.array(novelty_vector)
         return rews, t, np.array(novelty_vector)
 
+def countBluePixels(img):
+    result = 0
+    target = np.array([84, 138, 210])
+    for i in range(210):
+        for j in range(160):
+            if np.array_equal(image[i, j], target):
+                result+=1
+    return result
