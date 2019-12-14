@@ -12,6 +12,15 @@ from . import tf_util as U
 logger = logging.getLogger(__name__)
 
 
+def countBluePixels(img):
+    result = 0
+    target = np.array([84, 138, 210])
+    for i in range(210):
+        for j in range(160):
+            if np.array_equal(img[i, j], target):
+                result+=1
+    return result
+
 class Policy:
     def __init__(self, *args, **kwargs):
         self.args, self.kwargs = args, kwargs
@@ -411,7 +420,7 @@ class ESAtariPolicy(Policy):
             # TODO: (J) change this BC (should be custom per game instead of just the RAM state)
             ram = env.unwrapped._get_ram() # extracts RAM state information
 
-            env.unwrapped._get_image()
+            #num_blue_pixels = countBluePixels(env.unwrapped._get_image())
 
             if save_obs:
                obs.append(ob)
@@ -420,7 +429,7 @@ class ESAtariPolicy(Policy):
 
             rews.append(rew)
 
-            novelty_vector.append(countBluePixels(env.unwrapped._get_image()))
+            novelty_vector.append(ram)
 
             t += 1
             if render:
@@ -516,12 +525,3 @@ class GAAtariPolicy(Policy):
         if save_obs:
             return rews, t, np.array(obs), np.array(novelty_vector)
         return rews, t, np.array(novelty_vector)
-
-def countBluePixels(img):
-    result = 0
-    target = np.array([84, 138, 210])
-    for i in range(210):
-        for j in range(160):
-            if np.array_equal(img[i, j], target):
-                result+=1
-    return result
