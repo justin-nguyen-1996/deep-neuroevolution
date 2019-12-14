@@ -129,9 +129,9 @@ def setup(exp, single_threaded):
 
     config = Config(**exp['config'])
     env = gym.make(exp['env_id'])
-#    if exp['policy']['type'] == "ESAtariPolicy":
-#        from .atari_wrappers import wrap_deepmind
-#        env = wrap_deepmind(env)
+    if exp['policy']['type'] == "ESAtariPolicy":
+        from .atari_wrappers import wrap_deepmind
+        env = wrap_deepmind(env)
     sess = make_session(single_threaded=single_threaded)
     policy = getattr(policies, exp['policy']['type'])(env.observation_space, env.action_space, **exp['policy']['args'])
     tf_util.initialize()

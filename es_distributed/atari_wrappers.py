@@ -4,48 +4,19 @@ from PIL import Image
 import gym
 from gym import spaces
 
-
-class NoopResetEnv(gym.Wrapper):
-    def __init__(self, env, noop_max=30):
-        """Sample initial states by taking random number of no-ops on reset.
-        No-op is assumed to be action 0.
-        """
-        gym.Wrapper.__init__(self, env)
-        self.noop_max = noop_max
-        self.override_num_noops = None
-        assert env.unwrapped.get_action_meanings()[0] == 'NOOP'
-
-    def _reset(self):
-        """ Do no-op action for a number of steps in [1, noop_max]."""
-        self.env.reset()
-        if self.override_num_noops is not None:
-            noops = self.override_num_noops
-        else:
-            noops = self.unwrapped.np_random.randint(1, self.noop_max + 1) #pylint: disable=E1101
-        assert noops > 0
-        obs = None
-        for _ in range(noops):
-            obs, _, done, _ = self.env.step(0)
-            if done:
-                obs = self.env.reset()
-        return obs
-
-class FireResetEnv(gym.Wrapper):
+class DiscretizeActions(gym.Wrapper):
     def __init__(self, env):
-        """Take action on reset for environments that are fixed until firing."""
+        """Buffer observations and stack across channels (last axis)."""
         gym.Wrapper.__init__(self, env)
-        assert env.unwrapped.get_action_meanings()[1] == 'FIRE'
-        assert len(env.unwrapped.get_action_meanings()) >= 3
+        self.temp_action = env.action_space
+        self.action_space = spaces.Discrete(5 ** int(np.prod(env.action_space.shape)))
 
-    def _reset(self):
-        self.env.reset()
-        obs, _, done, _ = self.env.step(1)
-        if done:
-            self.env.reset()
-        obs, _, done, _ = self.env.step(2)
-        if done:
-            self.env.reset()
-        return obs
+    def _step(self, action):
+        cont_action = self.temp_action.low.copy()
+        for i in range(cont_action.size):
+            cont_action[i] += (self.temp_action.high[i] - self.temp_action.low[i]) * float(int(action) % 5) / 4.0
+            action = int(action / 5)
+        return self.env.step(cont_action)
 
 class EpisodicLifeEnv(gym.Wrapper):
     def __init__(self, env):
@@ -83,6 +54,31 @@ class EpisodicLifeEnv(gym.Wrapper):
         self.lives = self.env.unwrapped.ale.lives()
         return obs
 
+class NoopResetEnv(gym.Wrapper):
+    def __init__(self, env, noop_max=30):
+        """Sample initial states by taking random number of no-ops on reset.
+        No-op is assumed to be action 0.
+        """
+        gym.Wrapper.__init__(self, env)
+        self.noop_max = noop_max
+        self.override_num_noops = None
+        assert env.unwrapped.get_action_meanings()[0] == 'NOOP'
+
+    def _reset(self):
+        """ Do no-op action for a number of steps in [1, noop_max]."""
+        self.env.reset()
+        if self.override_num_noops is not None:
+            noops = self.override_num_noops
+        else:
+            noops = self.unwrapped.np_random.randint(1, self.noop_max + 1) #pylint: disable=E1101
+        assert noops > 0
+        obs = None
+        for _ in range(noops):
+            obs, _, done, _ = self.env.step(0)
+            if done:
+                obs = self.env.reset()
+        return obs
+
 class MaxAndSkipEnv(gym.Wrapper):
     def __init__(self, env, skip=4):
         """Return only every `skip`-th frame"""
@@ -103,7 +99,6 @@ class MaxAndSkipEnv(gym.Wrapper):
             if done:
                 break
         max_frame = np.max(np.stack(self._obs_buffer), axis=0)
-
         return max_frame, total_reward, done, info
 
     def _reset(self):
@@ -125,6 +120,22 @@ class MaxAndSkipEnv(gym.Wrapper):
         else:
             return np.max(np.stack(self._obs_buffer), axis=0)
 
+class FireResetEnv(gym.Wrapper):
+    def __init__(self, env):
+        """Take action on reset for environments that are fixed until firing."""
+        gym.Wrapper.__init__(self, env)
+        assert env.unwrapped.get_action_meanings()[1] == 'FIRE'
+        assert len(env.unwrapped.get_action_meanings()) >= 3
+
+    def _reset(self):
+        self.env.reset()
+        obs, _, done, _ = self.env.step(1)
+        if done:
+            self.env.reset()
+        obs, _, done, _ = self.env.step(2)
+        if done:
+            self.env.reset()
+        return obs
 
 class WarpFrame(gym.ObservationWrapper):
     def __init__(self, env, show_warped=False):
@@ -136,10 +147,12 @@ class WarpFrame(gym.ObservationWrapper):
         self.show_warped = show_warped
 
     def _observation(self, obs):
+        orig_obs = np.copy(obs)
         frame = np.dot(obs.astype('float32'), np.array([0.299, 0.587, 0.114], 'float32'))
-        frame = np.array(Image.fromarray(frame).resize((self.res, self.res),
-            resample=Image.BILINEAR), dtype=np.uint8)
-        return frame.reshape((self.res, self.res, 1))
+        frame = np.array(Image.fromarray(frame).resize((self.res, self.res), resample=Image.BILINEAR), dtype=np.uint8)
+        self.orig_obs = orig_obs
+        orig_frame = np.expand_dims(orig_obs, axis=3)
+        return frame.reshape((self.res, self.res, 1)), orig_frame
 
     def _render(self, mode='human', close=False):
         if close:
@@ -160,45 +173,38 @@ class FrameStack(gym.Wrapper):
         gym.Wrapper.__init__(self, env)
         self.k = k
         self.frames = deque([], maxlen=k)
+        self.orig_frames = deque([], maxlen=k)
         shp = env.observation_space.shape
         assert shp[2] == 1  # can only stack 1-channel frames
         self.observation_space = spaces.Box(low=0, high=255, shape=(shp[0], shp[1], k))
 
     def _reset(self):
         """Clear buffer and re-fill by duplicating the first observation."""
-        ob = self.env.reset()
-        for _ in range(self.k): self.frames.append(ob)
-        return self._observation()
+        ob, orig_ob = self.env.reset()
+        for _ in range(self.k):
+            self.frames.append(ob)
+            self.orig_frames.append(orig_ob)
+        ret = self._observation()
+        return ret
 
     def _step(self, action):
-        ob, reward, done, info = self.env.step(action)
+        ob_tuple, reward, done, info = self.env.step(action)
+        ob = ob_tuple[0]
+        orig_ob = ob_tuple[1]
         self.frames.append(ob)
-        return self._observation(), reward, done, info
+        self.orig_frames.append(orig_ob)
+        self_dot_observation_tuple = self._observation()
+        return self_dot_observation_tuple, reward, done, info
 
     def _observation(self):
         assert len(self.frames) == self.k
-        return np.concatenate(self.frames, axis=2)
+        return np.concatenate(self.frames, axis=2), np.concatenate(self.orig_frames, axis=3)
 
 class ScaledFloatFrame(gym.ObservationWrapper):
     def _observation(self, obs):
     # careful! This undoes the memory optimization, use
     # with smaller replay buffers only.
-        return np.array(obs).astype(np.float32) / 255.0
-
-class DiscretizeActions(gym.Wrapper):
-    def __init__(self, env):
-        """Buffer observations and stack across channels (last axis)."""
-        gym.Wrapper.__init__(self, env)
-        self.temp_action = env.action_space
-        self.action_space = spaces.Discrete(5 ** int(np.prod(env.action_space.shape)))
-
-    def _step(self, action):
-        cont_action = self.temp_action.low.copy()
-        for i in range(cont_action.size):
-            cont_action[i] += (self.temp_action.high[i] - self.temp_action.low[i]) * float(int(action) % 5) / 4.0
-            action = int(action / 5)
-        return self.env.step(cont_action)
-
+        return np.array(obs[0]).astype(np.float32) / 255.0, np.array(obs[1]).astype(np.float32)
 
 # def wrap_deepmind(env, episode_life=True, clip_rewards=True):
 def wrap_deepmind(env, episode_life=False, skip=4, stack_frames=4, noop_max=30, noops=None, show_warped=False):

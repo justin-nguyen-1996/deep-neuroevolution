@@ -79,12 +79,12 @@ class Policy:
         t = 0
         if save_obs:
             obs = []
-        ob = env.reset()
+        ob, orig_ob = env.reset()
         for _ in range(timestep_limit):
             ac = self.act(ob[None], random_stream=random_stream)[0]
             if save_obs:
                 obs.append(ob)
-            ob, rew, done, _ = env.step(ac)
+            ob, orig_ob, rew, done, _ = env.step(ac)
             rews.append(rew)
             t += 1
             if render:
@@ -275,12 +275,12 @@ class MujocoPolicy(Policy):
             if random_stream:
                 random_stream.seed(policy_seed)
 
-        ob = env.reset()
+        ob, orig_ob = env.reset()
         for _ in range(timestep_limit):
             ac = self.act(ob[None], random_stream=random_stream)[0]
             if save_obs:
                 obs.append(ob)
-            ob, rew, done, _ = env.step(ac)
+            ob, orig_ob, rew, done, _ = env.step(ac)
             x_traj[t], y_traj[t], _ = self._get_pos(env.unwrapped.model)
             rews.append(rew)
             t += 1
@@ -395,7 +395,7 @@ class ESAtariPolicy(Policy):
             if random_stream:
                 random_stream.seed(policy_seed)
 
-        ob = env.reset()
+        ob, orig_ob = env.reset()
         self.act(self.ref_list, random_stream=random_stream) #passing ref batch through network
 
         # Frostbite game color and position info
@@ -414,10 +414,12 @@ class ESAtariPolicy(Policy):
                 worker_stats.time_comp_act += time.time() - start_time
 
             start_time = time.time()
-            ob, rew, done, info = env.step(ac)
+            ob_tuple, rew, done, info = env.step(ac)
+            ob = ob_tuple[0]
+            orig_ob = ob_tuple[1]
 
             # TODO: (J) change this BC (should be custom per game instead of just the RAM state)
-#            bc = env.unwrapped._get_ram() # extracts RAM state information
+            bc = env.unwrapped._get_ram() # extracts RAM state information
 
             # TODO: try the following BC's
             # Number of white ice in water
@@ -438,17 +440,17 @@ class ESAtariPolicy(Policy):
 #                bc[player_pos] += 0.01
 
             # BC: path taken
-            player_pos_ = np.where(ob == [162, 162, 42])
-            if len(player_pos_[0]) != 0:
-                player_pos = (player_pos_[0][-1], player_pos_[1][-1])
-                bc = player_pos
-            else:
-                bc = [0,0]
-
-            if save_obs:
-               obs.append(ob)
-            if worker_stats:
-                worker_stats.time_comp_step += time.time() - start_time
+#            player_pos_ = np.where(ob == [162, 162, 42])
+#            if len(player_pos_[0]) != 0:
+#                player_pos = (player_pos_[0][-1], player_pos_[1][-1])
+#                bc = player_pos
+#            else:
+#                bc = [0,0]
+#
+#            if save_obs:
+#               obs.append(ob)
+#            if worker_stats:
+#                worker_stats.time_comp_step += time.time() - start_time
 
             rews.append(rew)
             novelty_vector.append(bc)
@@ -527,13 +529,13 @@ class GAAtariPolicy(Policy):
             if random_stream:
                 random_stream.seed(policy_seed)
 
-        ob = env.reset()
+        ob, orig_ob = env.reset()
         for _ in range(timestep_limit):
             ac = self.act(ob[None], random_stream=random_stream)[0]
 
             if save_obs:
                 obs.append(ob)
-            ob, rew, done, info = env.step(ac)
+            ob, orig_ob, rew, done, info = env.step(ac)
             rews.append(rew)
 
             t += 1

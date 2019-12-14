@@ -47,9 +47,9 @@ def setup_env(exp):
     gym.undo_logger_setup()
     config = Config(**exp['config'])
     env = gym.make(exp['env_id'])
-#    if exp['policy']['type'] == "ESAtariPolicy":
-#        from .atari_wrappers import wrap_deepmind
-#        env = wrap_deepmind(env)
+    if exp['policy']['type'] == "ESAtariPolicy":
+        from .atari_wrappers import wrap_deepmind
+        env = wrap_deepmind(env)
     return config, env
 
 def setup_policy(env, exp, single_threaded):
@@ -68,7 +68,7 @@ def run_master(master_redis_cfg, log_dir, exp):
     master = MasterClient(master_redis_cfg)
     noise = SharedNoiseTable()
     rs = np.random.RandomState()
-    ref_batch = get_ref_batch(env, batch_size=128)
+    ref_batch, orig_ref_batch = get_ref_batch(env, batch_size=128)
 
     pop_size = int(exp['novelty_search']['population_size'])
     num_rollouts = int(exp['novelty_search']['num_rollouts'])

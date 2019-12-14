@@ -104,13 +104,17 @@ def itergroups(items, group_size):
 
 def get_ref_batch(env, batch_size=32):
     ref_batch = []
-    ob = env.reset()
+    orig_ref_batch = []
+    ob, orig_ob = env.reset()
     while len(ref_batch) < batch_size:
-        ob, rew, done, info = env.step(env.action_space.sample())
+        ob_tuple, rew, done, info = env.step(env.action_space.sample())
+        ob = ob_tuple[0]
+        ob_orig = ob_tuple[1]
         ref_batch.append(ob)
+        orig_ref_batch.append(orig_ob)
         if done:
-            ob = env.reset()
-    return ref_batch
+            ob, ob_orig = env.reset()
+    return ref_batch, orig_ref_batch
 
 def batched_weighted_sum(weights, vecs, batch_size):
     total = 0.
@@ -129,9 +133,9 @@ def setup(exp, single_threaded):
 
     config = Config(**exp['config'])
     env = gym.make(exp['env_id'])
-#    if exp['policy']['type'] == "ESAtariPolicy":
-#        from .atari_wrappers import wrap_deepmind
-#        env = wrap_deepmind(env)
+    if exp['policy']['type'] == "ESAtariPolicy":
+        from .atari_wrappers import wrap_deepmind
+        env = wrap_deepmind(env)
     sess = make_session(single_threaded=single_threaded)
     policy = getattr(policies, exp['policy']['type'])(env.observation_space, env.action_space, **exp['policy']['args'])
     tf_util.initialize()
@@ -419,7 +423,7 @@ def run_worker(master_redis_cfg, relay_redis_cfg, noise, *, min_task_runtime=.2)
                 policy.set_trainable_flat(task_data.params - v)
                 rews_neg, len_neg, nov_vec_neg = rollout_and_update_ob_stat(
                     policy, env, task_data.timestep_limit, rs, task_ob_stat, config.calc_obstat_prob)
-    
+
                 signreturns.append([np.sign(rews_pos).sum(), np.sign(rews_neg).sum()])
                 noise_inds.append(noise_idx)
                 returns.append([rews_pos.sum(), rews_neg.sum()])
