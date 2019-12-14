@@ -407,32 +407,7 @@ class ESAtariPolicy(Policy):
 
             start_time = time.time()
             ob, rew, done, info = env.step(ac)
-
-            # TODO: (J) change this BC (should be custom per game instead of just the RAM state)
-#            bc = env.unwrapped._get_ram() # extracts RAM state information
-
-            # TODO: try the following BC's
-            # Number of white ice in water
-            # Number of stepped on ice in water
-            # Number of igloos pieces
-            # Entire water pixels (that entire 2D block of pixel values)
-            # Entire water pixels + entire igloo pixels
-            # --> TODO: try trajectory path (should be unique enough to encourage exploration)
-            # --> TODO: see if good results from step on ice BC is just because of 'R' component of NSR-ES
-            #           i.e. run experiment again but for just NS
-
-            # BC: Number of stepped on ice in water
-            num_stepped_on_ice = 0
-            begin_water_row    = 78
-            end_water_row      = 184+1
-            begin_water_col    = 8
-            end_water_col      = 159+1
-#            for r in range(begin_water_row, end_water_row):
-#                for c in range(begin_water_col, end_water_col):
-#                    if ob[r][c] == [84, 138, 210]:
-#                        num_stepped_on_ice += 1
-            num_stepped_on_ice = len(np.where(ob[begin_water_row:end_water_row] == [84, 138, 210])[0])/3
-            bc = num_stepped_on_ice
+            ram = env.unwrapped._get_ram() # extracts RAM state information
 
             if save_obs:
                obs.append(ob)
@@ -440,7 +415,7 @@ class ESAtariPolicy(Policy):
                 worker_stats.time_comp_step += time.time() - start_time
 
             rews.append(rew)
-            novelty_vector.append(bc)
+            novelty_vector.append(ram)
 
             t += 1
             if render:
