@@ -419,7 +419,7 @@ class ESAtariPolicy(Policy):
             orig_ob = ob_tuple[1]
 
             # TODO: (J) change this BC (should be custom per game instead of just the RAM state)
-            bc = env.unwrapped._get_ram() # extracts RAM state information
+#            bc = env.unwrapped._get_ram() # extracts RAM state information
 
             # TODO: try the following BC's
             # Number of white ice in water
@@ -430,27 +430,30 @@ class ESAtariPolicy(Policy):
             # --> TODO: try trajectory path (should be unique enough to encourage exploration)
 
             # BC: Number of stepped on ice in water
-#            num_stepped_on_ice = len(np.where(ob[begin_water_row:end_water_row] == [84, 138, 210])[0])/3
+#            num_stepped_on_ice = 0
+#            for i in range(4):
+#                num_stepped_on_ice += len(np.where(orig_ob[begin_water_row:end_water_row][:,:,:,i] == [84, 138, 210])[0])/3
 #            bc = num_stepped_on_ice
 
             # BC: trajectory heatmap (NOTE: doesn't work because it doesn't compile)
+            # TODO: try this again actually
 #            player_pos_ = np.where(ob == [162, 162, 42])
 #            if len(player_pos_[0]) != 0:
 #                player_pos = (player_pos_[0][-1], player_pos_[1][-1])
 #                bc[player_pos] += 0.01
 
             # BC: path taken
-#            player_pos_ = np.where(ob == [162, 162, 42])
-#            if len(player_pos_[0]) != 0:
-#                player_pos = (player_pos_[0][-1], player_pos_[1][-1])
-#                bc = player_pos
-#            else:
-#                bc = [0,0]
-#
-#            if save_obs:
-#               obs.append(ob)
-#            if worker_stats:
-#                worker_stats.time_comp_step += time.time() - start_time
+            player_pos_ = np.where(orig_ob[:,:,:,0] == [162, 162, 42])
+            if len(player_pos_[0]) != 0:
+                player_pos = (player_pos_[0][-1], player_pos_[1][-1])
+                bc = player_pos
+            else:
+                bc = [0,0]
+
+            if save_obs:
+               obs.append(ob)
+            if worker_stats:
+                worker_stats.time_comp_step += time.time() - start_time
 
             rews.append(rew)
             novelty_vector.append(bc)
@@ -461,7 +464,6 @@ class ESAtariPolicy(Policy):
             if done:
                 break
 
-#        print('novelty_vector: ', novelty_vector, len(novelty_vector))
         rews = np.array(rews, dtype=np.float32)
         if save_obs:
             return rews, t, np.array(obs), np.array(novelty_vector)

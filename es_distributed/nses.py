@@ -26,7 +26,6 @@ def compute_novelty_vs_archive(archive, novelty_vector, k):
     nov = novelty_vector.astype(np.float)
     # TODO: (J) change this to compute different distance metric for novelty calculation
     for point in archive:
-        import pdb; pdb.set_trace()
         distances.append(euclidean_distance(point.astype(np.float), nov))
 
     # Pick k nearest neighbors
@@ -67,6 +66,7 @@ def run_master(master_redis_cfg, log_dir, exp):
     config, env = setup_env(exp)
     algo_type = exp['algo_type']
     master = MasterClient(master_redis_cfg)
+    master.master_redis.delete('es:archive') # Need to clear BC archive every time
     noise = SharedNoiseTable()
     rs = np.random.RandomState()
     ref_batch, orig_ref_batch = get_ref_batch(env, batch_size=128)

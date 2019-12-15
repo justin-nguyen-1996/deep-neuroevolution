@@ -97,7 +97,6 @@ class MasterClient:
         archive = self.master_redis.lrange(ARCHIVE_KEY, 0, -1)
         return [deserialize(novelty_vector) for novelty_vector in archive]
 
-
 class RelayClient:
     """
     Receives and stores task broadcasts from the master
