@@ -438,7 +438,7 @@ class ESAtariPolicy(Policy):
                 env.render()
             if done:
                 break
-        novelty_vector.append(haetmap)
+        novelty_vector.append(heatmap)
         rews = np.array(rews, dtype=np.float32)
         if save_obs:
             return rews, t, np.array(obs), np.array(novelty_vector)
