@@ -68,7 +68,6 @@ def run_master(master_redis_cfg, log_dir, exp):
     config, env = setup_env(exp)
     algo_type = exp['algo_type']
     master = MasterClient(master_redis_cfg)
-    master.master_redis.delete('es:archive') # Need to clear BC archive every time
     noise = SharedNoiseTable()
     rs = np.random.RandomState()
     ref_batch, orig_ref_batch = get_ref_batch(env, batch_size=128)

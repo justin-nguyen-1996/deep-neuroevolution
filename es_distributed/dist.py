@@ -63,6 +63,7 @@ class MasterClient:
     def __init__(self, master_redis_cfg):
         self.task_counter = 0
         self.master_redis = retry_connect(master_redis_cfg)
+        self.master_redis.delete(ARCHIVE_KEY) # Need to clear BC archive every time
         logger.info('[master] Connected to Redis: {}'.format(self.master_redis))
 
     def declare_experiment(self, exp):
