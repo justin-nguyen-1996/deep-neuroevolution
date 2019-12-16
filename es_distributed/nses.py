@@ -63,6 +63,8 @@ def run_master(master_redis_cfg, log_dir, exp):
     logger.info('run_master: {}'.format(locals()))
     from .optimizers import SGD, Adam
     from . import tabular_logger as tlogger
+    logger.info('Tabular logging to {}'.format(log_dir))
+    tlogger.start(log_dir) # Output results to log dir and terminal
     config, env = setup_env(exp)
     algo_type = exp['algo_type']
     master = MasterClient(master_redis_cfg)

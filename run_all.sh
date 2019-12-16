@@ -1,13 +1,14 @@
 #!/bin/sh
 
-if [ $# != 2 ]; then
-    echo 'Needs two arguments (algo and config file)'
+if [ $# != 3 ]; then
+    echo 'Needs three arguments (algo, config file, and log dir)'
     exit
 fi
 
 # Set variables for the arguments
 ALGO=$1
 EXP_FILE=$2
+LOG_DIR=$3
 # Create tmux session in detached mode
 tmux new -d
 # Create splits in both windows
@@ -19,7 +20,7 @@ tmux send-keys -t :0.0 'redis-server redis_config/redis_master.conf' C-m
 tmux send-keys -t :0.1 'redis-server redis_config/redis_local_mirror.conf' C-m
 # Send commands to second window's pane 0 (master setup for ES)
 tmux send-keys -t :1.0 '. scripts/local_env_setup.sh' C-m
-tmux send-keys -t :1.0 'python -m es_distributed.main master --master_socket_path /tmp/es_redis_master.sock --algo '$ALGO' --exp_file '"$EXP_FILE" C-m
+tmux send-keys -t :1.0 'python -m es_distributed.main master --log_dir '$LOG_DIR' --master_socket_path /tmp/es_redis_master.sock --algo '$ALGO' --exp_file '"$EXP_FILE" C-m
 # Send commands to second window's pane 1 (worker setup for ES)
 tmux send-keys -t :1.1 '. scripts/local_env_setup.sh' C-m
 tmux send-keys -t :1.1 'sleep 30' C-m
