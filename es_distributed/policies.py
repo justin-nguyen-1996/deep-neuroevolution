@@ -408,7 +408,8 @@ class ESAtariPolicy(Policy):
             start_time = time.time()
             ob, rew, done, info = env.step(ac)
             # TODO: (J) change this BC (should be custom per game instead of just the RAM state)
-            ram = env.unwrapped._get_ram() # extracts RAM state information
+            color = (84, 138, 210)
+            ram = len(np.where(np.all(env.unwrapped._get_image() == color, axis=-1))[0])#env.unwrapped._get_ram() # extracts RAM state information
 
             if save_obs:
                obs.append(ob)
