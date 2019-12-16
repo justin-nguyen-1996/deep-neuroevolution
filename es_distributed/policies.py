@@ -13,16 +13,17 @@ logger = logging.getLogger(__name__)
 
 def find_kangaroo_and_adjust_heat(img, heat):
     indices = np.where(np.all(img[30:, :] == (223, 183, 85), axis=-1))
-    minIBound = 30+np.min(indices[0])
-    maxIBound = 30+np.max(indices[0])
-    minJBound = np.min(indices[1])
-    maxJBound = np.max(indices[1])
-    centerI = (maxIBound + minIBound)/2
-    centerJ = (maxJBound + minJBound)/2
-    
-    reduced_i = int(centerI/30) # max 7
-    reduced_j = int(centerJ/40) # max 4
-    heat[reduced_j*7+reduced_i]+=1
+    if len(indices[0]) > 1:
+	    minIBound = 30+np.min(indices[0])
+	    maxIBound = 30+np.max(indices[0])
+	    minJBound = np.min(indices[1])
+	    maxJBound = np.max(indices[1])
+	    centerI = (maxIBound + minIBound)/2
+	    centerJ = (maxJBound + minJBound)/2
+	    
+	    reduced_i = int(centerI/30) # max 7
+	    reduced_j = int(centerJ/40) # max 4
+	    heat[reduced_j*7+reduced_i]+=1
 
 class Policy:
     def __init__(self, *args, **kwargs):
