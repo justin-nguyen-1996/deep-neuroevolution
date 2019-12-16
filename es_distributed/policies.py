@@ -11,6 +11,18 @@ from . import tf_util as U
 
 logger = logging.getLogger(__name__)
 
+def find_kangaroo_and_adjust_heat(img, heat):
+    indices = np.where(np.all(img[30:, :] == (223, 183, 85), axis=-1))
+    minIBound = 30+np.min(indices[0])
+    maxIBound = 30+np.max(indices[0])
+    minJBound = np.min(indices[1])
+    maxJBound = np.max(indices[1])
+    centerI = (maxIBound + minIBound)/2
+    centerJ = (maxJBound + minJBound)/2
+    
+    reduced_i = int(centerI/30) # max 7
+    reduced_j = int(centerJ/40) # max 4
+    heat[reduced_j*7+reduced_i]+=1
 
 class Policy:
     def __init__(self, *args, **kwargs):
@@ -384,6 +396,7 @@ class ESAtariPolicy(Policy):
 
         timestep_limit = env_timestep_limit if timestep_limit is None else min(timestep_limit, env_timestep_limit)
         rews = []; novelty_vector = []
+        heatmap = np.zeros(28)
         t = 0
 
         if save_obs:
@@ -408,23 +421,23 @@ class ESAtariPolicy(Policy):
             start_time = time.time()
             ob, rew, done, info = env.step(ac)
             # TODO: (J) change this BC (should be custom per game instead of just the RAM state)
-            color = (84, 138, 210)
-            ram = len(np.where(np.all(env.unwrapped._get_image() == color, axis=-1))[0])#env.unwrapped._get_ram() # extracts RAM state information
-
+           
+            #ram = env.unwrapped._get_ram() # extracts RAM state information
+            find_kangaroo_and_adjust_heat(env.unwrapped._get_image(), heatmap)
             if save_obs:
                obs.append(ob)
             if worker_stats:
                 worker_stats.time_comp_step += time.time() - start_time
 
             rews.append(rew)
-            novelty_vector.append(ram)
+            #novelty_vector.append(ram)
 
             t += 1
             if render:
                 env.render()
             if done:
                 break
-
+        novelty_vector.append(haetmap)
         rews = np.array(rews, dtype=np.float32)
         if save_obs:
             return rews, t, np.array(obs), np.array(novelty_vector)
