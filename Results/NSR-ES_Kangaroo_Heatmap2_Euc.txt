@@ -1,0 +1,1550 @@
+
+[2019-12-16 07:35:59,898 pid=2795] [master] Added novelty vector to archive
+[2019-12-16 07:35:59,898 pid=2795] [master] Declared experiment {'algo_type': 'nsr',
+ 'config': {'calc_obstat_prob': 0.0,
+            'episode_cutoff_mode': 5000,
+            'episodes_per_batch': 1000,
+            'eval_prob': 0.1,
+            'l2coeff': 0.005,
+            'noise_stdev': 0.02,
+            'return_proc_mode': 'centered_sign_rank',
+            'snapshot_freq': 5,
+            'timesteps_per_batch': 10000},
+ 'env_id': 'KangarooNoFrameskip-v4',
+ 'novelty_search': {'k': 10,
+                    'num_rollouts': 1,
+                    'population_size': 3,
+                    'selection_method': 'novelty_prob'},
+ 'optimizer': {'args': {'stepsize': 0.01}, 'type': 'adam'},
+ 'policy': {'args': {}, 'type': 'ESAtariPolicy'}}
+********** Iteration 0 **********
+[2019-12-16 07:41:33,904 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 85.8     |
+| EpRewStd            | 165      |
+| EpLenMean           | 494      |
+| EvalEpRewMean       | 0        |
+| EvalEpRewStd        | 0        |
+| EvalEpLenMean       | 398      |
+| EvalPopRank         | 0        |
+| EvalEpCount         | 38       |
+| Norm                | 932      |
+| GradNorm            | 17.8     |
+| UpdateRatio         | 0.345    |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 1.04e+03 |
+| TimestepsThisIter   | 4.94e+05 |
+| TimestepsSoFar      | 5.09e+05 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0743   |
+| ResultsSkippedFrac  | 0        |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 334      |
+| TimeElapsed         | 334      |
+----------------------------------
+/home/suhaib_abdulquddos/deep-neuroevolution/es_distributed/nses.py:304: RuntimeWarning: invalid value encountered in true_divide
+  novelty_probs = np.array(novelty_probs) / float(np.sum(novelty_probs))
+/home/suhaib_abdulquddos/deep-neuroevolution/es_distributed/nses.py:305: RuntimeWarning: invalid value encountered in less
+  curr_parent = np.random.choice(range(pop_size), 1, p=novelty_probs)[0]
+Saved snapshot snapshot_iter00000_rew0.h5
+********** Iteration 1 **********
+[2019-12-16 07:47:56,618 pid=2795] Skipped 7 out of date results (1.38%)
+[2019-12-16 07:48:12,304 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 455      |
+| EpRewStd            | 230      |
+| EpLenMean           | 569      |
+| EvalEpRewMean       | 900      |
+| EvalEpRewStd        | 282      |
+| EvalEpLenMean       | 654      |
+| EvalPopRank         | 0.828    |
+| EvalEpCount         | 60       |
+| Norm                | 1.05e+03 |
+| GradNorm            | 22.1     |
+| UpdateRatio         | 0.233    |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 2.11e+03 |
+| TimestepsThisIter   | 5.69e+05 |
+| TimestepsSoFar      | 1.13e+06 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0705   |
+| ResultsSkippedFrac  | 0.0138   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 372      |
+| TimeElapsed         | 732      |
+----------------------------------
+********** Iteration 2 **********
+[2019-12-16 07:54:34,653 pid=2795] Skipped 10 out of date results (1.96%)
+[2019-12-16 07:54:54,704 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 470      |
+| EpRewStd            | 189      |
+| EpLenMean           | 564      |
+| EvalEpRewMean       | 539      |
+| EvalEpRewStd        | 144      |
+| EvalEpLenMean       | 707      |
+| EvalPopRank         | 0.469    |
+| EvalEpCount         | 46       |
+| Norm                | 1.17e+03 |
+| GradNorm            | 23.6     |
+| UpdateRatio         | 0.18     |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 3.18e+03 |
+| TimestepsThisIter   | 5.64e+05 |
+| TimestepsSoFar      | 1.73e+06 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0719   |
+| ResultsSkippedFrac  | 0.0196   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 372      |
+| TimeElapsed         | 1.13e+03 |
+----------------------------------
+********** Iteration 3 **********
+[2019-12-16 08:01:18,200 pid=2795] Skipped 14 out of date results (2.72%)
+[2019-12-16 08:01:39,809 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 532      |
+| EpRewStd            | 167      |
+| EpLenMean           | 575      |
+| EvalEpRewMean       | 600      |
+| EvalEpRewStd        | 0        |
+| EvalEpLenMean       | 536      |
+| EvalPopRank         | 0.422    |
+| EvalEpCount         | 62       |
+| Norm                | 1.3e+03  |
+| GradNorm            | 23.1     |
+| UpdateRatio         | 0.147    |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 4.27e+03 |
+| TimestepsThisIter   | 5.75e+05 |
+| TimestepsSoFar      | 2.36e+06 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0693   |
+| ResultsSkippedFrac  | 0.0272   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 376      |
+| TimeElapsed         | 1.54e+03 |
+----------------------------------
+********** Iteration 4 **********
+[2019-12-16 08:18:05,624 pid=2795] Skipped 6 out of date results (1.19%)
+[2019-12-16 08:18:22,512 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 605      |
+| EpRewStd            | 187      |
+| EpLenMean           | 597      |
+| EvalEpRewMean       | 677      |
+| EvalEpRewStd        | 204      |
+| EvalEpLenMean       | 579      |
+| EvalPopRank         | 0.472    |
+| EvalEpCount         | 57       |
+| Norm                | 1.43e+03 |
+| GradNorm            | 20.2     |
+| UpdateRatio         | 0.125    |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 5.34e+03 |
+| TimestepsThisIter   | 5.97e+05 |
+| TimestepsSoFar      | 3e+06    |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.071    |
+| ResultsSkippedFrac  | 0.0119   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 978      |
+| TimeElapsed         | 2.54e+03 |
+----------------------------------
+********** Iteration 5 **********
+[2019-12-16 08:35:05,727 pid=2795] Skipped 3 out of date results (0.60%)
+[2019-12-16 08:35:22,033 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 596      |
+| EpRewStd            | 228      |
+| EpLenMean           | 604      |
+| EvalEpRewMean       | 627      |
+| EvalEpRewStd        | 179      |
+| EvalEpLenMean       | 537      |
+| EvalPopRank         | 0.381    |
+| EvalEpCount         | 44       |
+| Norm                | 1.56e+03 |
+| GradNorm            | 19       |
+| UpdateRatio         | 0.108    |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 6.39e+03 |
+| TimestepsThisIter   | 6.04e+05 |
+| TimestepsSoFar      | 3.63e+06 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0731   |
+| ResultsSkippedFrac  | 0.00596  |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 995      |
+| TimeElapsed         | 3.56e+03 |
+----------------------------------
+Saved snapshot snapshot_iter00005_rew627.h5
+********** Iteration 6 **********
+[2019-12-16 08:52:25,632 pid=2795] Skipped 16 out of date results (3.10%)
+[2019-12-16 08:52:44,706 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 616      |
+| EpRewStd            | 249      |
+| EpLenMean           | 608      |
+| EvalEpRewMean       | 652      |
+| EvalEpRewStd        | 87.9     |
+| EvalEpLenMean       | 537      |
+| EvalPopRank         | 0.41     |
+| EvalEpCount         | 65       |
+| Norm                | 1.68e+03 |
+| GradNorm            | 21.4     |
+| UpdateRatio         | 0.0963   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 7.48e+03 |
+| TimestepsThisIter   | 6.08e+05 |
+| TimestepsSoFar      | 4.29e+06 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0688   |
+| ResultsSkippedFrac  | 0.031    |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 1.01e+03 |
+| TimeElapsed         | 4.6e+03  |
+----------------------------------
+********** Iteration 7 **********
+[2019-12-16 08:59:26,592 pid=2795] Skipped 11 out of date results (2.15%)
+[2019-12-16 08:59:44,774 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 637      |
+| EpRewStd            | 237      |
+| EpLenMean           | 604      |
+| EvalEpRewMean       | 716      |
+| EvalEpRewStd        | 219      |
+| EvalEpLenMean       | 587      |
+| EvalPopRank         | 0.516    |
+| EvalEpCount         | 67       |
+| Norm                | 1.8e+03  |
+| GradNorm            | 20.8     |
+| UpdateRatio         | 0.087    |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 8.57e+03 |
+| TimestepsThisIter   | 6.04e+05 |
+| TimestepsSoFar      | 4.95e+06 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0692   |
+| ResultsSkippedFrac  | 0.0215   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 391      |
+| TimeElapsed         | 5.02e+03 |
+----------------------------------
+********** Iteration 8 **********
+[2019-12-16 09:06:16,898 pid=2795] Skipped 20 out of date results (3.85%)
+[2019-12-16 09:06:33,508 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 661      |
+| EpRewStd            | 212      |
+| EpLenMean           | 594      |
+| EvalEpRewMean       | 692      |
+| EvalEpRewStd        | 99.7     |
+| EvalEpLenMean       | 590      |
+| EvalPopRank         | 0.393    |
+| EvalEpCount         | 52       |
+| Norm                | 1.92e+03 |
+| GradNorm            | 20.1     |
+| UpdateRatio         | 0.0795   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 9.67e+03 |
+| TimestepsThisIter   | 5.94e+05 |
+| TimestepsSoFar      | 5.6e+06  |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0699   |
+| ResultsSkippedFrac  | 0.0385   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 381      |
+| TimeElapsed         | 5.43e+03 |
+----------------------------------
+********** Iteration 9 **********
+[2019-12-16 09:13:00,057 pid=2795] Skipped 3 out of date results (0.60%)
+[2019-12-16 09:13:17,083 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 675      |
+| EpRewStd            | 205      |
+| EpLenMean           | 592      |
+| EvalEpRewMean       | 705      |
+| EvalEpRewStd        | 176      |
+| EvalEpLenMean       | 562      |
+| EvalPopRank         | 0.339    |
+| EvalEpCount         | 42       |
+| Norm                | 2.03e+03 |
+| GradNorm            | 21.8     |
+| UpdateRatio         | 0.0737   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 1.07e+04 |
+| TimestepsThisIter   | 5.92e+05 |
+| TimestepsSoFar      | 6.22e+06 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0734   |
+| ResultsSkippedFrac  | 0.00596  |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 376      |
+| TimeElapsed         | 5.84e+03 |
+----------------------------------
+********** Iteration 10 **********
+[2019-12-16 09:19:48,286 pid=2795] Skipped 8 out of date results (1.57%)
+[2019-12-16 09:20:05,210 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 679      |
+| EpRewStd            | 199      |
+| EpLenMean           | 591      |
+| EvalEpRewMean       | 745      |
+| EvalEpRewStd        | 159      |
+| EvalEpLenMean       | 570      |
+| EvalPopRank         | 0.434    |
+| EvalEpCount         | 55       |
+| Norm                | 2.14e+03 |
+| GradNorm            | 21.2     |
+| UpdateRatio         | 0.0688   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 1.18e+04 |
+| TimestepsThisIter   | 5.91e+05 |
+| TimestepsSoFar      | 6.85e+06 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.071    |
+| ResultsSkippedFrac  | 0.0157   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 380      |
+| TimeElapsed         | 6.25e+03 |
+----------------------------------
+Saved snapshot snapshot_iter00010_rew745.h5
+********** Iteration 11 **********
+[2019-12-16 09:26:39,421 pid=2795] Skipped 8 out of date results (1.57%)
+[2019-12-16 09:26:56,349 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 686      |
+| EpRewStd            | 192      |
+| EpLenMean           | 597      |
+| EvalEpRewMean       | 764      |
+| EvalEpRewStd        | 76.6     |
+| EvalEpLenMean       | 583      |
+| EvalPopRank         | 0.506    |
+| EvalEpCount         | 56       |
+| Norm                | 2.24e+03 |
+| GradNorm            | 20.5     |
+| UpdateRatio         | 0.0646   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 1.29e+04 |
+| TimestepsThisIter   | 5.97e+05 |
+| TimestepsSoFar      | 7.49e+06 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0709   |
+| ResultsSkippedFrac  | 0.0157   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 383      |
+| TimeElapsed         | 6.66e+03 |
+----------------------------------
+********** Iteration 12 **********
+[2019-12-16 09:33:33,607 pid=2795] Skipped 8 out of date results (1.57%)
+[2019-12-16 09:33:51,651 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 714      |
+| EpRewStd            | 209      |
+| EpLenMean           | 610      |
+| EvalEpRewMean       | 767      |
+| EvalEpRewStd        | 125      |
+| EvalEpLenMean       | 576      |
+| EvalPopRank         | 0.439    |
+| EvalEpCount         | 55       |
+| Norm                | 2.34e+03 |
+| GradNorm            | 21.6     |
+| UpdateRatio         | 0.0613   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 1.39e+04 |
+| TimestepsThisIter   | 6.1e+05  |
+| TimestepsSoFar      | 8.14e+06 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.071    |
+| ResultsSkippedFrac  | 0.0157   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 390      |
+| TimeElapsed         | 7.07e+03 |
+----------------------------------
+********** Iteration 13 **********
+[2019-12-16 09:51:09,362 pid=2795] Skipped 16 out of date results (3.10%)
+[2019-12-16 09:51:26,376 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 721      |
+| EpRewStd            | 224      |
+| EpLenMean           | 618      |
+| EvalEpRewMean       | 732      |
+| EvalEpRewStd        | 156      |
+| EvalEpLenMean       | 597      |
+| EvalPopRank         | 0.363    |
+| EvalEpCount         | 62       |
+| Norm                | 2.43e+03 |
+| GradNorm            | 20.8     |
+| UpdateRatio         | 0.0582   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 1.5e+04  |
+| TimestepsThisIter   | 6.18e+05 |
+| TimestepsSoFar      | 8.82e+06 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0692   |
+| ResultsSkippedFrac  | 0.031    |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 1.02e+03 |
+| TimeElapsed         | 8.13e+03 |
+----------------------------------
+********** Iteration 14 **********
+[2019-12-16 10:08:59,859 pid=2795] Skipped 10 out of date results (1.96%)
+[2019-12-16 10:09:19,243 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 743      |
+| EpRewStd            | 256      |
+| EpLenMean           | 635      |
+| EvalEpRewMean       | 747      |
+| EvalEpRewStd        | 165      |
+| EvalEpLenMean       | 588      |
+| EvalPopRank         | 0.367    |
+| EvalEpCount         | 49       |
+| Norm                | 2.52e+03 |
+| GradNorm            | 21.2     |
+| UpdateRatio         | 0.0557   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 1.61e+04 |
+| TimestepsThisIter   | 6.35e+05 |
+| TimestepsSoFar      | 9.49e+06 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0716   |
+| ResultsSkippedFrac  | 0.0196   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 1.05e+03 |
+| TimeElapsed         | 9.2e+03  |
+----------------------------------
+********** Iteration 15 **********
+[2019-12-16 10:16:19,690 pid=2795] Skipped 13 out of date results (2.53%)
+[2019-12-16 10:16:40,185 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 737      |
+| EpRewStd            | 276      |
+| EpLenMean           | 640      |
+| EvalEpRewMean       | 910      |
+| EvalEpRewStd        | 199      |
+| EvalEpLenMean       | 748      |
+| EvalPopRank         | 0.606    |
+| EvalEpCount         | 51       |
+| Norm                | 2.61e+03 |
+| GradNorm            | 21.2     |
+| UpdateRatio         | 0.0535   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 1.72e+04 |
+| TimestepsThisIter   | 6.4e+05  |
+| TimestepsSoFar      | 1.02e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0709   |
+| ResultsSkippedFrac  | 0.0253   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 412      |
+| TimeElapsed         | 9.64e+03 |
+----------------------------------
+Saved snapshot snapshot_iter00015_rew909.h5
+********** Iteration 16 **********
+[2019-12-16 10:23:53,916 pid=2795] Skipped 14 out of date results (2.72%)
+[2019-12-16 10:24:12,595 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 756      |
+| EpRewStd            | 288      |
+| EpLenMean           | 645      |
+| EvalEpRewMean       | 931      |
+| EvalEpRewStd        | 214      |
+| EvalEpLenMean       | 734      |
+| EvalPopRank         | 0.594    |
+| EvalEpCount         | 72       |
+| Norm                | 2.69e+03 |
+| GradNorm            | 20.3     |
+| UpdateRatio         | 0.0515   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 1.83e+04 |
+| TimestepsThisIter   | 6.45e+05 |
+| TimestepsSoFar      | 1.09e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0683   |
+| ResultsSkippedFrac  | 0.0272   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 423      |
+| TimeElapsed         | 1.01e+04 |
+----------------------------------
+********** Iteration 17 **********
+[2019-12-16 10:31:20,710 pid=2795] Skipped 6 out of date results (1.19%)
+[2019-12-16 10:31:40,490 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 795      |
+| EpRewStd            | 315      |
+| EpLenMean           | 654      |
+| EvalEpRewMean       | 1.19e+03 |
+| EvalEpRewStd        | 286      |
+| EvalEpLenMean       | 753      |
+| EvalPopRank         | 0.761    |
+| EvalEpCount         | 43       |
+| Norm                | 2.77e+03 |
+| GradNorm            | 21.4     |
+| UpdateRatio         | 0.0499   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 1.93e+04 |
+| TimestepsThisIter   | 6.54e+05 |
+| TimestepsSoFar      | 1.16e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0729   |
+| ResultsSkippedFrac  | 0.0119   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 416      |
+| TimeElapsed         | 1.05e+04 |
+----------------------------------
+********** Iteration 18 **********
+[2019-12-16 10:38:57,408 pid=2795] Skipped 10 out of date results (1.96%)
+[2019-12-16 10:39:20,225 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 826      |
+| EpRewStd            | 303      |
+| EpLenMean           | 661      |
+| EvalEpRewMean       | 1.15e+03 |
+| EvalEpRewStd        | 309      |
+| EvalEpLenMean       | 713      |
+| EvalPopRank         | 0.688    |
+| EvalEpCount         | 59       |
+| Norm                | 2.85e+03 |
+| GradNorm            | 21.7     |
+| UpdateRatio         | 0.0485   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 2.04e+04 |
+| TimestepsThisIter   | 6.61e+05 |
+| TimestepsSoFar      | 1.23e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0703   |
+| ResultsSkippedFrac  | 0.0196   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 433      |
+| TimeElapsed         | 1.1e+04  |
+----------------------------------
+********** Iteration 19 **********
+[2019-12-16 10:46:42,672 pid=2795] Skipped 7 out of date results (1.38%)
+[2019-12-16 10:47:01,508 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 838      |
+| EpRewStd            | 318      |
+| EpLenMean           | 662      |
+| EvalEpRewMean       | 1.23e+03 |
+| EvalEpRewStd        | 553      |
+| EvalEpLenMean       | 784      |
+| EvalPopRank         | 0.678    |
+| EvalEpCount         | 50       |
+| Norm                | 2.92e+03 |
+| GradNorm            | 22       |
+| UpdateRatio         | 0.0473   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 2.15e+04 |
+| TimestepsThisIter   | 6.62e+05 |
+| TimestepsSoFar      | 1.3e+07  |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0718   |
+| ResultsSkippedFrac  | 0.0138   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 427      |
+| TimeElapsed         | 1.15e+04 |
+----------------------------------
+********** Iteration 20 **********
+[2019-12-16 10:54:28,956 pid=2795] Skipped 5 out of date results (0.99%)
+[2019-12-16 10:54:55,548 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 883      |
+| EpRewStd            | 350      |
+| EpLenMean           | 677      |
+| EvalEpRewMean       | 993      |
+| EvalEpRewStd        | 437      |
+| EvalEpLenMean       | 715      |
+| EvalPopRank         | 0.525    |
+| EvalEpCount         | 57       |
+| Norm                | 2.99e+03 |
+| GradNorm            | 20.2     |
+| UpdateRatio         | 0.046    |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 2.25e+04 |
+| TimestepsThisIter   | 6.77e+05 |
+| TimestepsSoFar      | 1.37e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0712   |
+| ResultsSkippedFrac  | 0.0099   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 442      |
+| TimeElapsed         | 1.19e+04 |
+----------------------------------
+Saved snapshot snapshot_iter00020_rew992.h5
+********** Iteration 21 **********
+[2019-12-16 11:02:28,702 pid=2795] Skipped 2 out of date results (0.40%)
+[2019-12-16 11:02:48,211 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 907      |
+| EpRewStd            | 344      |
+| EpLenMean           | 686      |
+| EvalEpRewMean       | 1.44e+03 |
+| EvalEpRewStd        | 358      |
+| EvalEpLenMean       | 890      |
+| EvalPopRank         | 0.8      |
+| EvalEpCount         | 52       |
+| Norm                | 3.05e+03 |
+| GradNorm            | 19.4     |
+| UpdateRatio         | 0.0448   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 2.36e+04 |
+| TimestepsThisIter   | 6.86e+05 |
+| TimestepsSoFar      | 1.45e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0722   |
+| ResultsSkippedFrac  | 0.00398  |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 440      |
+| TimeElapsed         | 1.24e+04 |
+----------------------------------
+********** Iteration 22 **********
+[2019-12-16 11:10:39,016 pid=2795] Skipped 12 out of date results (2.34%)
+[2019-12-16 11:11:02,132 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 925      |
+| EpRewStd            | 369      |
+| EpLenMean           | 695      |
+| EvalEpRewMean       | 1.29e+03 |
+| EvalEpRewStd        | 180      |
+| EvalEpLenMean       | 822      |
+| EvalPopRank         | 0.763    |
+| EvalEpCount         | 64       |
+| Norm                | 3.12e+03 |
+| GradNorm            | 21.2     |
+| UpdateRatio         | 0.044    |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 2.47e+04 |
+| TimestepsThisIter   | 6.95e+05 |
+| TimestepsSoFar      | 1.52e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0694   |
+| ResultsSkippedFrac  | 0.0234   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 459      |
+| TimeElapsed         | 1.29e+04 |
+----------------------------------
+********** Iteration 23 **********
+[2019-12-16 11:18:54,840 pid=2795] Skipped 3 out of date results (0.60%)
+[2019-12-16 11:19:24,332 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 970      |
+| EpRewStd            | 393      |
+| EpLenMean           | 712      |
+| EvalEpRewMean       | 1.56e+03 |
+| EvalEpRewStd        | 276      |
+| EvalEpLenMean       | 876      |
+| EvalPopRank         | 0.848    |
+| EvalEpCount         | 49       |
+| Norm                | 3.18e+03 |
+| GradNorm            | 20.5     |
+| UpdateRatio         | 0.0431   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 2.57e+04 |
+| TimestepsThisIter   | 7.12e+05 |
+| TimestepsSoFar      | 1.6e+07  |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0725   |
+| ResultsSkippedFrac  | 0.00596  |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 469      |
+| TimeElapsed         | 1.34e+04 |
+----------------------------------
+********** Iteration 24 **********
+[2019-12-16 11:27:22,501 pid=2795] Skipped 2 out of date results (0.40%)
+[2019-12-16 11:27:48,829 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 1e+03    |
+| EpRewStd            | 417      |
+| EpLenMean           | 723      |
+| EvalEpRewMean       | 1.09e+03 |
+| EvalEpRewStd        | 418      |
+| EvalEpLenMean       | 854      |
+| EvalPopRank         | 0.51     |
+| EvalEpCount         | 48       |
+| Norm                | 3.23e+03 |
+| GradNorm            | 22.6     |
+| UpdateRatio         | 0.0427   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 2.68e+04 |
+| TimestepsThisIter   | 7.23e+05 |
+| TimestepsSoFar      | 1.68e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0727   |
+| ResultsSkippedFrac  | 0.00398  |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 469      |
+| TimeElapsed         | 1.39e+04 |
+----------------------------------
+********** Iteration 25 **********
+[2019-12-16 11:48:18,195 pid=2795] Skipped 6 out of date results (1.19%)
+[2019-12-16 11:48:42,582 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 1.02e+03 |
+| EpRewStd            | 416      |
+| EpLenMean           | 728      |
+| EvalEpRewMean       | 1.77e+03 |
+| EvalEpRewStd        | 315      |
+| EvalEpLenMean       | 957      |
+| EvalPopRank         | 0.895    |
+| EvalEpCount         | 46       |
+| Norm                | 3.29e+03 |
+| GradNorm            | 21.9     |
+| UpdateRatio         | 0.0422   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 2.78e+04 |
+| TimestepsThisIter   | 7.28e+05 |
+| TimestepsSoFar      | 1.76e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0725   |
+| ResultsSkippedFrac  | 0.0119   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 1.22e+03 |
+| TimeElapsed         | 1.52e+04 |
+----------------------------------
+Saved snapshot snapshot_iter00025_rew1769.h5
+********** Iteration 26 **********
+[2019-12-16 11:57:02,868 pid=2795] Skipped 3 out of date results (0.60%)
+[2019-12-16 11:57:26,330 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 1.08e+03 |
+| EpRewStd            | 417      |
+| EpLenMean           | 744      |
+| EvalEpRewMean       | 1.67e+03 |
+| EvalEpRewStd        | 764      |
+| EvalEpLenMean       | 912      |
+| EvalPopRank         | 0.685    |
+| EvalEpCount         | 56       |
+| Norm                | 3.34e+03 |
+| GradNorm            | 20.4     |
+| UpdateRatio         | 0.0414   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 2.89e+04 |
+| TimestepsThisIter   | 7.44e+05 |
+| TimestepsSoFar      | 1.84e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0716   |
+| ResultsSkippedFrac  | 0.00596  |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 486      |
+| TimeElapsed         | 1.57e+04 |
+----------------------------------
+********** Iteration 27 **********
+[2019-12-16 12:05:43,115 pid=2795] Skipped 15 out of date results (2.91%)
+[2019-12-16 12:06:07,137 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 1.11e+03 |
+| EpRewStd            | 460      |
+| EpLenMean           | 765      |
+| EvalEpRewMean       | 1.08e+03 |
+| EvalEpRewStd        | 200      |
+| EvalEpLenMean       | 772      |
+| EvalPopRank         | 0.421    |
+| EvalEpCount         | 50       |
+| Norm                | 3.39e+03 |
+| GradNorm            | 19.5     |
+| UpdateRatio         | 0.0406   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 3e+04    |
+| TimestepsThisIter   | 7.65e+05 |
+| TimestepsSoFar      | 1.92e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0708   |
+| ResultsSkippedFrac  | 0.0291   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 488      |
+| TimeElapsed         | 1.62e+04 |
+----------------------------------
+********** Iteration 28 **********
+[2019-12-16 12:14:44,245 pid=2795] Skipped 8 out of date results (1.57%)
+[2019-12-16 12:15:06,787 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 1.14e+03 |
+| EpRewStd            | 508      |
+| EpLenMean           | 776      |
+| EvalEpRewMean       | 2e+03    |
+| EvalEpRewStd        | 513      |
+| EvalEpLenMean       | 1.01e+03 |
+| EvalPopRank         | 0.861    |
+| EvalEpCount         | 57       |
+| Norm                | 3.43e+03 |
+| GradNorm            | 21.7     |
+| UpdateRatio         | 0.0403   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 3.11e+04 |
+| TimestepsThisIter   | 7.76e+05 |
+| TimestepsSoFar      | 2e+07    |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0708   |
+| ResultsSkippedFrac  | 0.0157   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 505      |
+| TimeElapsed         | 1.67e+04 |
+----------------------------------
+********** Iteration 29 **********
+[2019-12-16 12:23:52,825 pid=2795] Skipped 10 out of date results (1.96%)
+[2019-12-16 12:24:20,412 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 1.21e+03 |
+| EpRewStd            | 494      |
+| EpLenMean           | 793      |
+| EvalEpRewMean       | 1.67e+03 |
+| EvalEpRewStd        | 332      |
+| EvalEpLenMean       | 985      |
+| EvalPopRank         | 0.748    |
+| EvalEpCount         | 50       |
+| Norm                | 3.48e+03 |
+| GradNorm            | 22.4     |
+| UpdateRatio         | 0.0401   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 3.21e+04 |
+| TimestepsThisIter   | 7.93e+05 |
+| TimestepsSoFar      | 2.09e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0714   |
+| ResultsSkippedFrac  | 0.0196   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 514      |
+| TimeElapsed         | 1.73e+04 |
+----------------------------------
+********** Iteration 30 **********
+[2019-12-16 12:33:22,842 pid=2795] Skipped 13 out of date results (2.53%)
+[2019-12-16 12:33:57,611 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 1.3e+03  |
+| EpRewStd            | 546      |
+| EpLenMean           | 826      |
+| EvalEpRewMean       | 1.9e+03  |
+| EvalEpRewStd        | 422      |
+| EvalEpLenMean       | 953      |
+| EvalPopRank         | 0.784    |
+| EvalEpCount         | 62       |
+| Norm                | 3.52e+03 |
+| GradNorm            | 20.4     |
+| UpdateRatio         | 0.0396   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 3.32e+04 |
+| TimestepsThisIter   | 8.26e+05 |
+| TimestepsSoFar      | 2.18e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0696   |
+| ResultsSkippedFrac  | 0.0253   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 542      |
+| TimeElapsed         | 1.79e+04 |
+----------------------------------
+Saved snapshot snapshot_iter00030_rew1900.h5
+********** Iteration 31 **********
+[2019-12-16 12:43:23,701 pid=2795] Skipped 4 out of date results (0.79%)
+[2019-12-16 12:43:53,610 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 1.34e+03 |
+| EpRewStd            | 596      |
+| EpLenMean           | 844      |
+| EvalEpRewMean       | 2e+03    |
+| EvalEpRewStd        | 387      |
+| EvalEpLenMean       | 1.1e+03  |
+| EvalPopRank         | 0.801    |
+| EvalEpCount         | 61       |
+| Norm                | 3.56e+03 |
+| GradNorm            | 20.7     |
+| UpdateRatio         | 0.0391   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 3.43e+04 |
+| TimestepsThisIter   | 8.44e+05 |
+| TimestepsSoFar      | 2.27e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0708   |
+| ResultsSkippedFrac  | 0.00794  |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 556      |
+| TimeElapsed         | 1.85e+04 |
+----------------------------------
+********** Iteration 32 **********
+[2019-12-16 12:53:27,593 pid=2795] Skipped 11 out of date results (2.15%)
+[2019-12-16 12:53:55,278 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 1.41e+03 |
+| EpRewStd            | 617      |
+| EpLenMean           | 865      |
+| EvalEpRewMean       | 2.38e+03 |
+| EvalEpRewStd        | 166      |
+| EvalEpLenMean       | 1.11e+03 |
+| EvalPopRank         | 0.904    |
+| EvalEpCount         | 59       |
+| Norm                | 3.6e+03  |
+| GradNorm            | 20.3     |
+| UpdateRatio         | 0.0387   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 3.54e+04 |
+| TimestepsThisIter   | 8.65e+05 |
+| TimestepsSoFar      | 2.37e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0702   |
+| ResultsSkippedFrac  | 0.0215   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 562      |
+| TimeElapsed         | 1.91e+04 |
+----------------------------------
+********** Iteration 33 **********
+[2019-12-16 13:03:47,273 pid=2795] Skipped 5 out of date results (0.99%)
+[2019-12-16 13:04:13,951 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 1.5e+03  |
+| EpRewStd            | 644      |
+| EpLenMean           | 895      |
+| EvalEpRewMean       | 2.32e+03 |
+| EvalEpRewStd        | 676      |
+| EvalEpLenMean       | 1.19e+03 |
+| EvalPopRank         | 0.793    |
+| EvalEpCount         | 53       |
+| Norm                | 3.64e+03 |
+| GradNorm            | 20.4     |
+| UpdateRatio         | 0.0383   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 3.64e+04 |
+| TimestepsThisIter   | 8.95e+05 |
+| TimestepsSoFar      | 2.46e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0717   |
+| ResultsSkippedFrac  | 0.0099   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 578      |
+| TimeElapsed         | 1.97e+04 |
+----------------------------------
+********** Iteration 34 **********
+[2019-12-16 13:14:18,963 pid=2795] Skipped 9 out of date results (1.77%)
+[2019-12-16 13:14:53,091 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 1.58e+03 |
+| EpRewStd            | 680      |
+| EpLenMean           | 920      |
+| EvalEpRewMean       | 1.96e+03 |
+| EvalEpRewStd        | 367      |
+| EvalEpLenMean       | 1.13e+03 |
+| EvalPopRank         | 0.671    |
+| EvalEpCount         | 55       |
+| Norm                | 3.67e+03 |
+| GradNorm            | 21       |
+| UpdateRatio         | 0.0381   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 3.75e+04 |
+| TimestepsThisIter   | 9.2e+05  |
+| TimestepsSoFar      | 2.56e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0709   |
+| ResultsSkippedFrac  | 0.0177   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 601      |
+| TimeElapsed         | 2.03e+04 |
+----------------------------------
+********** Iteration 35 **********
+[2019-12-16 13:25:21,344 pid=2795] Skipped 6 out of date results (1.19%)
+[2019-12-16 13:25:52,901 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 1.68e+03 |
+| EpRewStd            | 692      |
+| EpLenMean           | 949      |
+| EvalEpRewMean       | 2.62e+03 |
+| EvalEpRewStd        | 377      |
+| EvalEpLenMean       | 1.28e+03 |
+| EvalPopRank         | 0.862    |
+| EvalEpCount         | 52       |
+| Norm                | 3.71e+03 |
+| GradNorm            | 20.3     |
+| UpdateRatio         | 0.0378   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 3.86e+04 |
+| TimestepsThisIter   | 9.49e+05 |
+| TimestepsSoFar      | 2.67e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0717   |
+| ResultsSkippedFrac  | 0.0119   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 615      |
+| TimeElapsed         | 2.1e+04  |
+----------------------------------
+Saved snapshot snapshot_iter00035_rew2619.h5
+********** Iteration 36 **********
+[2019-12-16 13:36:28,870 pid=2795] Skipped 9 out of date results (1.77%)
+[2019-12-16 13:36:56,872 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 1.76e+03 |
+| EpRewStd            | 770      |
+| EpLenMean           | 976      |
+| EvalEpRewMean       | 2.87e+03 |
+| EvalEpRewStd        | 293      |
+| EvalEpLenMean       | 1.32e+03 |
+| EvalPopRank         | 0.893    |
+| EvalEpCount         | 46       |
+| Norm                | 3.74e+03 |
+| GradNorm            | 23       |
+| UpdateRatio         | 0.0379   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 3.96e+04 |
+| TimestepsThisIter   | 9.76e+05 |
+| TimestepsSoFar      | 2.77e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0721   |
+| ResultsSkippedFrac  | 0.0177   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 623      |
+| TimeElapsed         | 2.17e+04 |
+----------------------------------
+********** Iteration 37 **********
+[2019-12-16 13:48:00,377 pid=2795] Skipped 5 out of date results (0.99%)
+[2019-12-16 13:48:44,682 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 1.85e+03 |
+| EpRewStd            | 782      |
+| EpLenMean           | 1e+03    |
+| EvalEpRewMean       | 2.76e+03 |
+| EvalEpRewStd        | 364      |
+| EvalEpLenMean       | 1.26e+03 |
+| EvalPopRank         | 0.838    |
+| EvalEpCount         | 63       |
+| Norm                | 3.77e+03 |
+| GradNorm            | 20.5     |
+| UpdateRatio         | 0.0376   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 4.07e+04 |
+| TimestepsThisIter   | 1e+06    |
+| TimestepsSoFar      | 2.88e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0704   |
+| ResultsSkippedFrac  | 0.0099   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 667      |
+| TimeElapsed         | 2.24e+04 |
+----------------------------------
+********** Iteration 38 **********
+[2019-12-16 14:17:15,145 pid=2795] Skipped 4 out of date results (0.79%)
+[2019-12-16 14:18:02,675 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 1.93e+03 |
+| EpRewStd            | 828      |
+| EpLenMean           | 1.03e+03 |
+| EvalEpRewMean       | 3.93e+03 |
+| EvalEpRewStd        | 526      |
+| EvalEpLenMean       | 1.66e+03 |
+| EvalPopRank         | 0.962    |
+| EvalEpCount         | 57       |
+| Norm                | 3.8e+03  |
+| GradNorm            | 21.8     |
+| UpdateRatio         | 0.0375   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 4.18e+04 |
+| TimestepsThisIter   | 1.03e+06 |
+| TimestepsSoFar      | 2.99e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0713   |
+| ResultsSkippedFrac  | 0.00794  |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 1.7e+03  |
+| TimeElapsed         | 2.41e+04 |
+----------------------------------
+********** Iteration 39 **********
+[2019-12-16 14:30:04,114 pid=2795] Skipped 3 out of date results (0.60%)
+[2019-12-16 14:30:38,634 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 2.09e+03 |
+| EpRewStd            | 855      |
+| EpLenMean           | 1.08e+03 |
+| EvalEpRewMean       | 3.52e+03 |
+| EvalEpRewStd        | 749      |
+| EvalEpLenMean       | 1.55e+03 |
+| EvalPopRank         | 0.887    |
+| EvalEpCount         | 57       |
+| Norm                | 3.83e+03 |
+| GradNorm            | 21       |
+| UpdateRatio         | 0.0373   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 4.28e+04 |
+| TimestepsThisIter   | 1.08e+06 |
+| TimestepsSoFar      | 3.11e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0714   |
+| ResultsSkippedFrac  | 0.00596  |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 700      |
+| TimeElapsed         | 2.49e+04 |
+----------------------------------
+********** Iteration 40 **********
+[2019-12-16 14:42:45,057 pid=2795] Skipped 12 out of date results (2.34%)
+[2019-12-16 14:43:28,749 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 2.18e+03 |
+| EpRewStd            | 964      |
+| EpLenMean           | 1.11e+03 |
+| EvalEpRewMean       | 2.78e+03 |
+| EvalEpRewStd        | 965      |
+| EvalEpLenMean       | 1.33e+03 |
+| EvalPopRank         | 0.64     |
+| EvalEpCount         | 62       |
+| Norm                | 3.85e+03 |
+| GradNorm            | 20.2     |
+| UpdateRatio         | 0.037    |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 4.39e+04 |
+| TimestepsThisIter   | 1.11e+06 |
+| TimestepsSoFar      | 3.23e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0696   |
+| ResultsSkippedFrac  | 0.0234   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 731      |
+| TimeElapsed         | 2.56e+04 |
+----------------------------------
+Saved snapshot snapshot_iter00040_rew2777.h5
+********** Iteration 41 **********
+[2019-12-16 14:56:09,648 pid=2795] Skipped 5 out of date results (0.99%)
+[2019-12-16 14:57:05,602 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 2.31e+03 |
+| EpRewStd            | 993      |
+| EpLenMean           | 1.15e+03 |
+| EvalEpRewMean       | 3.73e+03 |
+| EvalEpRewStd        | 620      |
+| EvalEpLenMean       | 1.57e+03 |
+| EvalPopRank         | 0.879    |
+| EvalEpCount         | 51       |
+| Norm                | 3.88e+03 |
+| GradNorm            | 20.2     |
+| UpdateRatio         | 0.0368   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 4.5e+04  |
+| TimestepsThisIter   | 1.15e+06 |
+| TimestepsSoFar      | 3.36e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0719   |
+| ResultsSkippedFrac  | 0.0099   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 764      |
+| TimeElapsed         | 2.65e+04 |
+----------------------------------
+********** Iteration 42 **********
+[2019-12-16 15:10:29,800 pid=2795] Skipped 6 out of date results (1.19%)
+[2019-12-16 15:11:14,155 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 2.48e+03 |
+| EpRewStd            | 1.09e+03 |
+| EpLenMean           | 1.2e+03  |
+| EvalEpRewMean       | 4.71e+03 |
+| EvalEpRewStd        | 999      |
+| EvalEpLenMean       | 1.88e+03 |
+| EvalPopRank         | 0.931    |
+| EvalEpCount         | 46       |
+| Norm                | 3.9e+03  |
+| GradNorm            | 20.5     |
+| UpdateRatio         | 0.0366   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 4.6e+04  |
+| TimestepsThisIter   | 1.2e+06  |
+| TimestepsSoFar      | 3.49e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0725   |
+| ResultsSkippedFrac  | 0.0119   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 783      |
+| TimeElapsed         | 2.73e+04 |
+----------------------------------
+********** Iteration 43 **********
+[2019-12-16 15:24:35,811 pid=2795] Skipped 7 out of date results (1.38%)
+[2019-12-16 15:25:14,289 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 2.6e+03  |
+| EpRewStd            | 1.17e+03 |
+| EpLenMean           | 1.24e+03 |
+| EvalEpRewMean       | 4.09e+03 |
+| EvalEpRewStd        | 438      |
+| EvalEpLenMean       | 1.71e+03 |
+| EvalPopRank         | 0.882    |
+| EvalEpCount         | 50       |
+| Norm                | 3.92e+03 |
+| GradNorm            | 19.8     |
+| UpdateRatio         | 0.0363   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 4.71e+04 |
+| TimestepsThisIter   | 1.24e+06 |
+| TimestepsSoFar      | 3.62e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0718   |
+| ResultsSkippedFrac  | 0.0138   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 795      |
+| TimeElapsed         | 2.82e+04 |
+----------------------------------
+********** Iteration 44 **********
+[2019-12-16 15:39:35,419 pid=2795] Skipped 2 out of date results (0.40%)
+[2019-12-16 15:40:31,500 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 2.79e+03 |
+| EpRewStd            | 1.28e+03 |
+| EpLenMean           | 1.3e+03  |
+| EvalEpRewMean       | 4.34e+03 |
+| EvalEpRewStd        | 479      |
+| EvalEpLenMean       | 1.77e+03 |
+| EvalPopRank         | 0.866    |
+| EvalEpCount         | 63       |
+| Norm                | 3.95e+03 |
+| GradNorm            | 19.8     |
+| UpdateRatio         | 0.0361   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 4.82e+04 |
+| TimestepsThisIter   | 1.3e+06  |
+| TimestepsSoFar      | 3.76e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0708   |
+| ResultsSkippedFrac  | 0.00398  |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 864      |
+| TimeElapsed         | 2.91e+04 |
+----------------------------------
+********** Iteration 45 **********
+[2019-12-16 15:55:05,380 pid=2795] Skipped 7 out of date results (1.38%)
+[2019-12-16 15:55:49,129 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 2.98e+03 |
+| EpRewStd            | 1.37e+03 |
+| EpLenMean           | 1.36e+03 |
+| EvalEpRewMean       | 4.34e+03 |
+| EvalEpRewStd        | 367      |
+| EvalEpLenMean       | 1.79e+03 |
+| EvalPopRank         | 0.842    |
+| EvalEpCount         | 53       |
+| Norm                | 3.97e+03 |
+| GradNorm            | 20.5     |
+| UpdateRatio         | 0.036    |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 4.92e+04 |
+| TimestepsThisIter   | 1.36e+06 |
+| TimestepsSoFar      | 3.91e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0714   |
+| ResultsSkippedFrac  | 0.0138   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 865      |
+| TimeElapsed         | 3e+04    |
+----------------------------------
+Saved snapshot snapshot_iter00045_rew4343.h5
+********** Iteration 46 **********
+[2019-12-16 16:10:53,276 pid=2795] Skipped 5 out of date results (0.99%)
+[2019-12-16 16:11:49,403 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 3.03e+03 |
+| EpRewStd            | 1.46e+03 |
+| EpLenMean           | 1.39e+03 |
+| EvalEpRewMean       | 3.94e+03 |
+| EvalEpRewStd        | 495      |
+| EvalEpLenMean       | 1.65e+03 |
+| EvalPopRank         | 0.747    |
+| EvalEpCount         | 72       |
+| Norm                | 3.99e+03 |
+| GradNorm            | 20.3     |
+| UpdateRatio         | 0.0359   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 5.03e+04 |
+| TimestepsThisIter   | 1.39e+06 |
+| TimestepsSoFar      | 4.06e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0693   |
+| ResultsSkippedFrac  | 0.0099   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 912      |
+| TimeElapsed         | 3.09e+04 |
+----------------------------------
+********** Iteration 47 **********
+[2019-12-16 16:52:24,464 pid=2795] Skipped 15 out of date results (2.91%)
+[2019-12-16 16:53:55,172 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 3.21e+03 |
+| EpRewStd            | 1.6e+03  |
+| EpLenMean           | 1.45e+03 |
+| EvalEpRewMean       | 7.91e+03 |
+| EvalEpRewStd        | 2.03e+03 |
+| EvalEpLenMean       | 2.98e+03 |
+| EvalPopRank         | 0.967    |
+| EvalEpCount         | 56       |
+| Norm                | 4e+03    |
+| GradNorm            | 20.8     |
+| UpdateRatio         | 0.0359   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 5.14e+04 |
+| TimestepsThisIter   | 1.45e+06 |
+| TimestepsSoFar      | 4.23e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0701   |
+| ResultsSkippedFrac  | 0.0291   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 2.43e+03 |
+| TimeElapsed         | 3.35e+04 |
+----------------------------------
+********** Iteration 48 **********
+[2019-12-16 17:37:59,655 pid=2795] Skipped 7 out of date results (1.38%)
+[2019-12-16 17:39:18,099 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 3.48e+03 |
+| EpRewStd            | 1.75e+03 |
+| EpLenMean           | 1.54e+03 |
+| EvalEpRewMean       | 8.45e+03 |
+| EvalEpRewStd        | 2.41e+03 |
+| EvalEpLenMean       | 3.14e+03 |
+| EvalPopRank         | 0.952    |
+| EvalEpCount         | 66       |
+| Norm                | 4.02e+03 |
+| GradNorm            | 19.9     |
+| UpdateRatio         | 0.0357   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 5.25e+04 |
+| TimestepsThisIter   | 1.54e+06 |
+| TimestepsSoFar      | 4.41e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0697   |
+| ResultsSkippedFrac  | 0.0138   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 2.62e+03 |
+| TimeElapsed         | 3.62e+04 |
+----------------------------------
+********** Iteration 49 **********
+[2019-12-16 18:25:20,738 pid=2795] Skipped 10 out of date results (1.96%)
+[2019-12-16 18:26:52,618 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 3.82e+03 |
+| EpRewStd            | 1.95e+03 |
+| EpLenMean           | 1.66e+03 |
+| EvalEpRewMean       | 7.64e+03 |
+| EvalEpRewStd        | 2.23e+03 |
+| EvalEpLenMean       | 2.92e+03 |
+| EvalPopRank         | 0.902    |
+| EvalEpCount         | 62       |
+| Norm                | 4.04e+03 |
+| GradNorm            | 20.4     |
+| UpdateRatio         | 0.0356   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 5.36e+04 |
+| TimestepsThisIter   | 1.66e+06 |
+| TimestepsSoFar      | 4.6e+07  |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0699   |
+| ResultsSkippedFrac  | 0.0196   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 2.79e+03 |
+| TimeElapsed         | 3.91e+04 |
+----------------------------------
+********** Iteration 50 **********
+[2019-12-16 19:16:57,742 pid=2795] Skipped 9 out of date results (1.77%)
+[2019-12-16 19:18:30,399 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 4.25e+03 |
+| EpRewStd            | 2.17e+03 |
+| EpLenMean           | 1.8e+03  |
+| EvalEpRewMean       | 9.83e+03 |
+| EvalEpRewStd        | 1.25e+03 |
+| EvalEpLenMean       | 3.6e+03  |
+| EvalPopRank         | 0.975    |
+| EvalEpCount         | 63       |
+| Norm                | 4.06e+03 |
+| GradNorm            | 21.3     |
+| UpdateRatio         | 0.0357   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 5.46e+04 |
+| TimestepsThisIter   | 1.8e+06  |
+| TimestepsSoFar      | 4.8e+07  |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0699   |
+| ResultsSkippedFrac  | 0.0177   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 3e+03    |
+| TimeElapsed         | 4.22e+04 |
+----------------------------------
+Saved snapshot snapshot_iter00050_rew9828.h5
+********** Iteration 51 **********
+[2019-12-16 19:40:53,476 pid=2795] Skipped 15 out of date results (2.91%)
+[2019-12-16 19:42:25,698 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 4.73e+03 |
+| EpRewStd            | 2.35e+03 |
+| EpLenMean           | 1.95e+03 |
+| EvalEpRewMean       | 9.97e+03 |
+| EvalEpRewStd        | 1.18e+03 |
+| EvalEpLenMean       | 3.68e+03 |
+| EvalPopRank         | 0.957    |
+| EvalEpCount         | 65       |
+| Norm                | 4.07e+03 |
+| GradNorm            | 18.8     |
+| UpdateRatio         | 0.0353   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 5.57e+04 |
+| TimestepsThisIter   | 1.95e+06 |
+| TimestepsSoFar      | 5.03e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0688   |
+| ResultsSkippedFrac  | 0.0291   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 1.34e+03 |
+| TimeElapsed         | 4.36e+04 |
+----------------------------------
+********** Iteration 52 **********
+[2019-12-16 20:06:47,041 pid=2795] Skipped 12 out of date results (2.34%)
+[2019-12-16 20:08:17,648 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 5.25e+03 |
+| EpRewStd            | 2.48e+03 |
+| EpLenMean           | 2.12e+03 |
+| EvalEpRewMean       | 1.09e+04 |
+| EvalEpRewStd        | 94.3     |
+| EvalEpLenMean       | 3.94e+03 |
+| EvalPopRank         | 0.981    |
+| EvalEpCount         | 63       |
+| Norm                | 4.08e+03 |
+| GradNorm            | 21.5     |
+| UpdateRatio         | 0.0355   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 5.68e+04 |
+| TimestepsThisIter   | 2.12e+06 |
+| TimestepsSoFar      | 5.27e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0693   |
+| ResultsSkippedFrac  | 0.0234   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 1.45e+03 |
+| TimeElapsed         | 4.51e+04 |
+----------------------------------
+********** Iteration 53 **********
+[2019-12-16 21:11:46,481 pid=2795] Skipped 8 out of date results (1.57%)
+[2019-12-16 21:13:18,306 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 5.85e+03 |
+| EpRewStd            | 2.67e+03 |
+| EpLenMean           | 2.31e+03 |
+| EvalEpRewMean       | 1.1e+04  |
+| EvalEpRewStd        | 153      |
+| EvalEpLenMean       | 3.94e+03 |
+| EvalPopRank         | 0.973    |
+| EvalEpCount         | 57       |
+| Norm                | 4.1e+03  |
+| GradNorm            | 19.4     |
+| UpdateRatio         | 0.0353   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 5.79e+04 |
+| TimestepsThisIter   | 2.31e+06 |
+| TimestepsSoFar      | 5.53e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0707   |
+| ResultsSkippedFrac  | 0.0157   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 3.8e+03  |
+| TimeElapsed         | 4.9e+04  |
+----------------------------------
+********** Iteration 54 **********
+[2019-12-16 21:40:21,431 pid=2795] Skipped 17 out of date results (3.29%)
+[2019-12-16 21:41:52,972 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 6.42e+03 |
+| EpRewStd            | 2.79e+03 |
+| EpLenMean           | 2.5e+03  |
+| EvalEpRewMean       | 1.08e+04 |
+| EvalEpRewStd        | 135      |
+| EvalEpLenMean       | 3.94e+03 |
+| EvalPopRank         | 0.92     |
+| EvalEpCount         | 43       |
+| Norm                | 4.11e+03 |
+| GradNorm            | 17.7     |
+| UpdateRatio         | 0.0349   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 5.9e+04  |
+| TimestepsThisIter   | 2.5e+06  |
+| TimestepsSoFar      | 5.81e+07 |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.071    |
+| ResultsSkippedFrac  | 0.0329   |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 1.61e+03 |
+| TimeElapsed         | 5.08e+04 |
+----------------------------------
+********** Iteration 55 **********
+[2019-12-16 22:10:29,161 pid=2795] Skipped 4 out of date results (0.79%)
+[2019-12-16 22:12:00,150 pid=2795] [master] Added novelty vector to archive
+----------------------------------
+| ParentId            | 0        |
+| EpRewMean           | 6.95e+03 |
+| EpRewStd            | 2.94e+03 |
+| EpLenMean           | 2.67e+03 |
+| EvalEpRewMean       | 1.03e+04 |
+| EvalEpRewStd        | 955      |
+| EvalEpLenMean       | 3.74e+03 |
+| EvalPopRank         | 0.831    |
+| EvalEpCount         | 64       |
+| Norm                | 4.12e+03 |
+| GradNorm            | 19.1     |
+| UpdateRatio         | 0.0347   |
+| EpisodesThisIter    | 1e+03    |
+| EpisodesSoFar       | 6.01e+04 |
+| TimestepsThisIter   | 2.67e+06 |
+| TimestepsSoFar      | 6.1e+07  |
+| UniqueWorkers       | 40       |
+| UniqueWorkersFrac   | 0.0704   |
+| ResultsSkippedFrac  | 0.00794  |
+| ObCount             | 0        |
+| TimeElapsedThisIter | 1.72e+03 |
+| TimeElapsed         | 5.26e+04 |
+----------------------------------
+Saved snapshot snapshot_iter00055_rew10256.h5
+********** Iteration 56 **********
+
+
+
